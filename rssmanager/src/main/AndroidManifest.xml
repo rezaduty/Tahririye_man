@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.crazyhitty.chdev.ks.rssmanager">
+    package="com.rezaduty.chdev.ks.rssmanager">
 
     <uses-permission android:name="android.permission.INTERNET" />
 

@@ -1,7 +1,7 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.crazyhitty.chdev.ks.munch">
+    package="com.rezaduty.chdev.ks.nta">
 
     <uses-sdk tools:overrideLibrary="android.support.customtabs" />
 
@@ -16,7 +16,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name=".ui.activities.SplashActivity"
+            android:name="com.rezaduty.chdev.ks.nta.ui.activities.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -26,43 +26,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name=".ui.activities.HomeActivity"
+            android:name="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name=".ui.activities.ArticleActivity"
+            android:name="com.rezaduty.chdev.ks.nta.ui.activities.ArticleActivity"
             android:label="@string/title_activity_article"
-            android:parentActivityName=".ui.activities.HomeActivity"
+            android:parentActivityName="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity"
             android:theme="@style/AppThemeCustom.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.crazyhitty.chdev.ks.munch.ui.activities.HomeActivity" />
+                android:value="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity" />
         </activity>
         <activity
-            android:name=".ui.activities.SettingsActivity"
+            android:name="com.rezaduty.chdev.ks.nta.ui.activities.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName=".ui.activities.HomeActivity">
+            android:parentActivityName="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.crazyhitty.chdev.ks.munch.ui.activities.HomeActivity" />
+                android:value="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity" />
         </activity>
         <activity
-            android:name=".ui.activities.AboutActivity"
+            android:name="com.rezaduty.chdev.ks.nta.ui.activities.AboutActivity"
             android:label="@string/title_activity_about"
-            android:parentActivityName=".ui.activities.HomeActivity"
+            android:parentActivityName="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.crazyhitty.chdev.ks.munch.ui.activities.HomeActivity" />
+                android:value="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity" />
         </activity>
 
         <service
-            android:name=".services.SyncArticlesIntentService"
+            android:name="com.rezaduty.chdev.ks.nta.services.SyncArticlesIntentService"
             android:exported="false" />
 
         <receiver
-            android:name=".receivers.SyncArticlesReceiver"
+            android:name="com.rezaduty.chdev.ks.nta.receivers.SyncArticlesReceiver"
             android:enabled="true"
             android:exported="true"></receiver>
     </application>

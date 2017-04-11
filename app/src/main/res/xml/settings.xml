@@ -6,7 +6,9 @@
             android:defaultValue="@string/perf_small"
             android:entries="@array/perf_feeds_font_size_entries"
             android:entryValues="@array/perf_feeds_font_size_entry_values"
+            android:layoutDirection="rtl"
             android:key="@string/perf_feeds_font_size_key"
+
             android:summary="@string/perf_feeds_font_size_desc"
             android:title="@string/perf_feeds_font_size" />
 
@@ -15,12 +17,16 @@
             android:entries="@array/perf_article_font_size_entries"
             android:entryValues="@array/perf_article_font_size_entry_values"
             android:key="@string/perf_article_font_size_key"
+            android:layoutDirection="rtl"
+
             android:summary="@string/perf_article_font_size_desc"
             android:title="@string/perf_article_font_size" />
 
         <SwitchPreference
             android:defaultValue="true"
             android:key="@string/perf_feeds_anim_key"
+            android:layoutDirection="rtl"
+
             android:summaryOff="@string/perf_feeds_anim_desc_disabled"
             android:summaryOn="@string/perf_feeds_anim_desc_enabled"
             android:title="@string/perf_feeds_anim" />
@@ -28,6 +34,8 @@
         <SwitchPreference
             android:defaultValue="true"
             android:key="@string/perf_sources_anim_key"
+            android:layoutDirection="rtl"
+
             android:summaryOff="@string/perf_sources_anim_desc_disabled"
             android:summaryOn="@string/perf_sources_anim_desc_enabled"
             android:title="@string/perf_sources_anim" />
@@ -35,6 +43,8 @@
         <SwitchPreference
             android:defaultValue="true"
             android:key="@string/perf_circular_reveal_key"
+            android:layoutDirection="rtl"
+
             android:summaryOff="@string/perf_circular_reveal_desc_disabled"
             android:summaryOn="@string/perf_circular_reveal_desc_enabled"
             android:title="@string/perf_circular_reveal" />
@@ -65,7 +75,7 @@
 
     <PreferenceCategory android:title="@string/perf_system">
 
-        <com.crazyhitty.chdev.ks.munch.ui.views.CustomListPreferenceDialog
+        <com.rezaduty.chdev.ks.nta.ui.views.CustomListPreferenceDialog
             android:defaultValue="@string/perf_theme_default_value"
             android:entries="@array/perf_theme_entries"
             android:entryValues="@array/perf_theme_values"
@@ -96,7 +106,7 @@
             android:summary="@string/perf_import_opml_desc"
             android:title="@string/perf_import_opml" />
 
-        <com.crazyhitty.chdev.ks.munch.ui.views.CustomPreferenceDialog
+        <com.rezaduty.chdev.ks.nta.ui.views.CustomPreferenceDialog
             android:dialogMessage="@string/perf_reset_db_message"
             android:dialogTitle="@string/perf_reset_db"
             android:summary="@string/perf_reset_db_desc"

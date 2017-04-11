@@ -17,10 +17,13 @@
         android:id="@+id/nav_view"
         android:layout_width="wrap_content"
         android:layout_height="match_parent"
-        android:layout_gravity="start"
+        android:layout_gravity="bottom|left"
         android:fitsSystemWindows="true"
+        android:layoutDirection="rtl"
+        android:paddingTop="-11dp"
         app:headerLayout="@layout/nav_header_main"
         app:itemBackground="@drawable/nav_item_bg"
-        app:menu="@menu/activity_main_drawer" />
+        app:menu="@menu/activity_main_drawer"
+        android:textAlignment="center" />
 
 </android.support.v4.widget.DrawerLayout>

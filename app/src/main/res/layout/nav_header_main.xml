@@ -15,7 +15,8 @@
             android:layout_width="match_parent"
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
-            android:src="@drawable/munch_promo_small" />
+            android:src="@drawable/imgres"
+            android:background="@color/colorPrimary" />
 
         <View style="@style/Divider" />
 

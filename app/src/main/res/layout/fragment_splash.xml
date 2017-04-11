@@ -3,7 +3,7 @@
     android:id="@+id/relative_layout_fragment_splash"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context="com.crazyhitty.chdev.ks.munch.ui.activities.SplashActivity$PlaceholderFragment">
+    tools:context="com.rezaduty.chdev.ks.nta.ui.activities.SplashActivity$PlaceholderFragment">
 
     <RelativeLayout
         android:layout_width="match_parent"
@@ -30,9 +30,9 @@
 
             <ImageView
                 android:id="@+id/image_view_splash"
-                android:layout_width="300dp"
-                android:layout_height="300dp"
-                android:src="@drawable/splash_1" />
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:src="@drawable/imgres" />
 
             <TextView
                 android:id="@+id/text_view_splash_desc"

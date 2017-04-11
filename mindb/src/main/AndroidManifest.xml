@@ -1,5 +1,5 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
-    package="com.crazyhitty.chdev.ks.mindb">
+    package="com.rezaduty.chdev.ks.mindb">
 
     <application
         android:allowBackup="true"

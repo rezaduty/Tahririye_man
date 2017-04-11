@@ -1,0 +1,108 @@
+{
+  "version": 0.1,
+  "release_date": "2017-04-09",
+  "last_modified": "2017-04-09",
+  "curated_feeds": [
+    {
+      "source_name": "دانشجویار",
+      "source_url": "http://www.daneshjooyar.com/feed/",
+      "source_category": "آموزشی"
+    },
+    {
+      "source_name": "رایت وب",
+      "source_url": "http://writeweb.ir/",
+      "source_category": "آموزشی"
+    },
+    {
+      "source_name": "مهدی غفاری",
+      "source_url": "http://mghaffari.blog.ir/rss/",
+      "source_category": "آموزشی"
+    },
+    {
+      "source_name": "اصفهان لاگ",
+      "source_url": "http://www.isfahanlug.org/feed/",
+      "source_category": "رویداد ها"
+    },
+    {
+      "source_name": "ایوند",
+      "source_url": "http://blog.evand.com/feed/",
+      "source_category": "رویداد ها"
+    },
+    {
+      "source_name": "infoworld",
+      "source_url": "http://www.infoworld.com/index.rss",
+      "source_category": "تکنولوژی"
+    },
+    {
+      "source_name": "گجت نیوز",
+      "source_url": "http://gadgetnews.ir/feed/",
+      "source_category": "تکنولوژی"
+    },
+    {
+      "source_name": "سیتو",
+      "source_url": "planet.sito.ir/feed/",
+      "source_category": "یونیکس"
+    },
+    {
+      "source_name": "حسین دیباپور",
+      "source_url": "http://hdartworks.blog.ir/rss/",
+      "source_category": "یونیکس"
+    },
+
+    {
+      "source_name": "لینوکس، عشق، برنامه نویسی",
+      "source_url": "https://linux-geek.blog.ir/rss/",
+      "source_category": "یونیکس"
+    },
+    {
+      "source_name": "لینوکس و من",
+      "source_url": "http://rss.linuxvaman.ir/linuxvaman",
+      "source_category": "یونیکس"
+    },
+    {
+      "source_name": "خط خطی های مینیمال",
+      "source_url": "http://stack.blog.ir/rss/",
+      "source_category": "یونیکس"
+    },
+    {
+      "source_name": "لینوکس سیزن",
+      "source_url": "http://linuxseason.com/feed",
+      "source_category": "یونیکس"
+    },
+    {
+      "source_name": "علیرضا امیر صمیمی",
+      "source_url": "http://amirsamimi.ir/feed/",
+      "source_category": "یونیکس"
+    },
+
+    {
+      "source_name": "تجربه های پراکنده",
+      "source_url": "http://blog.abyz.ir/feed",
+      "source_category": "آموزشی"
+    },
+    {
+      "source_name": "دیجی اسپارک",
+      "source_url": "http://digispark.ir/feed/",
+      "source_category": "سخت افزار"
+    },
+    {
+      "source_name": "گیمفا",
+      "source_url": "http://gamefa.com/feed/",
+      "source_category": "متفرقه"
+    },
+    {
+      "source_name": "خبرگذاری باشگاه خبرنگاران جوان",
+      "source_url": "http://www.yjc.ir/fa/rss/allnews",
+      "source_category": "متفرقه"
+    },
+    {
+      "source_name": "ایسنا",
+      "source_url": "http://www.isna.ir/rss-homepage",
+      "source_category": "متفرقه"
+    }
+
+
+
+
+  ]
+}

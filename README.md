@@ -1,7 +1,7 @@
 #Munch
 A minimalistic, easy to use Rss reader application.
 
-<a href="https://play.google.com/store/apps/details?id=com.crazyhitty.chdev.ks.munch">
+<a href="https://play.google.com/store/apps/details?id=rezaduty.chdev.ks.munch">
   <img alt="Get it on Google Play"
        src="http://www.androiddocs.com/images/brand/en_app_rgb_wo_45.png" />
 </a>

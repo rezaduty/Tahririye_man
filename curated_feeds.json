@@ -1,92 +1,108 @@
 {
-  "version": 0.13,
-  "release_date": "2016-01-03",
-  "last_modified": "2016-02-09",
+  "version": 0.1,
+  "release_date": "2017-04-09",
+  "last_modified": "2017-04-09",
   "curated_feeds": [
     {
-      "source_name": "Arstechnica",
-      "source_url": "http:\/\/feeds.arstechnica.com\/arstechnica\/index?format=xml",
-      "source_category": "Gadgets"
+      "source_name": "دانشجویار",
+      "source_url": "http://www.daneshjooyar.com/feed/",
+      "source_category": "آموزشی"
     },
     {
-      "source_name": "Reuters Top News",
-      "source_url": "http:\/\/feeds.reuters.com\/reuters\/topNews?format=xml",
-      "source_category": "International"
+      "source_name": "رایت وب",
+      "source_url": "http://writeweb.ir/",
+      "source_category": "آموزشی"
     },
     {
-      "source_name": "IGN",
-      "source_url": "http:\/\/feeds.ign.com\/ign\/all?format=xml",
-      "source_category": "Entertainment"
+      "source_name": "مهدی غفاری",
+      "source_url": "http://mghaffari.blog.ir/rss/",
+      "source_category": "آموزشی"
     },
     {
-      "source_name": "vrouwelijk goddelijke",
-      "source_url": "http:\/\/feeds.feedburner.com\/HetVrouwelijkGoddelijke",
-      "source_category": "Research"
+      "source_name": "اصفهان لاگ",
+      "source_url": "http://www.isfahanlug.org/feed/",
+      "source_category": "رویداد ها"
     },
     {
-      "source_name": "Juan Cole",
-      "source_url": "http:\/\/feeds.feedburner.com\/is\/pudp",
-      "source_category": "Politics"
+      "source_name": "ایوند",
+      "source_url": "http://blog.evand.com/feed/",
+      "source_category": "رویداد ها"
     },
     {
-      "source_name": "FTM",
-      "source_url": "http:\/\/feeds.feedburner.com\/ftm\/eddm",
-      "source_category": "Politics"
+      "source_name": "دیجیکالا مگ",
+      "source_url": "https://www.digikala.com/mag/feed/",
+      "source_category": "تکنولوژی"
     },
     {
-      "source_name": "James Petras",
-      "source_url": "http:\/\/petras.lahaine.org\/?feed=rss2",
-      "source_category": "Politics"
+      "source_name": "گجت نیوز",
+      "source_url": "http://gadgetnews.ir/feed/",
+      "source_category": "تکنولوژی"
     },
     {
-      "source_name": "Craig Murray",
-      "source_url": "http:\/\/feeds.feedburner.com\/org\/zMEt",
-      "source_category": "Politics"
+      "source_name": "سیتو",
+      "source_url": "planet.sito.ir/feed/",
+      "source_category": "یونیکس"
     },
     {
-      "source_name": "Leonardo Boff",
-      "source_url": "http:\/\/feeds.feedburner.com\/wordpress\/Hdbc",
-      "source_category": "Unknown"
+      "source_name": "حسین دیباپور",
+      "source_url": "http://hdartworks.blog.ir/rss/",
+      "source_category": "یونیکس"
+    },
+
+    {
+      "source_name": "لینوکس، عشق، برنامه نویسی",
+      "source_url": "https://linux-geek.blog.ir/rss/",
+      "source_category": "یونیکس"
     },
     {
-      "source_name": "CMI Watemaal",
-      "source_url": "http:\/\/feeds.feedburner.com\/CmiGuatemala",
-      "source_category": "Politics"
+      "source_name": "لینوکس و من",
+      "source_url": "http://rss.linuxvaman.ir/linuxvaman",
+      "source_category": "یونیکس"
     },
     {
-      "source_name": "Sprengsatz",
-      "source_url": "http:\/\/feeds.feedburner.com\/Sprengsatz_dasPolitik-blogAusBerlin",
-      "source_category": "International"
+      "source_name": "خط خطی های مینیمال",
+      "source_url": "http://stack.blog.ir/rss/",
+      "source_category": "یونیکس"
     },
     {
-      "source_name": "Musicke & Food",
-      "source_url": "http:\/\/feeds.feedburner.com\/blogspot\/wxXcs",
-      "source_category": "Music"
+      "source_name": "لینوکس سیزن",
+      "source_url": "http://linuxseason.com/feed",
+      "source_category": "یونیکس"
     },
     {
-      "source_name": "cogniarchae",
-      "source_url": "http:\/\/feeds.feedburner.com\/Cogniarchae",
-      "source_category": "Research"
+      "source_name": "علیرضا امیر صمیمی",
+      "source_url": "http://amirsamimi.ir/feed/",
+      "source_category": "یونیکس"
+    },
+
+    {
+      "source_name": "تجربه های پراکنده",
+      "source_url": "http://blog.abyz.ir/feed",
+      "source_category": "آموزشی"
     },
     {
-      "source_name": "el salm\u00f3n",
-      "source_url": "http:\/\/feeds.feedburner.com\/ElSalmn",
-      "source_category": "Politics"
+      "source_name": "دیجی اسپارک",
+      "source_url": "http://digispark.ir/feed/",
+      "source_category": "سخت افزار"
     },
     {
-      "source_name": "James Cockcroft",
-      "source_url": "http:\/\/feeds.feedburner.com\/JamesCockcroftsBlog-WriterProfessorRevolutionary",
-      "source_category": "Politics"
+      "source_name": "گیمفا",
+      "source_url": "http://gamefa.com/feed/",
+      "source_category": "متفرقه"
     },
     {
-      "source_name": "BBC news ",
-      "source_url": "http:\/\/feeds.bbci.co.uk\/news\/rss.xml?edition=uk#",
-      "source_category": "International"
+      "source_name": "خبرگذاری باشگاه خبرنگاران جوان",
+      "source_url": "http://www.yjc.ir/fa/rss/allnews",
+      "source_category": "متفرقه"
     },
     {
-      "source_name": "Express and star ",
-      "source_url": "http:\/\/www.expressandstar.com\/news\/feed\/",
-      "source_category": "International"
+      "source_name": "ایسنا",
+      "source_url": "http://www.isna.ir/rss-homepage",
+      "source_category": "متفرقه"
     }
+
+
+
+
   ]
 }

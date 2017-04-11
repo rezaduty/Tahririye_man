@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.crazyhitty.chdev.ks.munch.ui.activities.AboutActivity"
+    tools:context="com.rezaduty.chdev.ks.nta.ui.activities.AboutActivity"
     tools:showIn="@layout/activity_about">
 
     <LinearLayout
@@ -28,11 +28,11 @@
             android:foreground="?android:attr/selectableItemBackground">
 
             <ImageView
-                android:id="@+id/image_button_munch_about"
+                android:id="@+id/image_button_nTA_about"
                 android:layout_width="match_parent"
                 android:layout_height="200dp"
                 android:scaleType="centerCrop"
-                android:src="@drawable/munch_about" />
+                android:src="@drawable/nta_about" />
 
             <RelativeLayout
                 android:layout_width="wrap_content"

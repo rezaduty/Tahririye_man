@@ -1,15 +1,17 @@
 <resources>
-    <string name="app_name">Munch</string>
-    <string name="action_settings">Settings</string>
-    <string name="loading_feeds">Loading feeds</string>
-    <string name="cancel">Cancel</string>
-    <string name="feed_title">Feed title</string>
-    <string name="source">Source</string>
-    <string name="source_name">Source name</string>
-    <string name="feed_url">Feed url</string>
-    <string name="save">Save</string>
-    <string name="add_feed_title">Add Feed</string>
-    <string name="add_feed">Add your own RSS feed</string>
+    <string name="title_activity_scrolling">nTA</string>
+    <string name="title_activity_post_view">nTA</string>
+    <string name="app_name">nTA</string>
+    <string name="action_settings">تنظیمات</string>
+    <string name="loading_feeds">در حال دریافت اطلاعات</string>
+    <string name="cancel"> بستن</string>
+    <string name="feed_title">عنوان مطلب</string>
+    <string name="source">منابع</string>
+    <string name="source_name">نام منبع</string>
+    <string name="feed_url">آدرس منبع</string>
+    <string name="save">ذخیره</string>
+    <string name="add_feed_title">صفحه اصلی</string>
+    <string name="add_feed">اضافه کردن دیگر منابع</string>
 
     <!--font-->
     <string name="roboto_light">sans-serif-light</string>
@@ -18,84 +20,104 @@
     <string name="roboto_medium">sans-serif-medium</string>
     <string name="monospace">monospace</string>
 
-    <string name="category">Category</string>
-    <string name="add_category">Add a category</string>
-    <string name="source_url">Source url</string>
-    <string name="pub_date">Publish date</string>
-    <string name="clear_feeds">Clear Feeds</string>
+    <string name="category">دسته بندی ها</string>
+    <string name="add_category">اضافه کردن دسته بندی</string>
+    <string name="source_url">آدرس منبع</string>
+    <string name="pub_date">تاریخ درج</string>
+    <string name="clear_feeds">حذف کلیه موضوعات</string>
     <string name="navigation_drawer_open">Open navigation drawer</string>
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string-array name="category_names">
-        <item>Automobiles</item>
-        <item>Books</item>
-        <item>Business</item>
-        <item>Climate</item>
-        <item>Comics</item>
-        <item>Deals</item>
-        <item>Economics</item>
-        <item>Education</item>
-        <item>Entertainment</item>
-        <item>Fashion</item>
-        <item>Finance</item>
-        <item>Fitness</item>
-        <item>Food</item>
-        <item>Gadgets</item>
-        <item>Gaming</item>
-        <item>Hardware</item>
-        <item>Health</item>
-        <item>International</item>
-        <item>Marketing</item>
-        <item>Music</item>
-        <item>National</item>
-        <item>Politics</item>
-        <item>Productivity</item>
-        <item>Programming</item>
-        <item>Research</item>
-        <item>Science</item>
-        <item>Software</item>
-        <item>Space</item>
-        <item>Sports</item>
-        <item>Technology</item>
-        <item>Unknown</item>
+        <item>شخصیت ها</item>
+        <!--<item>تکنولوژی </item>
+        <item>برنامه نویسی</item>-->
+        <item>آموزشی</item>
+        <item>رویداد ها</item>
+        <item>تکنولوژی</item>
+        <item>یونیکس</item>
+        <item>سخت افزار</item>
+        <item>متفرقه</item>
+        <!-- <item>Finance</item>
+         <item>Fitness</item>
+         <item>Food</item>
+         <item>Gadgets</item>
+         <item>Gaming</item>
+         <item>Hardware</item>
+         <item>Health</item>
+         <item>International</item>
+         <item>Marketing</item>
+         <item>Music</item>
+         <item>National</item>
+         <item>Politics</item>
+         <item>Productivity</item>
+         <item>Programming</item>
+         <item>Research</item>
+         <item>Science</item>
+         <item>Software</item>
+         <item>Space</item>
+         <item>Sports</item>
+         <item>علمی</item>
+         <item>Technology</item>
+         <item>Unknown</item>-->
     </string-array>
 
+    <string name="menu_exit">خروج</string>
+    <string name="menu_about">درباره ما</string>
+    <string name="menu_planets">سیاره ها</string>
+    <string name="menu_main">صفحه اصلی</string>
+    <!-- floating action bar menu item -->
+    <string-array name="fan_labels">
+        <item>@string/menu_exit</item>
+        <item>@string/menu_about</item>
+        <item>@string/menu_planets</item>
+        <item>@string/menu_main</item>
+
+    </string-array>
+
+    <array name="button_icons">
+        <item>@drawable/ic_action_fav</item>
+        <item>@drawable/line</item>
+        <item>@drawable/ic_action_fav</item>
+        <item>@drawable/ic_action_share</item>
+    </array>
     <string-array name="category_drawables">
-        <item>@drawable/ic_automobile_24dp</item>
-        <item>@drawable/ic_book_24dp</item>
-        <item>@drawable/ic_business_24dp</item>
-        <item>@drawable/ic_climate_24dp</item>
-        <item>@drawable/ic_comics_24dp</item>
-        <item>@drawable/ic_deals_24dp</item>
-        <item>@drawable/ic_economics_24dp</item>
-        <item>@drawable/ic_education_24dp</item>
-        <item>@drawable/ic_entertainment_24dp</item>
-        <item>@drawable/ic_fashion_24dp</item>
-        <item>@drawable/ic_finance_24dp</item>
-        <item>@drawable/ic_fitness_24dp</item>
-        <item>@drawable/ic_food_24dp</item>
-        <item>@drawable/ic_gadgets_24dp</item>
-        <item>@drawable/ic_gaming_24dp</item>
-        <item>@drawable/ic_hardware_24dp</item>
-        <item>@drawable/ic_health_24dp</item>
-        <item>@drawable/ic_international_24dp</item>
-        <item>@drawable/ic_marketing_24dp</item>
-        <item>@drawable/ic_music_24dp</item>
-        <item>@drawable/ic_national_24dp</item>
-        <item>@drawable/ic_politics_24dp</item>
-        <item>@drawable/ic_productivity_24dp</item>
-        <item>@drawable/ic_programming_24dp</item>
-        <item>@drawable/ic_research_24dp</item>
-        <item>@drawable/ic_science_24dp</item>
-        <item>@drawable/ic_software_24dp</item>
-        <item>@drawable/ic_space_24dp</item>
-        <item>@drawable/ic_sports_24dp</item>
-        <item>@drawable/ic_technology_24dp</item>
-        <item>@drawable/ic_unknown_24dp</item>
+        <item>@drawable/assignment_ind_black_24x24 </item>
+        <!--<item>@drawable/touch_app_black_24x24 </item>
+        <item>@drawable/code_black_24x24 </item>-->
+        <item>@drawable/battery_charging_60_black_24x24 </item>
+        <item>@drawable/language_black_24x24 </item>
+        <item>@drawable/fiber_new_black_24x24 </item>
+        <item>@drawable/copyright_black_24x24 </item>
+        <item>@drawable/perm_data_setting_black_24x24 </item>
+        <item>@drawable/now_widgets_black_24x24 </item>
+
+        <!-- <item>@drawable/ic_automobile_24dp</item>
+         <item>@drawable/ic_business_24dp</item>
+         <item>@drawable/ic_climate_24dp</item>
+         <item>@drawable/ic_comics_24dp</item>
+         <item>@drawable/ic_deals_24dp</item>
+         <item>@drawable/ic_economics_24dp</item>
+         <item>@drawable/ic_entertainment_24dp</item>
+         <item>@drawable/ic_fashion_24dp</item>
+         <item>@drawable/ic_finance_24dp</item>
+         <item>@drawable/ic_food_24dp</item>
+         <item>@drawable/ic_gaming_24dp</item>
+         <item>@drawable/ic_hardware_24dp</item>
+         <item>@drawable/ic_health_24dp</item>
+         <item>@drawable/ic_marketing_24dp</item>
+         <item>@drawable/ic_music_24dp</item>
+         <item>@drawable/ic_national_24dp</item>
+         <item>@drawable/ic_politics_24dp</item>
+         <item>@drawable/ic_productivity_24dp</item>
+         <item>@drawable/ic_research_24dp</item>
+         <item>@drawable/ic_space_24dp</item>
+         <item>@drawable/ic_sports_24dp</item>
+         <item>@drawable/ic_unknown_24dp</item>-->
     </string-array>
 
     <string-array name="sources_test">
-        <item>All Sources</item>
+        <item>تمام منابع</item>
         <item>Reuters</item>
         <item>BBC India</item>
     </string-array>
@@ -134,65 +156,67 @@
     </string-array>
 
     <string name="title_activity_article">ArticleActivity</string>
-    <string name="action_share">Share</string>
-    <string name="action_archive">Archive</string>
-    <string name="content">Content</string>
-    <string name="please_wait">Please wait</string>
-    <string name="loading">Loading</string>
-    <string name="nav_feeds">Feeds</string>
-    <string name="nav_manage_feeds">Manage Feeds</string>
-    <string name="nav_other">Other</string>
-    <string name="nav_extra">Extra</string>
-    <string name="nav_settings">Settings</string>
-    <string name="nav_about">About</string>
-    <string name="nav_archive">Archive</string>
-    <string name="remove_archive">Remove from archive</string>
-    <string name="remove_archive_content">This action will remove this article from your archive permanantly.</string>
-    <string name="remove">Remove</string>
-    <string name="nav_manage_sources">Manage Sources</string>
-    <string name="modify_source">Modify Source</string>
-    <string name="modify">Modify</string>
-    <string name="delete">Delete</string>
-    <string name="title_activity_settings">Settings</string>
-    <string name="sort">Sort</string>
-    <string name="sort_feeds">Sort feeds</string>
+    <string name="action_share">اشتراک گذاری</string>
+    <string name="action_archive">آرشیو</string>
+    <string name="content">مطلب</string>
+    <string name="please_wait">لطفا صبر کنید</string>
+    <string name="loading">درحال بارگذاری</string>
+    <string name="nav_home">صفحه اصلی</string>
+    <string name="nav_feeds">موضوعات</string>
+    <string name="nav_manage_feeds">مدیریت موضوعات</string>
+    <string name="nav_other">متفرقه</string>
+    <string name="nav_extra"><i> تنظیمات برنامه</i></string>
+    <string name="nav_settings">تنظیمات</string>
+    <string name="nav_about">درباره ما</string>
+    <string name="nav_archive">آرشیو</string>
+    <string name="remove_archive">حذف از آرشیو</string>
+    <string name="remove_archive_content">این موضوع برای همیشه از آرشیو شما حذف میشود.</string>
+    <string name="remove">حذف</string>
+    <string name="nav_manage_sources">مدیریت منابع</string>
+    <string name="modify_source">تغیر منابع</string>
+    <string name="modify">تغیر</string>
+    <string name="delete">حذف</string>
+    <string name="title_activity_settings">تنظیمات</string>
+    <string name="sort">مرتب سازی</string>
+    <string name="sort_feeds">مرتب سازی موضوعات</string>
 
     <string-array name="sort_feeds_types">
-        <item>Randomly</item>
-        <item>Feed title</item>
-        <item>Category</item>
-        <item>Publish Date</item>
+        <item>تصادفی</item>
+        <item>عنوان ها</item>
+        <item>دسته بندی ها</item>
+        <item>تاریخ درج</item>
     </string-array>
 
     <!-- Strings related to Settings -->
-    <string name="perf_ui">User Interface</string>
+    <string name="perf_ui">تنظیمات شخصی</string>
 
-    <string name="perf_feeds">Feeds</string>
-    <string name="perf_feeds_font_size">Feeds Font Size</string>
-    <string name="perf_feeds_font_size_desc">Manage font size of RSS feeds</string>
+    <string name="perf_feeds">منابع</string>
+    <string name="perf_feeds_font_size">اندازه کلمات منابع</string>
+    <string name="perf_feeds_font_size_desc">مدیریت اندازی کلمات منابع</string>
     <string name="perf_feeds_font_size_key">perf_feeds_font_size</string>
 
     <string-array name="perf_feeds_font_size_entries">
-        <item>Small</item>
-        <item>Medium</item>
-        <item>Large</item>
+        <item>کوچک</item>
+        <item>معمولی</item>
+        <item>بزرگ</item>
     </string-array>
 
     <string-array name="perf_feeds_font_size_entry_values">
+
         <item>Small</item>
         <item>Medium</item>
         <item>Large</item>
     </string-array>
 
-    <string name="perf_article">Article</string>
-    <string name="perf_article_font_size">Article Font Size</string>
-    <string name="perf_article_font_size_desc">Manage font size of article</string>
+    <string name="perf_article">مطلب</string>
+    <string name="perf_article_font_size">اندازه ی کلمات</string>
+    <string name="perf_article_font_size_desc">مدیریت اندازه ی کلمات مطالب</string>
     <string name="perf_article_font_size_key">perf_article_font_size</string>
 
     <string-array name="perf_article_font_size_entries">
-        <item>Small</item>
-        <item>Medium</item>
-        <item>Large</item>
+        <item>کوچک</item>
+        <item>معمولی</item>
+        <item>بزرگ</item>
     </string-array>
 
     <string-array name="perf_article_font_size_entry_values">
@@ -201,47 +225,47 @@
         <item>Large</item>
     </string-array>
 
-    <string name="perf_small">Small</string>
-    <string name="perf_medium">Medium</string>
-    <string name="perf_large">Large</string>
+    <string name="perf_small">کوچک</string>
+    <string name="perf_medium">معمولی</string>
+    <string name="perf_large">بزرگ</string>
 
-    <string name="perf_feeds_anim">Enable Feeds Animation</string>
-    <string name="perf_feeds_anim_desc_enabled">If disabled, feeds won\'t animate, this might reduce lag</string>
-    <string name="perf_feeds_anim_desc_disabled">If enabled, feeds will animate, this might generate lag</string>
+    <string name="perf_feeds_anim">فعال کردن انیمیشن بارگذاری مطالب</string>
+    <string name="perf_feeds_anim_desc_disabled">با فعال سازی این قابلیت ممکن است دستگاه مطالب را با سرعت کم تری بارگذاری کند</string>
+    <string name="perf_feeds_anim_desc_enabled">با غیر فعال سازی این قابلیت ممکن است دستگاه مطالب را با سرعت بیشتری بارگذاری نماید</string>
     <string name="perf_feeds_anim_key">perf_feeds_anim_key</string>
 
-    <string name="perf_sources_anim">Enable Sources Animation</string>
-    <string name="perf_sources_anim_desc_enabled">If disabled, sources won\'t animate, this might reduce lag</string>
-    <string name="perf_sources_anim_desc_disabled">If enabled, sources will animate, this might generate lag</string>
+    <string name="perf_sources_anim">فعال سازی انیمیشن بارگذاری منابع</string>
+    <string name="perf_sources_anim_desc_disabled">با فعال سازی این قابلیت ممکن است دستگاه مطالب را با سرعت کم تری بارگذاری کند</string>
+    <string name="perf_sources_anim_desc_enabled">با غیر فعال سازی این قابلیت ممکن است دستگاه مطالب را با سرعت بیشتری بارگذاری نماید</string>
     <string name="perf_sources_anim_key">perf_sources_anim_key</string>
 
-    <string name="perf_circular_reveal">Enable Circular Reveal Animation</string>
-    <string name="perf_circular_reveal_desc_enabled">If disabled, you won\'t see a circular reveal animation on add sources screen</string>
-    <string name="perf_circular_reveal_desc_disabled">If enabled, you will see a circular reveal animation on add sources screen</string>
+    <string name="perf_circular_reveal">فعال سازی انیمیشن درج منابع</string>
+    <string name="perf_circular_reveal_desc_disabled">با فعال سازی این قابلیت ممکن است دستگاه مطالب را با سرعت کم تری بارگذاری کند</string>
+    <string name="perf_circular_reveal_desc_enabled">با غیر فعال سازی این قابلیت ممکن است دستگاه مطالب را با سرعت بیشتری بارگذاری نماید</string>
     <string name="perf_circular_reveal_key">perf_circular_reveal_key</string>
 
-    <string name="perf_curated_feeds">Curated Feeds</string>
+    <string name="perf_curated_feeds">موضوعات جاری</string>
 
-    <string name="perf_curated_feeds_import">Import Curated feeds</string>
-    <string name="perf_curated_feeds_import_desc">Import some of the best Rss feed sources available over the internet</string>
+    <string name="perf_curated_feeds_import">فراخوان منابع</string>
+    <string name="perf_curated_feeds_import_desc">فراخوانی منابع متداول</string>
     <string name="perf_curated_feeds_import_key">perf_curated_feeds_import_key</string>
 
     <string-array name="perf_curated_feeds_import_empty" />
 
-    <string name="perf_curated_feeds_submit">Submit Curated feeds</string>
-    <string name="perf_curated_feeds_submit_desc">Submit your own Rss feed sources and help in improving the current curated list</string>
+    <string name="perf_curated_feeds_submit">ثبت منبع</string>
+    <string name="perf_curated_feeds_submit_desc">با موافق شما منبع جدید از اینترنت دریافت خواهد شد</string>
     <string name="perf_curated_feeds_submit_key">perf_curated_feeds_submit_key</string>
 
     <string-array name="perf_curated_feeds_submit_empty" />
 
-    <string name="perf_theme">Manage themes</string>
-    <string name="perf_theme_desc">Change the system theme</string>
+    <string name="perf_theme">مدیریت پوسته</string>
+    <string name="perf_theme_desc">تغییر پوسته برنامه</string>
     <string name="perf_theme_key">perf_theme</string>
     <string name="perf_theme_default_value">Light</string>
 
     <string-array name="perf_theme_entries">
-        <item>Light</item>
-        <item>Dark</item>
+        <item>روشن</item>
+        <item>تیره</item>
     </string-array>
 
     <string-array name="perf_theme_values">
@@ -249,19 +273,19 @@
         <item>Dark</item>
     </string-array>
 
-    <string name="perf_in_app_browser">Enable In-App Browser</string>
-    <string name="perf_in_app_browser_desc_enabled">If disabled, application will open feed links via standard browser</string>
-    <string name="perf_in_app_browser_desc_disabled">If enabled, application will open feed links via in-app browser(requires chrome v45+)</string>
+    <string name="perf_in_app_browser">فعال سازی مرورگر داخل برنامه</string>
+    <string name="perf_in_app_browser_desc_enabled">با فعال سازی از مرورگر استاندارد برنامه استفاده خواهد شد</string>
+    <string name="perf_in_app_browser_desc_disabled">با غیر فعال سازی ار مرورگر گوشی شما استفاده خواهد شد (نیاز به chrome +45)</string>
     <string name="perf_in_app_browser_key">perf_in_app_browser_key</string>
 
-    <string name="perf_import_opml">Import Opml files</string>
-    <string name="perf_import_opml_desc">Import custom feed sources from Opml files, either from a url or a file</string>
+    <string name="perf_import_opml">فراخوانی فایل های ompl</string>
+    <string name="perf_import_opml_desc">فراخوانی فایل های شخصی شده ompl</string>
     <string name="perf_import_opml_key">perf_import_opml_files</string>
     <string name="perf_import_opml_default_value">Light</string>
 
     <string-array name="perf_import_opml_entries">
-        <item>From url</item>
-        <item>From file</item>
+        <item>از کدام آدرس</item>
+        <item>از کدام فایل</item>
     </string-array>
 
     <string-array name="perf_import_opml_values">
@@ -270,91 +294,95 @@
     </string-array>
 
 
-    <string name="perf_cache">Enable Feeds Cache</string>
-    <string name="perf_cache_desc_enabled">If disabled, application will not store the feeds downloaded in the database</string>
-    <string name="perf_cache_desc_disabled">If enabled, application will store the feeds downloaded in the database</string>
+    <string name="perf_cache">فعال سازی حافظه موقت برنامه</string>
+    <string name="perf_cache_desc_enabled">با فعال سازی این قابلیت برنامه مطالب را از بانک اطلاعاتی خود خواهد خواند</string>
+    <string name="perf_cache_desc_disabled">با غیر فعال سازی برنامه اطلاعات را از اینترنت به صورت بر خط خواهد خواند</string>
     <string name="perf_cache_key">perf_feeds_cache</string>
 
-    <string name="perf_system">System</string>
-    <string name="perf_reset_db">Reset Database</string>
-    <string name="perf_reset_db_desc">Restore the database to its initial state</string>
-    <string name="perf_reset_db_message">This will remove all the values from the database. This incudes deleting your sources, archives and feeds.</string>
+    <string name="perf_system">سیستمی</string>
+    <string name="perf_reset_db">راه اندازی مججد دیتابیس</string>
+    <string name="perf_reset_db_desc">بازگشت به حالت اولیه</string>
+    <string name="perf_reset_db_message">باعث از دست رفتن اطلاعات و موضوعان و منابع خواهد شد</string>
 
-    <string name="perf_misc">Miscellaneous</string>
+    <string name="perf_misc">عیب یابی برنامه</string>
 
-    <string name="perf_feeds_not_working">Feeds not working?</string>
-    <string name="perf_feeds_not_working_desc">Not every Rss source will work correctly with the app, so inorder to make it work you need to modify your feeds. Tap here to view the tutorial</string>
+    <string name="perf_feeds_not_working">منابع من کار نمیکند</string>
+    <string name="perf_feeds_not_working_desc">خیلی از منابعی که من وارد برنامه کرده ام درست کار نمیکند پیشنهاد میکنم به آموزش مراجعه کنید</string>
     <string name="perf_feeds_not_working_key">perf_feeds_not_working_key</string>
 
-    <string name="swipe_down">Swipe down to refresh</string>
-    <string name="archive_empty">Archive is empty</string>
-    <string name="action_open_in_browser">Open In Browser</string>
-    <string name="refresh">Refresh</string>
-    <string name="no_internet_available">No Internet Available</string>
-    <string name="no_internet_available_extnd">Unable to detect an internet connection. Please turn it on in your network settings.</string>
-    <string name="settings">Settings</string>
-    <string name="dismiss">Dismiss</string>
-    <string name="clear_feeds_desc">This would delete all feeds available currently. Don\'t worry, this won\'t reset your archive.</string>
-    <string name="clear">Clear</string>
-    <string name="no_content_available">No Content Available</string>
+    <string name="swipe_down">به سمت پایین بکشید</string>
+    <string name="archive_empty">آرشیو خالی است</string>
+    <string name="action_open_in_browser">باز شدن داخل مرورگر</string>
+    <string name="refresh">بارگذاری مجدد</string>
+    <string name="no_internet_available">اینترنت موجود نیست</string>
+    <string name="no_internet_available_extnd">من نمیتوانم اطلاعاتی دریافت کنم لطفا اینترنت دستگاه خود را بررسی کنید</string>
+    <string name="settings">تنظیمات</string>
+    <string name="dismiss">بستن</string>
+    <string name="clear_feeds_desc">موضوعات پاک خواهد شد ولی جای نگرانی نیست چون در آرشیو شما است</string>
+    <string name="clear">تمیز کاری</string>
+    <string name="no_content_available">موضوعی موجود نیست</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
-    <string name="splash_title_1">Munch</string>
-    <string name="splash_title_2">Read RSS feeds easily</string>
-    <string name="splash_title_3">Manage, Archive and share your feeds</string>
-    <string name="splash_desc_1">A Minimalistic Rss Reader</string>
-    <string name="splash_desc_2">Scroll swiftly through the available feeds</string>
-    <string name="splash_desc_3">Add your own Rss feed sources, manage them and read the articles associated with the feeds</string>
+    <string name="splash_title_1">nTA</string>
+    <string name="splash_title_2">به آسانی مطالب مورد نظر خود را بخوانید</string>
+    <string name="splash_title_3">مدیریت ، اضافه و اشتراک گذاری موضوعات</string>
+    <string name="splash_desc_1">خبر خوان خود را خود بسازید</string>
+    <string name="splash_desc_2">بین موضوعات با یک لمس حرکت کنید</string>
+    <string name="splash_desc_3">میتوانید به خبر خوان خود موضوع، منبع اضافه کنید و اطلاعات آن را دریافت کنید</string>
 
-    <string name="title_activity_about">About</string>
-    <string name="created_by">Kartik Sharma\n(Aka Chdev)</string>
-    <string name="contact_dev">Contact the developer</string>
+    <string name="title_activity_about">درباره برنامه</string>
+    <string name="created_by">Development by rezaduty</string>
+    <string name="contact_dev">Contact the developer\nCotact the Developer</string>
 
     <string-array name="contacts">
-        <item>Email</item>
-        <item>Website</item>
-        <item>Google Plus</item>
-        <item>Github</item>
+        <item>پست الکترونیک</item>
+        <item>وبسایت</item>
+        <item>گیت هاب</item>
     </string-array>
 
-    <string name="dev_mail">cr42yh17m4n@gmail.com</string>
-    <string name="dev_website">http://crazyhitty.com/</string>
-    <string name="dev_google_plus">https://plus.google.com/106736340463642451694</string>
-    <string name="dev_github">https://github.com/crazyhitty/</string>
+    <string name="dev_mail">reza.duty.persian@gmail.com</string>
+    <string name="dev_website">http://rezaduty.gitlab.io/selectandrun</string>
+    <string name="dev_github">http://github.com/rezaduty/</string>
 
     <string name="libraries_used">Libraries Used</string>
     <string name="library">Library</string>
     <string name="library_creator">Library Creator</string>
     <string name="library_desc">Library Desc</string>
-    <string name="rate">Rate App</string>
-    <string name="source_code">Source Code</string>
-    <string name="github_source_code">https://github.com/crazyhitty/Munch</string>
-    <string name="licence">Licence</string>
-    <string name="licence_desc"><b>The MIT License (MIT)</b>\n\n<b>Copyright (c) 2015 Kartik Sharma</b>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
+    <string name="rate">به برنامه امتیاز دهید</string>
+    <string name="source_code">کد های پروژه</string>
+    <string name="github_source_code">https://github.com/rezaduty/nTA</string>
+    <string name="licence">مجوز</string>
+    <string name="licence_desc"><b>The MIT License (MIT)</b>\n\n<b>Copyright (c) 2017 rezaduty</b>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
     <string name="enter_url">Enter Url</string>
-    <string name="url">Url</string>
-    <string name="enter_url_here">Enter url here</string>
-    <string name="get_feeds">Get feeds</string>
-    <string name="select_feeds">Select Feeds</string>
-    <string name="import_str">Import</string>
-    <string name="change_log">Change Log</string>
-    <string name="change_log_desc"><b>Version 0.44</b>\n\nFixed some issues with feed parsing, thanks to https://github.com/LukeOwncloud\n\n<b>Version 0.43</b>\n\nMinor bug fixes.\n\n<b>Version 0.42</b>\n\nMinor bug fixes.\n\n<b>Version 0.41</b>\n\nMinor bug fixes.\n\n<b>Version 0.40</b>\n\nAdded sync feature. Now you can synchronize feeds in background and application will save all of the data for offline reading.\n\n<b>Version 0.33</b>\n\nAdded white icons in dark theme(only in category list and sources list) so they are easier to see.\n\nRemoved shadow from toolbars as it was glitching in dark theme.\n\n<b>Version 0.32</b>\n\nMinor bug fixes.\n\nAdded shadow to toolbars.\n\nAdded option to delete the feed from article.\n\n<b>Version 0.31</b>\n\nMinor bug fix, which was making the settings menu crash on some devices.\n\n<b>Version 0.30</b>\n\nAdded Opml integration.\n\nAdded <i>Read External Storage</i> permission so that user can import opml feeds via file stored in SD Card or internal storage.\n\nAdded Curated feeds and option to submit your own feeds to the curated list.\n\nAdded Sorting option, now user can sort the feeds by random, title, category and date.\n\nMinor bug fixes.\n\n<b>Version 0.22</b>\n\nMade circular reveal animation optional, you can disable it in settings.\n\n<b>Version 0.21</b>\n\nFixed a bug in which white screen was shown on splash screen.\n\nAdded the option to rate, view source code and view licence in About screen.\n\n<b>Version 0.20</b>\n\nAdded dark theme.\n\n<b>Version 0.11</b>\n\nRemoved duplicate entries in settings menu.\n\n<b>Version 0.10</b>\n\nReleased initial version.</string>
-    <string name="delete_this_feed">Delete this feed</string>
-    <string name="delete_this_feed_desc">This would remove this feed from the feed list present on the home screen.</string>
-    <string name="syncing_feeds">Syncing feeds</string>
-    <string name="sync">Sync</string>
-    <string name="feeds_synced">Feeds synced</string>
+    <string name="url">آدرس</string>
+    <string name="enter_url_here">آدرس خود را وارد نمایید</string>
+    <string name="get_feeds">منابع را بخوان</string>
+    <string name="select_feeds">منابع انتخاب شده</string>
+    <string name="import_str">بارگذاری</string>
+    <string name="change_log">تغیرات اخیر</string>
+    <!--     <string name="change_log_desc"><b>Version 0.01</b>\n\nFixed some issues with feed parsing, thanks to https://github.com/LukeOwncloud\n\n<b>Version 0.43</b>\n\nMinor bug fixes.\n\n<b>Version 0.42</b>\n\nMinor bug fixes.\n\n<b>Version 0.41</b>\n\nMinor bug fixes.\n\n<b>Version 0.40</b>\n\nAdded sync feature. Now you can synchronize feeds in background and application will save all of the data for offline reading.\n\n<b>Version 0.33</b>\n\nAdded white icons in dark theme(only in category list and sources list) so they are easier to see.\n\nRemoved shadow from toolbars as it was glitching in dark theme.\n\n<b>Version 0.32</b>\n\nMinor bug fixes.\n\nAdded shadow to toolbars.\n\nAdded option to delete the feed from article.\n\n<b>Version 0.31</b>\n\nMinor bug fix, which was making the settings menu crash on some devices.\n\n<b>Version 0.30</b>\n\nAdded Opml integration.\n\nAdded <i>Read External Storage</i> permission so that user can import opml feeds via file stored in SD Card or internal storage.\n\nAdded Curated feeds and option to submit your own feeds to the curated list.\n\nAdded Sorting option, now user can sort the feeds by random, title, category and date.\n\nMinor bug fixes.\n\n<b>Version 0.22</b>\n\nMade circular reveal animation optional, you can disable it in settings.\n\n<b>Version 0.21</b>\n\nFixed a bug in which white screen was shown on splash screen.\n\nAdded the option to rate, view source code and view licence in About screen.\n\n<b>Version 0.20</b>\n\nAdded dark theme.\n\n<b>Version 0.11</b>\n\nRemoved duplicate entries in settings menu.\n\n<b>Version 0.10</b>\n\nReleased initial version.</string>
+ -->
+    <string name="change_log_desc"><b>Version 0.01</b></string>
+    <string name="delete_this_feed">حذف منبع جاری</string>
+    <string name="delete_this_feed_desc">همه ی مطالب پاک خواهد شد ولی اگر مطلبی در آرشیو شما است جای نگرانی نیست</string>
+    <string name="syncing_feeds">همگام سازی منابع</string>
+    <string name="sync">همگام سازی</string>
+    <string name="feeds_synced">منابع به روز شد</string>
     <string name="downloading_feeds">Downloading feeds - Munch</string>
     <string name="download_complete">Download complete - Munch</string>
-    <string name="contributions">Contributions</string>
-    <string name="contributions_desc">These people contributed in the development of this app.</string>
+    <string name="contributions">مشارکت کنندگان</string>
+    <string name="contributions_desc">این افراد در توسعه پروژه شرکت کرده اند.</string>
 
     <string-array name="contributions_arr">
         <item>LukeOwncloud</item>
+        <item>crazyhitty</item>
+        <item>resource: ubuntu.ir/forum abedzadeh</item>
     </string-array>
 
     <string-array name="contributions_links_arr">
         <item>https://github.com/LukeOwncloud</item>
+        <item>https://github.com/crazyhitty/Munch</item>
+        <item>http://forum.ubuntu.ir/index.php/topic,92977.0.html</item>
     </string-array>
 
     <string-array name="library_names">
