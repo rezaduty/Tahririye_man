@@ -13,7 +13,7 @@ A minimalistic, easy to use Rss reader application.
 
 
 # What is nTA ?
-Munch is an android app which enable the users to manage their Rss feeds. User can add new sources, manage them and view the article associated with the feeds.
+nTA is an android app which enable the users to manage their Rss feeds. User can add new sources, manage them and view the article associated with the feeds.
 
 # Permissions:
 * Internet
