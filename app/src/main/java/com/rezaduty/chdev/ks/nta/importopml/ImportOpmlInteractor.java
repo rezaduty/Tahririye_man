@@ -69,7 +69,7 @@ public class ImportOpmlInteractor implements IImportOpmlInteractor {
                 mOpmlAsyncParser = new OpmlAsyncParser(file);
                 mOpmlAsyncParser.execute();
             } else {
-                mOnOpmlImportListener.onFailure("Invalid file");
+                mOnOpmlImportListener.onFailure("فایل مورد تایید نیست");
             }
         } catch (MalformedURLException e) {
             e.printStackTrace();

@@ -7,6 +7,7 @@ import android.content.pm.PackageManager;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
+import android.os.Environment;
 import android.preference.ListPreference;
 import android.preference.MultiSelectListPreference;
 import android.preference.Preference;
@@ -40,6 +41,8 @@ import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.io.File;
+import java.io.FileWriter;
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -261,42 +264,72 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
 
         private void sendCustomCuratedSourcesMail(List<SourceItem> customCuratedSourceItems) {
             JSONArray jsonArraySources = new JSONArray();
-            String all;
+            // read and write opml
+            String all,al;
+            // add `al` end of segment to `all` and all end of segment to `message`
+            al="";
+            all="<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
+                    "<opml version=\"1.0\">\n" +
+                    "<head>\n" +
+                    "<title>Vienna Subscriptions</title>\n" +
+                    "<dateCreated>2007-11-13 22:14:09 -0600</dateCreated>\n" +
+                    "</head>\n" +
+                    "<body>";
             for (SourceItem sourceItem : customCuratedSourceItems) {
                 JSONObject jsonObjectSource = new JSONObject();
                 try {
+
+                    al = al + "<outline text= \""+ sourceItem.getSourceName()+"\" description= \""+ sourceItem.getSourceName()+"\"  htmlUrl=\""+ sourceItem.getSourceUrl() +"\" type=rss xmlUrl=\""+ sourceItem.getSourceUrl() +"\"/>\n\n";
                     jsonObjectSource.put(SOURCE_NAME, sourceItem.getSourceName());
                     jsonObjectSource.put(SOURCE_URL, sourceItem.getSourceUrl());
                     jsonObjectSource.put(SOURCE_CATEGORY, sourceItem.getSourceCategoryName());
                     jsonArraySources.put(jsonObjectSource);
-                    all = sourceItem.getSourceName();
                 } catch (JSONException e) {
                     e.printStackTrace();
                 }
             }
-
+            all = all + al + "</body>\n" +
+                    "</opml> ";
             String message = null;
             if (jsonArraySources != null) {
                 if (jsonArraySources.length() != 0) {
 
-                    message = jsonArraySources.toString();
+                    message = all;
+
                 }
             }
 
             if (message != null) {
-                message = "Include these feeds into the curated list: \n\n" + message;
+                message =  message;
+                // internal storage path
+                String filepath = Environment.getExternalStorageDirectory().getPath();
+                File file = new File(filepath);
+                try {
+
+                    File gpxfile = new File(file, "main.opml");
+                    FileWriter writer = new FileWriter(gpxfile);
+                    writer.append(message);
+                    writer.flush();
+                    writer.close();
+                }catch (IOException e){
+                    Log.e("Exception", "File write failed: " + e.toString());
+                }
+
+                // read file and path
+                file = new File(filepath + "/main.opml");
 
                 String[] emailId = {getResources().getString(R.string.dev_mail)};
                 Intent emailIntent = new Intent(Intent.ACTION_SEND);
                 emailIntent.setData(Uri.parse("mailto:"));
-                emailIntent.setType("text/plain");
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, emailId);
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, EMAIL_SUBJECT);
                 emailIntent.putExtra(Intent.EXTRA_TEXT, message);
+                emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
+
                 emailIntent.setType(MESSAGE_TYPE);
                 startActivity(emailIntent);
             } else {
-                Toast.makeText(getActivity(), "Please select a source", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getActivity(), "لطفا منبع مورد نظر خود را انتخاب کنید", Toast.LENGTH_SHORT).show();
             }
         }
 

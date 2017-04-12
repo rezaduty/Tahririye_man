@@ -96,8 +96,10 @@ public class FeedsPresenter implements IFeedsPresenter, OnFeedsLoadedListener {
                 Collections.sort(feedItems, new FeedCategoryComparator());
                 break;
             case "feed_pub_date":
-                Collections.sort(feedItems, new FeedPubDateComparator());
+                Collections.sort(feedItems, new FeedCategoryComparator());
                 break;
+            default:
+                Collections.sort(feedItems, new FeedPubDateComparator());
         }
         mIFeedsView.feedsLoaded(feedItems);
         if (loadedNewFeeds && SettingsPreferences.FEED_CACHE) {

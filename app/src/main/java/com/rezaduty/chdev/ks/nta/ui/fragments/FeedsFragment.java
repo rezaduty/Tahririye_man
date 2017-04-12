@@ -159,6 +159,8 @@ public class FeedsFragment extends Fragment implements IFeedsView, SwipeRefreshL
     public void loadingFailed(String message) {
         swipeRefreshLayout.setRefreshing(false);
         Toast.makeText(getActivity(), "خطا در بارگذاری\nError: " + message, Toast.LENGTH_SHORT).show();
+        mFeedsPresenter.attemptFeedLoadingFromDb();
+
     }
 
     @Override

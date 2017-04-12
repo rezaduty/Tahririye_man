@@ -29,7 +29,6 @@ public class NetworkConnectionUtil {
         MaterialDialog noNetworkAvailDialog = new MaterialDialog.Builder(context)
                 .title(R.string.no_internet_available)
                 .content(R.string.no_internet_available_extnd)
-                .iconRes(R.drawable.ic_error_24dp)
                 .positiveText(R.string.settings)
                 .negativeText(R.string.dismiss)
                 .onPositive(new MaterialDialog.SingleButtonCallback() {

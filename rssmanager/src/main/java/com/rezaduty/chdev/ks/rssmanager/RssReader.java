@@ -2,6 +2,7 @@ package com.rezaduty.chdev.ks.rssmanager;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.util.Log;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
@@ -109,12 +110,23 @@ public class RssReader implements OnFeedLoadListener {
     }
 
     private RssItem getRssItem(Element element) {
-        String title = element.select("title").first().text();
-        String description = element.select("description").first().text();
-        String link = element.select("link").first().text();
-        String sourceName = mSourceList[mPosition];
-        String sourceUrl = getWebsiteName(mUrlList[mPosition]);
+        String title,description,link,sourceName,sourceUrl;
+        title="";
+        description="";
+        link="";
+        sourceName="";
+        sourceUrl="";
+        try {
+             title = element.select("title").first().text();
+             description = element.select("description").first().text();
+             link = element.select("link").first().text();
+             sourceName = mSourceList[mPosition];
+             sourceUrl = getWebsiteName(mUrlList[mPosition]);
 
+
+        }catch (Exception e){
+            Log.e("Exception", "Try Again: " + e.toString());
+        }
         String imageUrl;
         if (!element.select("media|thumbnail").isEmpty()) {
             imageUrl = element.select("media|thumbnail").attr("url");

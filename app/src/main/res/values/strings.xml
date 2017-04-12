@@ -192,7 +192,7 @@
 
     <string name="perf_feeds">منابع</string>
     <string name="perf_feeds_font_size">اندازه کلمات منابع</string>
-    <string name="perf_feeds_font_size_desc">مدیریت اندازی کلمات منابع</string>
+    <string name="perf_feeds_font_size_desc">مدیریت اندازه ی کلمات منابع</string>
     <string name="perf_feeds_font_size_key">perf_feeds_font_size</string>
 
     <string-array name="perf_feeds_font_size_entries">
@@ -253,7 +253,7 @@
     <string-array name="perf_curated_feeds_import_empty" />
 
     <string name="perf_curated_feeds_submit">ثبت منبع</string>
-    <string name="perf_curated_feeds_submit_desc">با موافق شما منبع جدید از اینترنت دریافت خواهد شد</string>
+    <string name="perf_curated_feeds_submit_desc">با موافقت شما منبع جدید از اینترنت دریافت خواهد شد</string>
     <string name="perf_curated_feeds_submit_key">perf_curated_feeds_submit_key</string>
 
     <string-array name="perf_curated_feeds_submit_empty" />
@@ -275,11 +275,11 @@
 
     <string name="perf_in_app_browser">فعال سازی مرورگر داخل برنامه</string>
     <string name="perf_in_app_browser_desc_enabled">با فعال سازی از مرورگر استاندارد برنامه استفاده خواهد شد</string>
-    <string name="perf_in_app_browser_desc_disabled">با غیر فعال سازی ار مرورگر گوشی شما استفاده خواهد شد (نیاز به chrome +45)</string>
+    <string name="perf_in_app_browser_desc_disabled">با غیر فعال سازی از مرورگر گوشی شما استفاده خواهد شد (نیاز به chrome +45)</string>
     <string name="perf_in_app_browser_key">perf_in_app_browser_key</string>
 
-    <string name="perf_import_opml">فراخوانی فایل های ompl</string>
-    <string name="perf_import_opml_desc">فراخوانی فایل های شخصی شده ompl</string>
+    <string name="perf_import_opml">فراخوانی فایل های opml</string>
+    <string name="perf_import_opml_desc">فراخوانی فایل های شخصی شده opml</string>
     <string name="perf_import_opml_key">perf_import_opml_files</string>
     <string name="perf_import_opml_default_value">Light</string>
 
@@ -332,7 +332,7 @@
 
     <string name="title_activity_about">درباره برنامه</string>
     <string name="created_by">Development by rezaduty</string>
-    <string name="contact_dev">Contact the developer\nCotact the Developer</string>
+    <string name="contact_dev">Contact the Developer</string>
 
     <string-array name="contacts">
         <item>پست الکترونیک</item>

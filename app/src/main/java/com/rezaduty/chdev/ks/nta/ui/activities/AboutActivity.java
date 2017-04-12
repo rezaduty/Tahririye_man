@@ -29,7 +29,7 @@ import butterknife.OnClick;
 
 public class AboutActivity extends AppCompatActivity {
 
-    private static String EMAIL_SUBJECT = "Munch Feedback";
+    private static String EMAIL_SUBJECT = "nTA Feedback";
     private static String MESSAGE_TYPE = "message/rfc822";
     @Bind(R.id.toolbar)
     Toolbar toolbar;
