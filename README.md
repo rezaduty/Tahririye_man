@@ -5,17 +5,14 @@ A minimalistic, easy to use Rss reader application.
   <img alt="Get it on Google Play"
        src="http://www.androiddocs.com/images/brand/en_app_rgb_wo_45.png" />
 </a>
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Munch-brightgreen.svg?style=flat)](http://android-arsenal.com/details/3/2955)
-
-[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)]()
+[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Munch-brightgreen.svg?style=flat)]
+(http://android-arsenal.com/details/3/2955)
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
-[![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg)]()
 
-[![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg)]()
 
-#What is Munch ?
+#What is nTA ?
 Munch is an android app which enable the users to manage their Rss feeds. User can add new sources, manage them and view the article associated with the feeds.
 
 #Permissions:
@@ -34,7 +31,7 @@ These permissions are used to grab the data from the web and to know if user’s
 * Ad free
 * export opml and import opml
 
-#How does Munch work ?
+#How does nTA work ?
 Munch uses jsoup xml parser to parse rss feeds and also load the web articles associated with those feeds. It also uses glide to lazy load article images(if available).
 
 #Screenshots
