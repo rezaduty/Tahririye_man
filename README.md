@@ -7,6 +7,14 @@ A minimalistic, easy to use Rss reader application.
 </a>
 [![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Munch-brightgreen.svg?style=flat)](http://android-arsenal.com/details/3/2955)
 
+[![Github All Releases](https://img.shields.io/github/downloads/atom/atom/total.svg)]()
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+
+[![GitHub contributors](https://img.shields.io/github/contributors/cdnjs/cdnjs.svg)]()
+
+[![GitHub issues](https://img.shields.io/github/issues/badges/shields.svg)]()
+
 #What is Munch ?
 Munch is an android app which enable the users to manage their Rss feeds. User can add new sources, manage them and view the article associated with the feeds.
 
@@ -14,7 +22,7 @@ Munch is an android app which enable the users to manage their Rss feeds. User c
 * Internet
 * Access Network State
 * Read External Storage
-
+* Write External Storage
 These permissions are used to grab the data from the web and to know if user’s internet is available or not so that he can be notified regarding that matter. The Read External Storage permissions is used to retrieve the opml files from either SD card or internal storage. Also, this app will never snoop on your personal information.
 
 #Application features:
@@ -24,6 +32,7 @@ These permissions are used to grab the data from the web and to know if user’s
 * Archive feeds
 * Customizable settings
 * Ad free
+* export opml and import opml
 
 #How does Munch work ?
 Munch uses jsoup xml parser to parse rss feeds and also load the web articles associated with those feeds. It also uses glide to lazy load article images(if available).
