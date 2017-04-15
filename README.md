@@ -14,7 +14,7 @@ Click ``Build Passing``
 
 
 
-* [Metadefender Scanner](https://www.metadefender.com/#!/results/file/YTE3MDQxNUJrR2dhdDF4MGVIazdlYXR5bDB4/regular/analysis)
+:white_check_mark: [Metadefender Scanner](https://www.metadefender.com/#!/results/file/YTE3MDQxNUJrR2dhdDF4MGVIazdlYXR5bDB4/regular/analysis)
 <a href="https://play.google.com/store/apps/details?id=rezaduty.chdev.ks.nta">
   <img alt="Get it on Google Play"
        src="http://www.androiddocs.com/images/brand/en_app_rgb_wo_45.png" />
