@@ -2,17 +2,16 @@
 A minimalistic, easy to use Rss reader application.
 
 # Download Apk
-[![Price](https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg?style=plastic)]() Free Application
-
-:white_check_mark: Android >=4.1
+[![Price](https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg?style=plastic)]()
 [![Requirement](https://img.shields.io/badge/android-%3E%3D4.1-orange.svg)]()
-
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://www.dropbox.com/s/xsza3ex4pif49dm/nta-v0-1.apk?dl=0)
+***
 For download apk without android store please goto ``app/`` folder and Download ``nta-v*-*.apk``
 
 OR 
 
 Click ``Build Passing``
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg?style=plastic)]()
+
 
 
 * [Metadefender Scanner](https://www.metadefender.com/#!/results/file/YTE3MDQxNUJrR2dhdDF4MGVIazdlYXR5bDB4/regular/analysis)
