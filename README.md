@@ -1,7 +1,22 @@
 # nTA
 A minimalistic, easy to use Rss reader application.
 
-<a href="https://play.google.com/store/apps/details?id=rezaduty.chdev.ks.munch">
+# Download Apk
+[![Price](https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg?style=plastic)]() Free Application
+
+:white_check_mark: Android >=4.1
+[![Requirement](https://img.shields.io/badge/android-%3E%3D4.1-orange.svg)]()
+
+For download apk without android store please goto ``app/`` folder and Download ``nta-v*-*.apk``
+
+OR 
+
+Click ``Build Passing``
+[![Travis](https://img.shields.io/travis/rust-lang/rust.svg?style=plastic)]()
+
+
+* [Metadefender Scanner](https://www.metadefender.com/#!/results/file/YTE3MDQxNUJrR2dhdDF4MGVIazdlYXR5bDB4/regular/analysis)
+<a href="https://play.google.com/store/apps/details?id=rezaduty.chdev.ks.nta">
   <img alt="Get it on Google Play"
        src="http://www.androiddocs.com/images/brand/en_app_rgb_wo_45.png" />
 </a>
@@ -41,3 +56,11 @@ nTA uses jsoup xml parser to parse rss feeds and also load the web articles asso
 ![](https://lh3.googleusercontent.com/VaKLswqGi7QL7cAOE99ZIdIpsgGJFm8140AUUV5__8jrregugPM1-2nGPx4onUow2V_D=h900-rw)
 ![](https://lh3.googleusercontent.com/iMNYSHzW7q06dsfhs52XNHJOBVwt3YV5FV1WrRTK_VacHW_gHscDIBAMHnBogNkTWXvW=h900-rw)
 ![](https://lh3.googleusercontent.com/tkqDfYKtVhkKO4FgP3-nml3ctfprs2mqlHk0_AZCeYAmyxezOXKyYUBeGioyuWBcIGU=h900-rw)
+
+# My Resource not working (منابع من کار نمیکند)
+
+:large_blue_circle: file format should be this template *.opml
+
+# For example working
+
+:recycle: this step
