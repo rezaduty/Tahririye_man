@@ -1,24 +1,24 @@
 # nTA
 A minimalistic, easy to use Rss reader application.
 
+## Program Scan Result
+
+:white_check_mark: [Metadefender Scanner](https://www.metadefender.com/#!/results/file/YTE3MDQxNUJrR2dhdDF4MGVIazdlYXR5bDB4/regular/analysis)
+
 # Download Apk
 [![Price](https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg?style=plastic)]()
 [![TeamCity CodeBetter](https://img.shields.io/badge/size-3.67%20MB-brightgreen.svg)]()
 [![Travis branch](https://img.shields.io/badge/platform-android-brightgreen.svg)]()
 [![Requirement](https://img.shields.io/badge/android-%3E%3D4.1-orange.svg)]()
-[![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://www.dropbox.com/s/xsza3ex4pif49dm/nta-v0-1.apk?dl=0)
+[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/xsza3ex4pif49dm/nta-v0-1.apk?dl=0)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 ***
 For download apk without android store please goto ``app/`` folder and Download ``nta-v*-*.apk``
 
 OR 
 
-Click [![Travis](https://img.shields.io/travis/rust-lang/rust.svg)](https://www.dropbox.com/s/xsza3ex4pif49dm/nta-v0-1.apk?dl=0)
+Click [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/xsza3ex4pif49dm/nta-v0-1.apk?dl=0)
 
-
-## Program Scan Result
-
-:white_check_mark: [Metadefender Scanner](https://www.metadefender.com/#!/results/file/YTE3MDQxNUJrR2dhdDF4MGVIazdlYXR5bDB4/regular/analysis)
 <br>
 
 <a href="https://play.google.com/store/apps/details?id=rezaduty.chdev.ks.nta">
