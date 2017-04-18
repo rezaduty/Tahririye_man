@@ -19,13 +19,6 @@ OR
 
 Click [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/xsza3ex4pif49dm/nta-v0-1.apk?dl=0)
 
-<br>
-
-<a href="https://play.google.com/store/apps/details?id=rezaduty.chdev.ks.nta">
-  <img alt="Get it on Google Play"
-       src="http://www.androiddocs.com/images/brand/en_app_rgb_wo_45.png" />
-</a>
-
 # What is nTA ?
 nTA is an android app which enable the users to manage their Rss feeds. User can add new sources, manage them and view the article associated with the feeds.
 
