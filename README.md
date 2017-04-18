@@ -64,8 +64,9 @@ nTA uses jsoup xml parser to parse rss feeds and also load the web articles asso
 
 # My Resource not working (منابع من کار نمیکند)
 
+:large_blue_circle: توجه داشته باشید حتما فایل با پسوند opml باشد<br>
 :large_blue_circle: file format should be this template *.opml
-:large_blue_circle: توجه داشته باشید حتما فایل با پسوند opml باشد
+
 
 # For example working
 
