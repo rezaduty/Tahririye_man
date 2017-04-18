@@ -7,7 +7,7 @@ A minimalistic, easy to use Rss reader application.
 
 # Download Apk
 [![Price](https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg?style=plastic)]()
-[![TeamCity CodeBetter](https://img.shields.io/badge/size-3.67%20MB-brightgreen.svg)]()
+[![TeamCity CodeBetter](https://img.shields.io/badge/size-3.9%20MB-brightgreen.svg)]()
 [![Travis branch](https://img.shields.io/badge/platform-android-brightgreen.svg)]()
 [![Requirement](https://img.shields.io/badge/android-%3E%3D4.1-orange.svg)]()
 [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/xsza3ex4pif49dm/nta-v0-1.apk?dl=0)
