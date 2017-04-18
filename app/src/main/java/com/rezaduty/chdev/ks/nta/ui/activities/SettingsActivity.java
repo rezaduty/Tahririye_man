@@ -2,6 +2,8 @@ package com.rezaduty.chdev.ks.nta.ui.activities;
 
 
 import android.Manifest;
+import android.content.Context;
+import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.net.Uri;
@@ -15,6 +17,7 @@ import android.preference.PreferenceActivity;
 import android.preference.PreferenceFragment;
 import android.support.v4.app.ActivityCompat;
 import android.support.v4.content.ContextCompat;
+import android.support.v7.app.AlertDialog;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
 import android.util.Log;
@@ -69,7 +72,7 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
     private static MaterialProgressBar mMaterialProgressBar;
     @Bind(R.id.toolbar)
     Toolbar toolbar;
-
+    private static int flag;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -217,6 +220,7 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
             }
 
             if (preference.getKey().equals(getActivity().getResources().getString(R.string.perf_import_opml_key))) {
+
                 String selection = (String) updatedObject;
                 if (selection.equals("From url")) {
                     mImportOpmlPresenter.attemptFeedsRetrievalFromOpml(true);
@@ -306,7 +310,7 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
                 File file = new File(filepath);
                 try {
 
-                    File gpxfile = new File(file, "main.opml");
+                    File gpxfile = new File(file, "this.opml");
                     FileWriter writer = new FileWriter(gpxfile);
                     writer.append(message);
                     writer.flush();
@@ -316,10 +320,11 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
                 }
 
                 // read file and path
-                file = new File(filepath + "/main.opml");
+                file = new File(filepath + "/this.opml");
 
                 String[] emailId = {getResources().getString(R.string.dev_mail)};
-                Intent emailIntent = new Intent(Intent.ACTION_SEND);
+                final Intent emailIntent = new Intent(Intent.ACTION_SEND);
+
                 emailIntent.setData(Uri.parse("mailto:"));
                 emailIntent.putExtra(Intent.EXTRA_EMAIL, emailId);
                 emailIntent.putExtra(Intent.EXTRA_SUBJECT, EMAIL_SUBJECT);
@@ -327,10 +332,40 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
                 emailIntent.putExtra(Intent.EXTRA_STREAM, Uri.fromFile(file));
 
                 emailIntent.setType(MESSAGE_TYPE);
-                startActivity(emailIntent);
+
+
+
+                DialogInterface.OnClickListener dialogClickListener = new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        switch (which){
+                            case DialogInterface.BUTTON_POSITIVE:
+                                //Local save button clicked
+                                Toast.makeText(getActivity(), "فایلی حاوی منابع شما در حافظه دستگاه با نام this.opml ذخیره شد",
+                                        Toast.LENGTH_LONG).show();
+
+                                break;
+
+                            case DialogInterface.BUTTON_NEGATIVE:
+                                //Share button clicked
+                                startActivity(emailIntent);
+                                break;
+                        }
+                    }
+                };
+
+                AlertDialog.Builder builder = new AlertDialog.Builder(this.getActivity());
+                builder.setMessage("با کدام روش انتقال میدهید").setPositiveButton("ذخیره سازی در دستگاه", dialogClickListener)
+                        .setNegativeButton("اشتراک گذاری فایل با دیگران", dialogClickListener).show();
+
+
+
+
+
             } else {
                 Toast.makeText(getActivity(), "لطفا منبع مورد نظر خود را انتخاب کنید", Toast.LENGTH_SHORT).show();
             }
+
         }
 
         @Override
