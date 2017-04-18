@@ -25,12 +25,6 @@ Click [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)
   <img alt="Get it on Google Play"
        src="http://www.androiddocs.com/images/brand/en_app_rgb_wo_45.png" />
 </a>
-[![Android Arsenal](https://img.shields.io/badge/Android%20Arsenal-Munch-brightgreen.svg?style=flat)]
-(http://android-arsenal.com/details/3/2955)
-
-
-
-
 
 # What is nTA ?
 nTA is an android app which enable the users to manage their Rss feeds. User can add new sources, manage them and view the article associated with the feeds.
@@ -64,7 +58,7 @@ nTA uses jsoup xml parser to parse rss feeds and also load the web articles asso
 
 # My Resource not working (منابع من کار نمیکند)
 
-:large_blue_circle: توجه داشته باشید حتما فایل با پسوند opml باشد<br>
+:large_blue_circle: باشد opml توجه داشته باشید فایل به پسوند <br>
 :large_blue_circle: file format should be this template *.opml
 
 
