@@ -3,7 +3,7 @@ A minimalistic, easy to use Rss reader application.
 
 ## Program Scan Result
 
-:white_check_mark: [Metadefender Scanner](https://www.metadefender.com/#!/results/file/YTE3MDQxOFNrYW1tU3E3MGxTSkM3N3I5UUNn/regular/analysis)
+[![Metadefender Scanner](https://www.dropbox.com/s/37xx4ave7umzu3k/metadefender.png?dl=1)](https://www.metadefender.com/#!/results/file/YTE3MDQxOFNrYW1tU3E3MGxTSkM3N3I5UUNn/regular/analysis)
 
 # Download Apk
 [![Price](https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg?style=plastic)]()
