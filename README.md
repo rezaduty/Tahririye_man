@@ -1,6 +1,8 @@
 # nTA
 A minimalistic, easy to use Rss reader application.
 
+[![Alt text for your video](https://img.youtube.com/vi/T-D1KVIuvjA/0.jpg)](http://www.youtube.com/watch?v=T-D1KVIuvjA)
+
 ## Program Scan Result
 
 [![Metadefender Scanner](https://www.dropbox.com/s/37xx4ave7umzu3k/metadefender.png?dl=1)](https://www.metadefender.com/#!/results/file/YTE3MDQxOFNrYW1tU3E3MGxTSkM3N3I5UUNn/regular/analysis)
