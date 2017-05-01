@@ -1,6 +1,9 @@
 # nTA
 A minimalistic, easy to use Rss reader application.
 
+simple website
+
+https://rezaduty.github.io/ntaw/
 
 ## Program Scan Result
 
