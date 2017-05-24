@@ -81,6 +81,7 @@ public class FeedsFragment extends Fragment implements IFeedsView, SwipeRefreshL
     public void onActivityCreated(@Nullable Bundle savedInstanceState) {
         super.onActivityCreated(savedInstanceState);
 
+        // Logical Error
         if (mFeedsPresenter == null) {
             mFeedsPresenter = new FeedsPresenter(this, getActivity());
         }

@@ -71,9 +71,10 @@
             <TextView
                 android:id="@+id/text_view_content"
                 android:layout_width="match_parent"
+                android:drawablePadding="10dip"
                 android:layout_height="match_parent"
                 android:text="@string/no_content_available"
-                android:textIsSelectable="true"
+                
                 android:textSize="@dimen/text_size_avg" />
 
         </LinearLayout>

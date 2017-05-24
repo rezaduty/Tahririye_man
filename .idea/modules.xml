@@ -4,7 +4,7 @@
     <modules>
       <module fileurl="file://$PROJECT_DIR$/app/app.iml" filepath="$PROJECT_DIR$/app/app.iml" />
       <module fileurl="file://$PROJECT_DIR$/mindb/mindb.iml" filepath="$PROJECT_DIR$/mindb/mindb.iml" />
-      <module fileurl="file://$PROJECT_DIR$/nTA.iml" filepath="$PROJECT_DIR$/nTA.iml" />
+      <module fileurl="file://$PROJECT_DIR$/nTA .iml" filepath="$PROJECT_DIR$/nTA .iml" />
       <module fileurl="file://$PROJECT_DIR$/rssmanager/rssmanager.iml" filepath="$PROJECT_DIR$/rssmanager/rssmanager.iml" />
     </modules>
   </component>

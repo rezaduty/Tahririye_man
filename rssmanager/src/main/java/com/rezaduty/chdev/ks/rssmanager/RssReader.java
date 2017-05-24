@@ -7,6 +7,8 @@ import android.util.Log;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.MaterialDialog;
 
+import org.jsoup.Jsoup;
+import org.jsoup.nodes.Document;
 import org.jsoup.nodes.Element;
 import org.jsoup.select.Elements;
 
@@ -135,7 +137,18 @@ public class RssReader implements OnFeedLoadListener {
         } else if (!element.select("image").isEmpty()) {
             imageUrl = element.select("image").attr("url");
         } else {
-            imageUrl = null;
+            imageUrl="";
+            Document document =Jsoup.parse(element.select("description").text());
+            Elements imgs = document.select("img");
+            for (Element img : imgs) {
+                if (img.hasAttr("src")) {
+                    imageUrl = img.attr("src");
+                }
+                else {
+                    imageUrl = null;
+                }
+            }
+
         }
 
         String category = null;

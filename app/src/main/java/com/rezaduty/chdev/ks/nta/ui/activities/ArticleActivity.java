@@ -7,6 +7,9 @@ import android.support.design.widget.FloatingActionButton;
 import android.support.v4.content.ContextCompat;
 import android.support.v7.app.AppCompatActivity;
 import android.support.v7.widget.Toolbar;
+import android.text.Html;
+import android.text.Spanned;
+import android.text.method.LinkMovementMethod;
 import android.util.TypedValue;
 import android.view.Menu;
 import android.view.MenuItem;
@@ -230,7 +233,12 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
     @Override
     public void onArticleLoaded(String article) {
         //set content of the rss feed item url
-        txtContent.setText(article);
+        URLImageParser p = new URLImageParser(txtContent, this);
+        // p is class for download img stc in context
+        Spanned htmlSpan = Html.fromHtml(article, p, null);
+        txtContent.setText(htmlSpan);
+        // check link in context click
+        txtContent.setMovementMethod(LinkMovementMethod.getInstance());
     }
 
     @Override

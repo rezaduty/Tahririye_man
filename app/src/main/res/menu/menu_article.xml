@@ -6,11 +6,13 @@
         android:id="@+id/action_refresh"
         android:orderInCategory="1"
         android:title="@string/refresh"
+        android:icon="@android:drawable/stat_notify_sync"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_open_in_browser"
         android:orderInCategory="2"
         android:title="@string/action_open_in_browser"
+        android:icon="@android:drawable/arrow_up_float"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_share"

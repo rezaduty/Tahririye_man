@@ -135,9 +135,17 @@ public class ArticleInteractor implements IArticleInteractor {
         private String getArticleBody(Elements paragraphs) {
             String body = "";
             for (Element paragraph : paragraphs) {
-                String para = paragraph.text().trim();
+                String para = paragraph.toString().trim();
                 if (!para.isEmpty()) {
-                    body += para + "\n\n";
+
+                    // check img tag in string for margin of text
+                    if(para.contains("<img")) {
+                        body += "<br><br><br><br><br><br><br><br><br><br>" + para + "\n\n<br>";
+
+                    }
+                    else {
+                        body += para + "\n\n";
+                    }
                 }
             }
             if (body.length() != 0) {
