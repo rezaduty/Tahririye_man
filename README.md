@@ -3,24 +3,24 @@ A minimalistic, easy to use Rss reader application.
 
 ## Program Scan Result
 
-[![Metadefender Scanner](https://www.dropbox.com/s/37xx4ave7umzu3k/metadefender.png?dl=1)](https://www.metadefender.com/#!/results/file/YTE3MDQxOFNrYW1tU3E3MGxTSkM3N3I5UUNn/regular/analysis)
+[![Malware Scan Result](https://apkscan.nviso.be/report/show/6286286ec0cbe8c5d6e7c5743858b7a1)
 
 # Download Apk
 [![Price](https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg?style=plastic)]()
-[![TeamCity CodeBetter](https://img.shields.io/badge/size-3.9%20MB-brightgreen.svg)]()
+[![TeamCity CodeBetter](https://img.shields.io/badge/size-3.4%20MB-brightgreen.svg)]()
 [![Travis branch](https://img.shields.io/badge/platform-android-brightgreen.svg)]()
 [![Requirement](https://img.shields.io/badge/android-%3E%3D4.1-orange.svg)]()
 [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/xsza3ex4pif49dm/nta-v0-1.apk?dl=0)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 ***
-For download apk without android store please goto ``app/`` folder and Download ``nta-v*-*.apk``
+For download apk without android store please goto ``app/`` folder and Download ``t-v*-*.apk``
 
 OR 
 
-Click [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/mi5lh5kzuvrng9g/nta-v0-1.apk?dl=0)
+Click [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/tvcobmapiucb7qm/t-v1-0.apk?dl=0)
 
-# What is nTA ?
-nTA is an android app which enable the users to manage their Rss feeds. User can add new sources, manage them and view the article associated with the feeds.
+# What is Tahririrye_man ?
+Tahririrye_man is an android app which enable the users to manage their Rss feeds. User can add new sources, manage them and view the article associated with the feeds.
 
 # Permissions:
 * Internet
@@ -38,10 +38,10 @@ These permissions are used to grab the data from the web and to know if user’s
 * Ad free
 * export opml and import opml
 
-#How does nTA work ?
-nTA uses jsoup xml parser to parse rss feeds and also load the web articles associated with those feeds. It also uses glide to lazy load article images(if available).
+#How does Tahririye_man work ?
+Tahririye_man uses jsoup xml parser to parse rss feeds and also load the web articles associated with those feeds. It also uses glide to lazy load article images(if available).
 
-# Screenshots
+# Review
 ![](https://www.dropbox.com/s/pasf1cdf53spi63/main.png?dl=1)
 ![](https://www.dropbox.com/s/i4h3p1pu6wboqzn/add.png?dl=1)
 ![](https://www.dropbox.com/s/7fxan8xm423vrog/add_category.png?dl=1)
