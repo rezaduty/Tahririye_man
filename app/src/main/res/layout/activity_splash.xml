@@ -6,7 +6,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:fitsSystemWindows="true"
-    tools:context="com.rezaduty.chdev.ks.nta.ui.activities.SplashActivity">
+    tools:context="com.rezaduty.chdev.ks.tahririye_man.ui.activities.SplashActivity">
 
     <android.support.v4.view.ViewPager
         android:id="@+id/container"
@@ -17,6 +17,7 @@
         android:id="@+id/image_button_next"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:visibility="gone"
         android:layout_gravity="bottom|end"
         android:layout_margin="@dimen/margin_avg"
         android:background="@drawable/circle_button"

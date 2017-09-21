@@ -16,7 +16,7 @@
             android:layout_height="match_parent"
             android:scaleType="fitCenter"
             android:src="@drawable/imgres"
-            android:background="@color/colorPrimary" />
+            android:background="@color/white" />
 
         <View style="@style/Divider" />
 

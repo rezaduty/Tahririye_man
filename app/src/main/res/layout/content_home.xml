@@ -139,7 +139,6 @@
                             android:gravity="center_vertical" />
 
                     </LinearLayout>
-
                     <Button
                         android:id="@+id/button_save"
                         style="?android:attr/borderlessButtonStyle"

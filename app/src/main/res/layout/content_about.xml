@@ -7,7 +7,7 @@
     android:paddingLeft="@dimen/activity_horizontal_margin"
     android:paddingRight="@dimen/activity_horizontal_margin"
     app:layout_behavior="@string/appbar_scrolling_view_behavior"
-    tools:context="com.rezaduty.chdev.ks.nta.ui.activities.AboutActivity"
+    tools:context="com.rezaduty.chdev.ks.tahririye_man.ui.activities.AboutActivity"
     tools:showIn="@layout/activity_about">
 
     <LinearLayout
@@ -22,48 +22,59 @@
 
         <FrameLayout
             android:id="@+id/frame_layout_contact"
-            android:layout_width="match_parent"
+            android:layout_width="wrap_content"
             android:layout_height="200dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground">
 
-            <ImageView
-                android:id="@+id/image_button_nTA_about"
-                android:layout_width="match_parent"
-                android:layout_height="200dp"
-                android:scaleType="centerCrop"
-                android:src="@drawable/nta_about" />
+
 
             <RelativeLayout
-                android:layout_width="wrap_content"
-                android:layout_height="wrap_content"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
                 android:layout_alignParentBottom="true"
-                android:layout_margin="@dimen/margin_min">
+                android:layout_margin="@dimen/margin_min"
+                android:background="#e9e8e9">
 
                 <TextView
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentLeft="true"
-                    android:background="@color/md_grey_900"
                     android:padding="@dimen/padding_min"
                     android:text="@string/created_by"
-                    android:textColor="@color/md_grey_100"
-                    android:textSize="@dimen/text_size_min" />
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_min"
+                    android:id="@+id/textView"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:gravity="right"
+                    android:background="#e6e5e7" />
 
                 <TextView
                     android:id="@+id/text_view_app_version"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:background="@color/md_grey_900"
                     android:padding="@dimen/padding_min"
-                    android:textColor="@color/md_grey_100"
-                    android:textSize="@dimen/text_size_min" />
+                    android:layout_alignParentRight="true"
+                    android:textDirection="rtl"
+                    android:textColor="@color/colorPrimary"
+                    android:textSize="@dimen/text_size_min"
+                    android:layout_above="@+id/textView"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentStart="true"
+                    android:layout_marginBottom="19dp"
+                    android:background="#e9e9ea" />
 
             </RelativeLayout>
+            <ImageView
+                android:id="@+id/image_button_nTA_about"
+                android:scaleType="fitStart"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
 
+                android:src="@drawable/about" />
         </FrameLayout>
 
         <Space
@@ -71,7 +82,7 @@
             android:layout_height="@dimen/space_avg" />
 
         <TextView
-            android:layout_width="wrap_content"
+            android:layout_width="match_parent"
             android:layout_height="wrap_content"
             android:text="@string/libraries_used"
             android:textSize="@dimen/text_size_big" />

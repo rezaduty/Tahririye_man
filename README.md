@@ -1,4 +1,4 @@
-# nTA
+# Tahririye_man تحریریه من 
 A minimalistic, easy to use Rss reader application.
 
 ## Program Scan Result

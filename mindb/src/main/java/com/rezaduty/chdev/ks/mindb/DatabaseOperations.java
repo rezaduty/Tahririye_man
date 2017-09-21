@@ -12,7 +12,7 @@ import java.util.List;
  * Created by Kartik_ch on 8/29/2015.
  */
 public class DatabaseOperations {
-    //String title, url, body;
+    String title, url, body;
     private Context mContext;
     private String mDatabaseName;
 
@@ -56,63 +56,79 @@ public class DatabaseOperations {
 
     public void editDataInDB(String tableName, String[] columnNames, String[] values, String condition) throws Exception {
         DatabaseAdapter dbAdapter = new DatabaseAdapter(mContext, mDatabaseName);
-        dbAdapter.createDatabase();
-        dbAdapter.open();
+        try {
+            dbAdapter.createDatabase();
+            dbAdapter.open();
 
-        String updatedValues = "";
+            String updatedValues = "";
 
-        for (int i = 0; i < columnNames.length; i++) {
-            updatedValues += columnNames[i] + "='" + values[i].replace("'", "''") + "',";
+            for (int i = 0; i < columnNames.length; i++) {
+                updatedValues += columnNames[i] + "='" + values[i].replace("'", "''") + "',";
+            }
+
+            updatedValues = updatedValues.substring(0, updatedValues.length() - 1);
+            String query = "UPDATE " + tableName + " SET " + updatedValues + " " + condition;
+            dbAdapter.executeQuery(query);
+
+
+            Log.e("DATABASE EDIT", query);
+        }finally {
+            dbAdapter.close();
         }
 
-        updatedValues = updatedValues.substring(0, updatedValues.length() - 1);
-        String query = "UPDATE " + tableName + " SET " + updatedValues + " " + condition;
-        dbAdapter.executeQuery(query);
-        dbAdapter.close();
-
-        Log.e("DATABASE EDIT", query);
     }
 
     private void saveDataInDBAsync(String tableName, String[] columnNames, String[] values) throws Exception {
         DatabaseAdapter dbAdapter = new DatabaseAdapter(mContext, mDatabaseName);
-        dbAdapter.createDatabase();
-        dbAdapter.open();
-        String queryColumns = "";
-        String queryValues = "";
-        for (String value : columnNames) {
-            queryColumns += value + ",";
+        try {
+            dbAdapter.createDatabase();
+            dbAdapter.open();
+            String queryColumns = "";
+            String queryValues = "";
+            for (String value : columnNames) {
+                queryColumns += value + ",";
+            }
+            for (String value : values) {
+                // ' (single apostrophe) doesn't work with sqlite database in insertion, instead of it, use ''(double apostrophe).
+                //tldr : store ' as '' otherwise it won't work
+                queryValues += "'" + value.replace("'", "''") + "',";
+            }
+            queryColumns = queryColumns.substring(0, queryColumns.length() - 1);
+            queryValues = queryValues.substring(0, queryValues.length() - 1);
+            String query = "INSERT INTO " + tableName + " (" + queryColumns + ") " +
+                    "VALUES (" + queryValues + ")";
+            dbAdapter.executeQuery(query);
+
+            Log.e("DATABASE", "VALUES SAVED INTO DB");
+        }finally {
+            dbAdapter.close();
         }
-        for (String value : values) {
-            // ' (single apostrophe) doesn't work with sqlite database in insertion, instead of it, use ''(double apostrophe).
-            //tldr : store ' as '' otherwise it won't work
-            queryValues += "'" + value.replace("'", "''") + "',";
-        }
-        queryColumns = queryColumns.substring(0, queryColumns.length() - 1);
-        queryValues = queryValues.substring(0, queryValues.length() - 1);
-        String query = "INSERT INTO " + tableName + " (" + queryColumns + ") " +
-                "VALUES (" + queryValues + ")";
-        dbAdapter.executeQuery(query);
-        dbAdapter.close();
-        Log.e("DATABASE", "VALUES SAVED INTO DB");
+
     }
 
     private List<String> retrieveFromDBAsync(String tableName, String columnName) throws Exception {
         List<String> values = new ArrayList<>();
         DatabaseAdapter dbAdapter = new DatabaseAdapter(mContext, mDatabaseName);
-        dbAdapter.createDatabase();
-        dbAdapter.open();
-        String query = "SELECT " + columnName + " FROM " + tableName;
-        Cursor cursor = dbAdapter.selectQuery(query);
-        if (cursor != null && cursor.getCount() != 0) {
-            if (cursor.moveToFirst()) {
-                do {
-                    values.add(cursor.getString(cursor.getColumnIndex(columnName)));
-                } while (cursor.moveToNext());
+        try {
+            dbAdapter.createDatabase();
+            dbAdapter.open();
+            String query = "SELECT " + columnName + " FROM " + tableName;
+            Cursor cursor = dbAdapter.selectQuery(query);
+            if (cursor != null && cursor.getCount() != 0) {
+                if (cursor.moveToFirst()) {
+                    do {
+                        values.add(cursor.getString(cursor.getColumnIndex(columnName)));
+                    } while (cursor.moveToNext());
+                }
             }
+
+            Log.e("DATABASE", "VALUES RETRIEVED FROM DB");
+            return values;
+        }finally {
+            dbAdapter.close();
         }
-        dbAdapter.close();
-        Log.e("DATABASE", "VALUES RETRIEVED FROM DB");
-        return values;
+
+
     }
 
     private Cursor retrieveFromDBAsync(String tableName, String[] columnNames) throws Exception {
@@ -134,20 +150,25 @@ public class DatabaseOperations {
     private List<String> retrieveFromDBConditionAsync(String tableName, String columnName, String condition) throws Exception {
         List<String> values = new ArrayList<>();
         DatabaseAdapter dbAdapter = new DatabaseAdapter(mContext, mDatabaseName);
-        dbAdapter.createDatabase();
-        dbAdapter.open();
-        String query = "SELECT " + columnName + " FROM " + tableName + " " + condition;
-        Cursor cursor = dbAdapter.selectQuery(query);
-        if (cursor != null && cursor.getCount() != 0) {
-            if (cursor.moveToFirst()) {
-                do {
-                    values.add(cursor.getString(cursor.getColumnIndex(columnName)));
-                } while (cursor.moveToNext());
+        try {
+            dbAdapter.createDatabase();
+            dbAdapter.open();
+            String query = "SELECT " + columnName + " FROM " + tableName + " " + condition;
+            Cursor cursor = dbAdapter.selectQuery(query);
+            if (cursor != null && cursor.getCount() != 0) {
+                if (cursor.moveToFirst()) {
+                    do {
+                        values.add(cursor.getString(cursor.getColumnIndex(columnName)));
+                    } while (cursor.moveToNext());
+                }
             }
+
+            Log.e("DATABASE", "VALUES RETRIEVED FROM DB");
+            return values;
+        }finally {
+            dbAdapter.close();
         }
-        dbAdapter.close();
-        Log.e("DATABASE", "VALUES RETRIEVED FROM DB");
-        return values;
+
     }
 
     private Cursor retrieveFromDBConditionAsync(String tableName, String[] columnNames, String condition) throws Exception {
@@ -199,12 +220,17 @@ public class DatabaseOperations {
 
     private void deleteAllFromDBAsync(String tableName) throws Exception {
         DatabaseAdapter dbAdapter = new DatabaseAdapter(mContext, mDatabaseName);
-        dbAdapter.createDatabase();
-        dbAdapter.open();
-        String query = "DELETE FROM " + tableName + "";
-        dbAdapter.executeQuery(query);
-        dbAdapter.close();
-        Log.e("DATABASE", "ALL VALUES DELETED FROM DB");
+        try {
+            dbAdapter.createDatabase();
+            dbAdapter.open();
+            String query = "DELETE FROM " + tableName + "";
+            dbAdapter.executeQuery(query);
+
+            Log.e("DATABASE", "ALL VALUES DELETED FROM DB");
+        }finally {
+            dbAdapter.close();
+        }
+
     }
 
     public class DbOperationsAsync extends AsyncTask<String, Integer, String> {

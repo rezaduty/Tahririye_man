@@ -1,11 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
-    package="com.rezaduty.chdev.ks.nta">
+    package="com.rezaduty.chdev.ks.tahririye_man">
 
     <uses-sdk tools:overrideLibrary="android.support.customtabs" />
 
     <uses-permission android:name="android.permission.INTERNET" />
+
     <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE" />
     <uses-permission android:name="android.permission.WRITE_EXTERNAL_STORAGE"/>
@@ -17,7 +18,7 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
         <activity
-            android:name="com.rezaduty.chdev.ks.nta.ui.activities.SplashActivity"
+            android:name="com.rezaduty.chdev.ks.tahririye_man.ui.activities.SplashActivity"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
@@ -27,43 +28,43 @@
             </intent-filter>
         </activity>
         <activity
-            android:name="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity"
+            android:name="com.rezaduty.chdev.ks.tahririye_man.ui.activities.HomeActivity"
             android:configChanges="orientation|screenSize"
             android:label="@string/app_name"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity
-            android:name="com.rezaduty.chdev.ks.nta.ui.activities.ArticleActivity"
+            android:name="com.rezaduty.chdev.ks.tahririye_man.ui.activities.ArticleActivity"
             android:label="@string/title_activity_article"
-            android:parentActivityName="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity"
+            android:parentActivityName="com.rezaduty.chdev.ks.tahririye_man.ui.activities.HomeActivity"
             android:theme="@style/AppThemeCustom.NoActionBar">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity" />
+                android:value="com.rezaduty.chdev.ks.tahririye_man.ui.activities.HomeActivity" />
         </activity>
         <activity
-            android:name="com.rezaduty.chdev.ks.nta.ui.activities.SettingsActivity"
+            android:name="com.rezaduty.chdev.ks.tahririye_man.ui.activities.SettingsActivity"
             android:label="@string/title_activity_settings"
-            android:parentActivityName="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity">
+            android:parentActivityName="com.rezaduty.chdev.ks.tahririye_man.ui.activities.HomeActivity">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity" />
+                android:value="com.rezaduty.chdev.ks.tahririye_man.ui.activities.HomeActivity" />
         </activity>
         <activity
-            android:name="com.rezaduty.chdev.ks.nta.ui.activities.AboutActivity"
+            android:name="com.rezaduty.chdev.ks.tahririye_man.ui.activities.AboutActivity"
             android:label="@string/title_activity_about"
-            android:parentActivityName="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity"
+            android:parentActivityName="com.rezaduty.chdev.ks.tahririye_man.ui.activities.HomeActivity"
             android:theme="@style/AppTheme">
             <meta-data
                 android:name="android.support.PARENT_ACTIVITY"
-                android:value="com.rezaduty.chdev.ks.nta.ui.activities.HomeActivity" />
+                android:value="com.rezaduty.chdev.ks.tahririye_man.ui.activities.HomeActivity" />
         </activity>
 
         <service
-            android:name="com.rezaduty.chdev.ks.nta.services.SyncArticlesIntentService"
+            android:name="com.rezaduty.chdev.ks.tahririye_man.services.SyncArticlesIntentService"
             android:exported="false" />
 
         <receiver
-            android:name="com.rezaduty.chdev.ks.nta.receivers.SyncArticlesReceiver"
+            android:name="com.rezaduty.chdev.ks.tahririye_man.receivers.SyncArticlesReceiver"
             android:enabled="true"
             android:exported="true"></receiver>
     </application>

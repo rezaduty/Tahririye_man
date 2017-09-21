@@ -1,7 +1,7 @@
 <resources>
-    <string name="title_activity_scrolling">nTA</string>
-    <string name="title_activity_post_view">nTA</string>
-    <string name="app_name">nTA</string>
+    <string name="title_activity_scrolling">تحریریه من</string>
+    <string name="title_activity_post_view">تحریریه من</string>
+    <string name="app_name">تحریریه من</string>
     <string name="action_settings">تنظیمات</string>
     <string name="loading_feeds">در حال دریافت اطلاعات</string>
     <string name="cancel"> بستن</string>
@@ -11,7 +11,7 @@
     <string name="feed_url">آدرس منبع</string>
     <string name="save">ذخیره</string>
     <string name="add_feed_title">صفحه اصلی</string>
-    <string name="add_feed">اضافه کردن دیگر منابع</string>
+    <string name="add_feed">اضافه کردن منبع جدید</string>
 
     <!--font-->
     <string name="roboto_light">sans-serif-light</string>
@@ -29,11 +29,13 @@
     <string name="navigation_drawer_close">Close navigation drawer</string>
 
     <string-array name="category_names">
+        <item>خبری</item>
         <item>شخصیت ها</item>
         <!--<item>تکنولوژی </item>
         <item>برنامه نویسی</item>-->
         <item>آموزشی</item>
-        <item>رویداد ها</item>
+        <item>بازی</item>
+
         <item>تکنولوژی</item>
         <item>یونیکس</item>
         <item>سخت افزار</item>
@@ -82,15 +84,15 @@
         <item>@drawable/ic_action_share</item>
     </array>
     <string-array name="category_drawables">
-        <item>@drawable/assignment_ind_black_24x24 </item>
-        <!--<item>@drawable/touch_app_black_24x24 </item>
-        <item>@drawable/code_black_24x24 </item>-->
-        <item>@drawable/battery_charging_60_black_24x24 </item>
-        <item>@drawable/language_black_24x24 </item>
+        <item>@drawable/icons8_news_24 </item>
+        <item>@drawable/icons8_person24</item>
+        <item>@drawable/icons8_elearning_24 </item>
+        <item>@drawable/icons8_gamecontroller_24 </item>
         <item>@drawable/fiber_new_black_24x24 </item>
-        <item>@drawable/copyright_black_24x24 </item>
-        <item>@drawable/perm_data_setting_black_24x24 </item>
-        <item>@drawable/now_widgets_black_24x24 </item>
+        <item>@drawable/icons8_unix_24 </item>
+        <item>@drawable/icons8_processor_24 </item>
+        <item>@drawable/icons8_questionmark_24 </item>
+
 
         <!-- <item>@drawable/ic_automobile_24dp</item>
          <item>@drawable/ic_business_24dp</item>
@@ -253,7 +255,7 @@
     <string-array name="perf_curated_feeds_import_empty" />
 
     <string name="perf_curated_feeds_submit">ثبت منبع</string>
-    <string name="perf_curated_feeds_submit_desc">با موافقت شما منبع جدید از اینترنت دریافت خواهد شد</string>
+    <string name="perf_curated_feeds_submit_desc">ذخیره یا به اشتراک گذاری منابع با دیگران</string>
     <string name="perf_curated_feeds_submit_key">perf_curated_feeds_submit_key</string>
 
     <string-array name="perf_curated_feeds_submit_empty" />
@@ -264,8 +266,8 @@
     <string name="perf_theme_default_value">Light</string>
 
     <string-array name="perf_theme_entries">
-        <item>روشن</item>
-        <item>تیره</item>
+        <item>حالت روز</item>
+        <item>حالت شب</item>
     </string-array>
 
     <string-array name="perf_theme_values">
@@ -279,7 +281,7 @@
     <string name="perf_in_app_browser_key">perf_in_app_browser_key</string>
 
     <string name="perf_import_opml">فراخوانی فایل های opml</string>
-    <string name="perf_import_opml_desc">فراخوانی فایل های شخصی شده opml</string>
+    <string name="perf_import_opml_desc">بارگذاری منابع جدید</string>
     <string name="perf_import_opml_key">perf_import_opml_files</string>
     <string name="perf_import_opml_default_value">Light</string>
 
@@ -302,12 +304,12 @@
     <string name="perf_system">سیستمی</string>
     <string name="perf_reset_db">راه اندازی مججد دیتابیس</string>
     <string name="perf_reset_db_desc">بازگشت به حالت اولیه</string>
-    <string name="perf_reset_db_message">باعث از دست رفتن اطلاعات و موضوعان و منابع خواهد شد</string>
+    <string name="perf_reset_db_message">باعث از دست رفتن موضوعات و منابع خواهد شد</string>
 
     <string name="perf_misc">عیب یابی برنامه</string>
 
     <string name="perf_feeds_not_working">منابع من کار نمیکند</string>
-    <string name="perf_feeds_not_working_desc">خیلی از منابعی که من وارد برنامه کرده ام درست کار نمیکند پیشنهاد میکنم به آموزش مراجعه کنید</string>
+    <string name="perf_feeds_not_working_desc">اگر منابعی که به برنامه وارد میکنید درست کار نمیکند به اینجا ضربه بزنید</string>
     <string name="perf_feeds_not_working_key">perf_feeds_not_working_key</string>
 
     <string name="swipe_down">به سمت پایین بکشید</string>
@@ -320,19 +322,20 @@
     <string name="dismiss">بستن</string>
     <string name="clear_feeds_desc">موضوعات پاک خواهد شد ولی جای نگرانی نیست چون در آرشیو شما است</string>
     <string name="clear">تمیز کاری</string>
-    <string name="no_content_available">موضوعی موجود نیست</string>
+    <string name="no_content_available">موضوعی موجود نیست \n برای اطلاعات بیشتر بر روی علامت کره ضربه بزنید</string>
     <string name="title_activity_splash">SplashActivity</string>
     <string name="section_format">Hello World from section: %1$d</string>
-    <string name="splash_title_1">nTA</string>
+    <string name="splash_title_1">تحریریه من</string>
     <string name="splash_title_2">به آسانی مطالب مورد نظر خود را بخوانید</string>
     <string name="splash_title_3">مدیریت ، اضافه و اشتراک گذاری موضوعات</string>
-    <string name="splash_desc_1">خبر خوان خود را خود بسازید</string>
+    <string name="splash_desc_1">خبر خوان خود را خود بسازید \n
+وبسایت های مورد علاقه خود را به برنامه اضافه و مطالب آن را بدون مراجعه به وبسایت بخوانید</string>
     <string name="splash_desc_2">بین موضوعات با یک لمس حرکت کنید</string>
-    <string name="splash_desc_3">میتوانید به خبر خوان خود موضوع، منبع اضافه کنید و اطلاعات آن را دریافت کنید</string>
+    <string name="splash_desc_3">میتوانید به خبر خوان خود وبسایت اضافه کنید و مطالب آن را دریافت کنید</string>
 
     <string name="title_activity_about">درباره برنامه</string>
-    <string name="created_by">Development by rezaduty</string>
-    <string name="contact_dev">Contact the Developer</string>
+    <string name="created_by">crazyhitty,LukeOwncloud  ساخته شده توسط\n rezaduty توسعه داده شده توسط </string>
+    <string name="contact_dev">تماس با توسعه دهنده</string>
 
     <string-array name="contacts">
         <item>پست الکترونیک</item>
@@ -341,16 +344,16 @@
     </string-array>
 
     <string name="dev_mail">reza.duty.persian@gmail.com</string>
-    <string name="dev_website">http://rezaduty.gitlab.io/selectandrun</string>
+    <string name="dev_website">http://rezaduty.blog.ir/</string>
     <string name="dev_github">http://github.com/rezaduty/</string>
 
-    <string name="libraries_used">Libraries Used</string>
+    <string name="libraries_used">کتابخوانه های استفاده شده</string>
     <string name="library">Library</string>
-    <string name="library_creator">Library Creator</string>
+    <string name="library_creator">سازنده کتابخوانه ها</string>
     <string name="library_desc">Library Desc</string>
     <string name="rate">به برنامه امتیاز دهید</string>
     <string name="source_code">کد های پروژه</string>
-    <string name="github_source_code">https://github.com/rezaduty/nTA</string>
+    <string name="github_source_code">https://github.com/rezaduty/tahririye_man</string>
     <string name="licence">مجوز</string>
     <string name="licence_desc"><b>The MIT License (MIT)</b>\n\n<b>Copyright (c) 2017 rezaduty</b>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
     <string name="enter_url">Enter Url</string>
@@ -362,8 +365,11 @@
     <string name="change_log">تغیرات اخیر</string>
     <!--     <string name="change_log_desc"><b>Version 0.01</b>\n\nFixed some issues with feed parsing, thanks to https://github.com/LukeOwncloud\n\n<b>Version 0.43</b>\n\nMinor bug fixes.\n\n<b>Version 0.42</b>\n\nMinor bug fixes.\n\n<b>Version 0.41</b>\n\nMinor bug fixes.\n\n<b>Version 0.40</b>\n\nAdded sync feature. Now you can synchronize feeds in background and application will save all of the data for offline reading.\n\n<b>Version 0.33</b>\n\nAdded white icons in dark theme(only in category list and sources list) so they are easier to see.\n\nRemoved shadow from toolbars as it was glitching in dark theme.\n\n<b>Version 0.32</b>\n\nMinor bug fixes.\n\nAdded shadow to toolbars.\n\nAdded option to delete the feed from article.\n\n<b>Version 0.31</b>\n\nMinor bug fix, which was making the settings menu crash on some devices.\n\n<b>Version 0.30</b>\n\nAdded Opml integration.\n\nAdded <i>Read External Storage</i> permission so that user can import opml feeds via file stored in SD Card or internal storage.\n\nAdded Curated feeds and option to submit your own feeds to the curated list.\n\nAdded Sorting option, now user can sort the feeds by random, title, category and date.\n\nMinor bug fixes.\n\n<b>Version 0.22</b>\n\nMade circular reveal animation optional, you can disable it in settings.\n\n<b>Version 0.21</b>\n\nFixed a bug in which white screen was shown on splash screen.\n\nAdded the option to rate, view source code and view licence in About screen.\n\n<b>Version 0.20</b>\n\nAdded dark theme.\n\n<b>Version 0.11</b>\n\nRemoved duplicate entries in settings menu.\n\n<b>Version 0.10</b>\n\nReleased initial version.</string>
  -->
-    <string name="change_log_desc"><b>Version 0.01</b></string>
-    <string name="delete_this_feed">حذف منبع جاری</string>
+    <string name="change_log_desc"> ترجمه به فارسی\n
+تغیر عناوین دسته بندی\n
+ذخیره و بارگذاری منابع یا همان فید\n
+شناسایی خودکار آدرس فید\n </string>
+    <string name="delete_this_feed">حذف خبر جاری</string>
     <string name="delete_this_feed_desc">همه ی مطالب پاک خواهد شد ولی اگر مطلبی در آرشیو شما است جای نگرانی نیست</string>
     <string name="syncing_feeds">همگام سازی منابع</string>
     <string name="sync">همگام سازی</string>
@@ -376,13 +382,11 @@
     <string-array name="contributions_arr">
         <item>LukeOwncloud</item>
         <item>crazyhitty</item>
-        <item>resource: ubuntu.ir/forum abedzadeh</item>
     </string-array>
 
     <string-array name="contributions_links_arr">
         <item>https://github.com/LukeOwncloud</item>
         <item>https://github.com/crazyhitty/Munch</item>
-        <item>http://forum.ubuntu.ir/index.php/topic,92977.0.html</item>
     </string-array>
 
     <string-array name="library_names">

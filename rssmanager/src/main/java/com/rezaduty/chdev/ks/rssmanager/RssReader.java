@@ -5,6 +5,7 @@ import android.content.DialogInterface;
 import android.util.Log;
 
 import com.afollestad.materialdialogs.DialogAction;
+import com.afollestad.materialdialogs.GravityEnum;
 import com.afollestad.materialdialogs.MaterialDialog;
 
 import org.jsoup.Jsoup;
@@ -19,6 +20,7 @@ import java.util.List;
 
 /**
  * Created by Kartik_ch on 11/15/2015.
+ * Developed by rezaduty on 2017-09-12
  */
 public class RssReader implements OnFeedLoadListener {
     private String[] mUrlList, mSourceList, mCategories;
@@ -41,6 +43,8 @@ public class RssReader implements OnFeedLoadListener {
 
     public void readRssFeeds() {
         mMaterialDialog = new MaterialDialog.Builder(mContext)
+                .titleGravity(GravityEnum.END)
+                .contentGravity(GravityEnum.END)
                 .title(R.string.loading_feeds)
                 .progress(true, 0)
                 .progressIndeterminateStyle(true)
@@ -112,21 +116,58 @@ public class RssReader implements OnFeedLoadListener {
     }
 
     private RssItem getRssItem(Element element) {
-        String title,description,link,sourceName,sourceUrl;
+        String title,pubDate,description,link,sourceName,sourceUrl;
         title="";
-        description="";
+        description = "";
         link="";
         sourceName="";
         sourceUrl="";
+        pubDate = "";
+        RssItem rssItem = new RssItem();
         try {
              title = element.select("title").first().text();
-             description = element.select("description").first().text();
-             link = element.select("link").first().text();
-             sourceName = mSourceList[mPosition];
-             sourceUrl = getWebsiteName(mUrlList[mPosition]);
+            if(!element.select("link").first().text().isEmpty()){
+                link = element.select("link").first().text();
+
+            }else{
+                link = "http://www.tabnak.ir/fa/news/731286/پیوند-عجیب-استخوان-با-پرینتر-سه-بعدی";
+            }
+
+            if(!element.select("description").first().text().isEmpty() || element.select("description").first().text().length() <=6){
+                description = element.select("description").first().text();
+
+            }else{
+                description = "برای اطلاعات بیشتر روی علامت کرده ضربه بزنید";
+            }
+
+
+
+
+
+            if(!mSourceList[mPosition].isEmpty()){
+                sourceName = mSourceList[mPosition];
+
+            }else{
+                sourceName = "google";
+            }
+            if(!getWebsiteName(mUrlList[mPosition]).isEmpty()){
+                sourceUrl = getWebsiteName(mUrlList[mPosition]);
+            }else{
+                sourceUrl = "http://www.tabnak.ir/fa/news/731286/پیوند-عجیب-استخوان-با-پرینتر-سه-بعدی";
+
+            }
+
 
 
         }catch (Exception e){
+
+            Log.e("Exception", "Try Again: " + title.toString());
+            Log.e("Exception", "Try Again: " + description.toString());
+            Log.e("Exception", "Try Again: " + link.toString());
+            Log.e("Exception", "Try Again: " + sourceName.toString());
+
+            Log.e("Exception", "Try Again: " + sourceUrl.toString());
+
             Log.e("Exception", "Try Again: " + e.toString());
         }
         String imageUrl;
@@ -160,19 +201,23 @@ public class RssReader implements OnFeedLoadListener {
             category = mCategories[mPosition];
         }
 
-        String pubDate = "";
-        if (!element.select("pubDate").isEmpty()) {
+
+        if (element.select("pubDate").toString() !="") {
             pubDate = element.select("pubDate").first().text();
+            //Log.d("pubDate",pubDate);
         }
+
 
         int categoryImgId = mCategoryImgIds[mPosition];
 
-        RssItem rssItem = new RssItem();
+
 
         rssItem.setTitle(title);
-        rssItem.setDescription(description);
+
+        //Log.d("description",description);
         rssItem.setLink(link);
         rssItem.setSourceName(sourceName);
+        rssItem.setDescription(description);
         rssItem.setSourceUrl(sourceUrl);
         rssItem.setImageUrl(imageUrl);
         rssItem.setCategory(category);

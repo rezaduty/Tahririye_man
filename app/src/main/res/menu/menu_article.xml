@@ -1,7 +1,7 @@
 <menu xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
-    tools:context="com.rezaduty.chdev.ks.nta.ui.activities.ArticleActivity">
+    tools:context="com.rezaduty.chdev.ks.tahririye_man.ui.activities.ArticleActivity">
     <item
         android:id="@+id/action_refresh"
         android:orderInCategory="1"
@@ -12,7 +12,7 @@
         android:id="@+id/action_open_in_browser"
         android:orderInCategory="2"
         android:title="@string/action_open_in_browser"
-        android:icon="@android:drawable/arrow_up_float"
+        android:icon="@drawable/ic_web_white_18dp"
         app:showAsAction="ifRoom" />
     <item
         android:id="@+id/action_share"
