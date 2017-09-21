@@ -1,13 +1,13 @@
 <h1 align="center">
   <br>
-  <a href="https://www.dropbox.com/s/x0953b4blm298nk/web_hi_res_512.png?dl=1" alt="Markdownify" width="200"></a>
+  <a href="https://raw.githubusercontent.com/rezaduty/Tahririye_man/master/markdownify.pngweb_hi_res_512.png" alt="Markdownify" width="200"></a>
   <br>
   Tahririye_man Rss Reader
   تحریریه من
   <br>
 </h1>
 
-# Tahririye_man تحریریه من 
+# Tahririye_man
 A minimalistic, easy to use Rss reader application.
 
 ## Program Scan Result
@@ -47,9 +47,10 @@ These permissions are used to grab the data from the web and to know if user’s
 * Ad free
 * export opml and import opml
 
-#How does Tahririye_man work ?
+# How does Tahririye_man work ?
 Tahririye_man uses jsoup xml parser to parse rss feeds and also load the web articles associated with those feeds. It also uses glide to lazy load article images(if available).
 
-# Review
+# Blog Review
+
 
 
