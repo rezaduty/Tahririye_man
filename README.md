@@ -1,3 +1,11 @@
+<h1 align="center">
+  <br>
+  <a href="https://www.dropbox.com/s/x0953b4blm298nk/web_hi_res_512.png?dl=1" alt="Markdownify" width="200"></a>
+  <br>
+  Tahririye_man Rss Reader
+  <br>
+</h1>
+
 # Tahririye_man تحریریه من 
 A minimalistic, easy to use Rss reader application.
 
@@ -5,7 +13,7 @@ A minimalistic, easy to use Rss reader application.
 
 [![Malware Scan Result](https://img.shields.io/badge/malware%20scan%20result-clean-brightgreen.svg)](https://apkscan.nviso.be/report/show/6286286ec0cbe8c5d6e7c5743858b7a1)
 
-# Download Apk
+[![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) 
 [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/tvcobmapiucb7qm/t-v1-0.apk?dl=0)
 [![Price](https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg?style=plastic)]()
 [![TeamCity CodeBetter](https://img.shields.io/badge/size-3.4%20MB-brightgreen.svg)]()
@@ -42,10 +50,5 @@ These permissions are used to grab the data from the web and to know if user’s
 Tahririye_man uses jsoup xml parser to parse rss feeds and also load the web articles associated with those feeds. It also uses glide to lazy load article images(if available).
 
 # Review
-![](https://www.dropbox.com/s/pasf1cdf53spi63/main.png?dl=1)
-![](https://www.dropbox.com/s/i4h3p1pu6wboqzn/add.png?dl=1)
-![](https://www.dropbox.com/s/7fxan8xm423vrog/add_category.png?dl=1)
-![](https://www.dropbox.com/s/nmsxv64950drswn/resource_managment.png?dl=1)
-![](https://www.dropbox.com/s/83ud2hvjv54lk7u/settings.png?dl=1)
-![](https://www.dropbox.com/s/9cjdbkn0gxcpqvk/about.png?dl=1)
+
 
