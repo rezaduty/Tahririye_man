@@ -3,14 +3,14 @@ A minimalistic, easy to use Rss reader application.
 
 ## Program Scan Result
 
-[![Malware Scan Result](https://apkscan.nviso.be/report/show/6286286ec0cbe8c5d6e7c5743858b7a1)
+[![Malware Scan Result](https://img.shields.io/badge/malware%20scan%20result-clean-brightgreen.svg)](https://apkscan.nviso.be/report/show/6286286ec0cbe8c5d6e7c5743858b7a1)
 
 # Download Apk
+[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/tvcobmapiucb7qm/t-v1-0.apk?dl=0)
 [![Price](https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg?style=plastic)]()
 [![TeamCity CodeBetter](https://img.shields.io/badge/size-3.4%20MB-brightgreen.svg)]()
 [![Travis branch](https://img.shields.io/badge/platform-android-brightgreen.svg)]()
 [![Requirement](https://img.shields.io/badge/android-%3E%3D4.1-orange.svg)]()
-[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/xsza3ex4pif49dm/nta-v0-1.apk?dl=0)
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 ***
 For download apk without android store please goto ``app/`` folder and Download ``t-v*-*.apk``
@@ -49,19 +49,3 @@ Tahririye_man uses jsoup xml parser to parse rss feeds and also load the web art
 ![](https://www.dropbox.com/s/83ud2hvjv54lk7u/settings.png?dl=1)
 ![](https://www.dropbox.com/s/9cjdbkn0gxcpqvk/about.png?dl=1)
 
-# My Resource not working (منابع من کار نمیکند)
-
-## Opml extension
-
-:large_blue_circle: باشد opml توجه داشته باشید فایل به پسوند <br>
-:large_blue_circle: file format should be this template *.opml
-
-OR
-
-## Enable File permission 
-
-for write to internal storage need Storage Permission
-
-# For example working
-
-:recycle: this step
