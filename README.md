@@ -3,6 +3,7 @@
   <a href="https://www.dropbox.com/s/x0953b4blm298nk/web_hi_res_512.png?dl=1" alt="Markdownify" width="200"></a>
   <br>
   Tahririye_man Rss Reader
+  تحریریه من
   <br>
 </h1>
 
@@ -25,7 +26,7 @@ For download apk without android store please goto ``app/`` folder and Download 
 
 OR 
 
-Click [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/tvcobmapiucb7qm/t-v1-0.apk?dl=0)
+[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/tvcobmapiucb7qm/t-v1-0.apk?dl=0)
 
 # What is Tahririrye_man ?
 Tahririrye_man is an android app which enable the users to manage their Rss feeds. User can add new sources, manage them and view the article associated with the feeds.
