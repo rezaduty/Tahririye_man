@@ -9,20 +9,43 @@ A minimalistic, easy to use Rss reader application.
 
 ## Program Scan Result
 
-[![Malware Scan Result](https://img.shields.io/badge/malware%20scan%20result-clean-brightgreen.svg)](https://apkscan.nviso.be/report/show/6286286ec0cbe8c5d6e7c5743858b7a1)
-[![Open Source Love](https://badges.frapsoft.com/os/v3/open-source.svg?v=102)](https://github.com/ellerbrock/open-source-badge/) 
-[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/tvcobmapiucb7qm/t-v1-0.apk?dl=0)
-[![Price](https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg?style=plastic)]()
-[![TeamCity CodeBetter](https://img.shields.io/badge/size-3.4%20MB-brightgreen.svg)]()
-[![Travis branch](https://img.shields.io/badge/platform-android-brightgreen.svg)]()
-[![Requirement](https://img.shields.io/badge/android-%3E%3D4.1-orange.svg)]()
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+<p align="center">
+	<a href="https://apkscan.nviso.be/report/show/6286286ec0cbe8c5d6e7c5743858b7a1">
+        	<img src="https://img.shields.io/badge/malware%20scan%20result-clean-brightgreen.svg" alt="malware scan">
+	</a>
+	<a href="https://github.com/ellerbrock/open-source-badge/">
+		<img src="https://badges.frapsoft.com/os/v3/open-source.svg?v=102" alt="open source">
+	</a>
+
+	<a href="https://www.dropbox.com/s/tvcobmapiucb7qm/t-v1-0.apk?dl=0">
+		<img src="https://img.shields.io/travis/rust-lang/rust/master.svg" alt="open source">
+	</a>
+
+	<a href="#">
+		<img src="https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg?style=plastic" alt="open source">
+	</a>
+
+	<a href="#">
+		<img src="https://img.shields.io/badge/size-3.4%20MB-brightgreen.svg" alt="open source">
+	</a>
+	<a href="https://saythanks.io/to/rezaduty">
+		<img src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg" alt="open source">
+	</a>
+
+
+</p>
+
+
+
+# Download
+
 ***
 For download apk without android store please goto ``app/`` folder and Download ``t-v*-*.apk``
 
 OR 
 
 [![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/tvcobmapiucb7qm/t-v1-0.apk?dl=0)
+
 
 # What is Tahririrye_man ?
 Tahririrye_man is an android app which enable the users to manage their Rss feeds. User can add new sources, manage them and view the article associated with the feeds.
@@ -46,6 +69,12 @@ These permissions are used to grab the data from the web and to know if user’s
 # How does Tahririye_man work ?
 Tahririye_man uses jsoup xml parser to parse rss feeds and also load the web articles associated with those feeds. It also uses glide to lazy load article images(if available).
 
+# Requirement
+
+[![Travis branch](https://img.shields.io/badge/platform-android-brightgreen.svg)]()
+
+[![Requirement](https://img.shields.io/badge/android-%3E%3D4.1-orange.svg)]()
+
 # Blog Review
 
 <h1 align="center">
@@ -54,3 +83,6 @@ Tahririye_man uses jsoup xml parser to parse rss feeds and also load the web art
 
 </h1>
 
+# LICENSE
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
