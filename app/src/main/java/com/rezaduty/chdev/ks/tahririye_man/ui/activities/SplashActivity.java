@@ -1,5 +1,6 @@
 package com.rezaduty.chdev.ks.tahririye_man.ui.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.v4.view.ViewPager;
@@ -15,6 +16,8 @@ import com.rezaduty.chdev.ks.tahririye_man.utils.FadePageTransformerUtil;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class SplashActivity extends AppCompatActivity implements ViewPager.OnPageChangeListener {
 
@@ -28,7 +31,12 @@ public class SplashActivity extends AppCompatActivity implements ViewPager.OnPag
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/vazir.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        );
+        //....
         this.getWindow().setFlags(WindowManager.LayoutParams.FLAG_FULLSCREEN, WindowManager.LayoutParams.FLAG_FULLSCREEN);
 
         runOnce();

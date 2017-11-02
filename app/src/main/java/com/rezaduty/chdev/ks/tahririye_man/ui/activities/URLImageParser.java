@@ -4,6 +4,7 @@ import java.io.InputStream;
 import java.net.URL;
 
 import android.content.Context;
+import android.content.res.Resources;
 import android.graphics.Bitmap;
 import android.graphics.BitmapFactory;
 import android.graphics.PorterDuff;
@@ -24,7 +25,15 @@ public class URLImageParser implements ImageGetter {
         this.context = context;
         this.container = container;
     }
+    public static int getScreenWidth() {
+        Log.d("adas",String.valueOf(Resources.getSystem().getDisplayMetrics().widthPixels));
+        return Resources.getSystem().getDisplayMetrics().widthPixels;
 
+    }
+
+    public static int getScreenHeight() {
+        return Resources.getSystem().getDisplayMetrics().heightPixels;
+    }
     public Drawable getDrawable(String source) {
         if(source.matches("data:image.*base64.*")) {
             String base_64_source = source.replaceAll("data:image.*base64", "");
@@ -71,7 +80,7 @@ public class URLImageParser implements ImageGetter {
 
                 int dWidth = drawable.getIntrinsicWidth();
                 int dHeight = drawable.getIntrinsicHeight();
-                drawable.setBounds(0, 0, 750, -1310-200);
+                drawable.setBounds(0, 0, getScreenWidth(), getScreenHeight()/3);
 
                 return drawable;
             } catch (Exception e) {

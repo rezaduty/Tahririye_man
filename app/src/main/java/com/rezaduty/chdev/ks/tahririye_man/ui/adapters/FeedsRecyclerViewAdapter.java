@@ -55,7 +55,7 @@ public class FeedsRecyclerViewAdapter extends RecyclerView.Adapter<FeedsRecycler
         holder.mTxtSourceUrl.setText(mFeedItems.get(position).getItemSourceUrl());
         holder.mTxtCategory.setText(mFeedItems.get(position).getItemCategory());
         holder.mTxtPubDate.setText(mFeedItems.get(position).getItemPubDate());
-        //holder.mImgCategory.setImageResource(mFeedItems.get(position).getItemCategoryImgId());
+        holder.mImgCategory.setImageResource(mFeedItems.get(position).getItemCategoryImgId());
         holder.mImgCategory.setImageResource(new Categories(mContext).getDrawableId(mFeedItems.get(position).getItemCategory()));
 
         //get a randomized background resource id from a set of available drawables
@@ -191,11 +191,17 @@ public class FeedsRecyclerViewAdapter extends RecyclerView.Adapter<FeedsRecycler
 
         private void setFontSize() {
             //textView.setTextSize(TypedValue.COMPLEX_UNIT_SP, 65);
-            mTxtSource.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.SOURCE_NAME_SIZE);
-            mTxtCategory.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.SOURCE_CATEGORY_SIZE);
-            mTxtSourceUrl.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.SOURCE_URL_SIZE);
-            mTxtPubDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.FEED_PUBLISH_DATE_SIZE);
-            mTxtTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.FEED_TITLE_SIZE);
+            //Log.d("Hello",String.valueOf(SettingsPreferences.SOURCE_NAME_SIZE));
+            int s = Integer.parseInt (String.valueOf(SettingsPreferences.SOURCE_NAME_SIZE));
+
+            if(s>0){
+                mTxtSource.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.SOURCE_NAME_SIZE);
+                mTxtCategory.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.SOURCE_CATEGORY_SIZE);
+                mTxtSourceUrl.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.SOURCE_URL_SIZE);
+                mTxtPubDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.FEED_PUBLISH_DATE_SIZE);
+                mTxtTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.FEED_TITLE_SIZE);
+            }
+
         }
 
     }

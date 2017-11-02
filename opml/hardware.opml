@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+<head>
+<title>Tahririye_man Opml</title>
+</head>
+<body><outline text= "وب سایت سخت‌افزار" category="سخت افزار" description= "وب سایت سخت‌افزار"  htmlUrl="sakhtafzarmag.com" type="rss" xmlUrl="https://www.sakhtafzarmag.com/?format=feed"/>
+
+<outline text= "انجمن تخصصی سخت افزار" category="سخت افزار" description= "انجمن تخصصی سخت افزار"  htmlUrl="forum.lioncomputer.ir" type="rss" xmlUrl="https://forum.lioncomputer.ir/index.php?/forum/45-%D8%A7%D9%86%D8%AC%D9%85%D9%86-%D8%AA%D8%AE%D8%B5%D8%B5%DB%8C-%D8%B3%D8%AE%D8%AA-%D8%A7%D9%81%D8%B2%D8%A7%D8%B1.xml/"/>
+
+<outline text= "شهر سخت افزار" category="سخت افزار" description= "شهر سخت افزار"  htmlUrl="shahrsakhtafzar.com" type="rss" xmlUrl="http://www.shahrsakhtafzar.com/fa/?format=feed&type=rss"/>
+
+
+
+
+</body>
+</opml> 

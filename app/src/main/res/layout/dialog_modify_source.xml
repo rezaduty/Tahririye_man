@@ -9,12 +9,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/source_name"
+
         android:textColor="@color/colorAccent"
         android:textSize="@dimen/text_size_min" />
 
     <EditText
         android:id="@+id/edit_text_source_name"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:hint="@string/source_name" />
 
@@ -26,12 +28,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/source_url"
+
         android:textColor="@color/colorAccent"
         android:textSize="@dimen/text_size_min" />
 
     <EditText
         android:id="@+id/edit_text_source_url"
         android:layout_width="match_parent"
+
         android:layout_height="wrap_content"
         android:hint="@string/source_url"
         android:inputType="textWebEmailAddress" />
@@ -56,6 +60,7 @@
                 android:id="@+id/text_view_category"
                 android:layout_width="wrap_content"
                 android:layout_height="match_parent"
+
                 android:layout_alignParentLeft="true"
                 android:gravity="center_vertical"
                 android:text="@string/category"

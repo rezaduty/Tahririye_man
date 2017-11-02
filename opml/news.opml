@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+<head>
+<title>Tahririye_man Opml</title>
+</head>
+<body><outline text= "ایسنا" category="خبری" description= "ایسنا"  htmlUrl="isna.ir" type="rss" xmlUrl="http://www.isna.ir/rss-homepage"/>
+
+<outline text= "باشگاه خبرنگاران جوان" category="خبری" description= "باشگاه خبرنگاران جوان"  htmlUrl="yjc.ir" type="rss" xmlUrl="http://www.yjc.ir/fa/rss/allnews/"/>
+
+<outline text= "تابناک" category="خبری" description= "تابناک"  htmlUrl="tabnak.ir" type="rss" xmlUrl="http://www.tabnak.ir/fa/rss/allnews"/>
+
+<outline text= "الف" category="خبری" description= "الف"  htmlUrl="alef.ir" type="rss" xmlUrl="http://www.alef.ir/rss/latest/all.xml"/>
+
+<outline text= "ایرنا" category="خبری" description= "ایرنا"  htmlUrl="irna.ir" type="rss" xmlUrl="http://www.irna.ir/fa/rss.aspx?kind=-1"/>
+
+</body>
+</opml> 

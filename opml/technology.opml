@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+<head>
+<title>Tahririye_man Opml</title>
+</head>
+<body><outline text= "زومیت" category="تکنولوژی" description= "زومیت"  htmlUrl="zoomit.ir" type="rss" xmlUrl="https://www.zoomit.ir/feed/"/>
+
+<outline text= "دیجیاتو" category="تکنولوژی" description= "دیجیاتو"  htmlUrl="digiato.com" type="rss" xmlUrl="http://digiato.com/feed/"/>
+
+<outline text= "اینتونت" category="تکنولوژی" description= "اینتونت"  htmlUrl="intonet.ir" type="rss" xmlUrl="http://intonet.ir/feed/"/>
+
+
+</body>
+</opml> 

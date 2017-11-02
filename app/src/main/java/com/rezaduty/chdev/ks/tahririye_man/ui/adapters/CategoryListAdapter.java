@@ -54,8 +54,8 @@ public class CategoryListAdapter extends BaseAdapter {
 
         //add a white color filter to the images if dark theme is selected
         if (!SettingsPreferences.THEME) {
-            txtCategoryName.setTextColor(ContextCompat.getColor(viewGroup.getContext(), R.color.md_grey_100));
-            imgCategory.setColorFilter(ContextCompat.getColor(viewGroup.getContext(), R.color.md_grey_100));
+            txtCategoryName.setTextColor(ContextCompat.getColor(viewGroup.getContext(), R.color.grey_light));
+            imgCategory.setColorFilter(ContextCompat.getColor(viewGroup.getContext(), R.color.grey_light));
         }
 
         return itemView;

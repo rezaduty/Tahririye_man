@@ -1,5 +1,6 @@
 package com.rezaduty.chdev.ks.tahririye_man.ui.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.os.Build;
 import android.os.Bundle;
@@ -36,6 +37,8 @@ import java.util.List;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class ArticleActivity extends AppCompatActivity implements IArticleView, IFeedsView {
 
@@ -63,7 +66,12 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/vazir.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        );
+        //....
         //set theme
         setSystemTheme(getFeedThemeBgId());
 
@@ -125,10 +133,16 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
     }
 
     private void setFontSize() {
-        txtFeedTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_TITLE_SIZE);
-        txtFeedCategory.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_CATEGORY_SIZE);
-        txtFeedPubDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_PUBLISH_DATE_SIZE);
-        txtContent.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_CONTENT_SIZE);
+        int s = Integer.parseInt (String.valueOf(SettingsPreferences.ARTICLE_TITLE_SIZE));
+
+        if(s>0) {
+            txtFeedTitle.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_TITLE_SIZE);
+            txtFeedCategory.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_CATEGORY_SIZE);
+            txtFeedPubDate.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_PUBLISH_DATE_SIZE);
+            txtContent.setTextSize(TypedValue.COMPLEX_UNIT_SP, SettingsPreferences.ARTICLE_CONTENT_SIZE);
+        }
+
+
     }
 
     private void setToolbar(FeedItem feedItem) {

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+<head>
+<title>Tahririye_man Opml</title>
+</head>
+<body><outline text= "ورزش ۳" category="ورزشی" description= "ورزش ۳"  htmlUrl="varzesh3.com" type="rss" xmlUrl="www.varzesh3.com/rss/all"/>
+
+<outline text= "90tv" category="ورزشی" description= "90tv.ir"  htmlUrl="90tv.ir" type="rss" xmlUrl="http://90tv.ir/frontcms/rss/view"/>
+
+<outline text= "ورزش ۱۱" category="ورزشی" description= "ورزش ۱۱"  htmlUrl="varzesh11.com" type="rss" xmlUrl="http://www.varzesh11.com/fa/rss/"/>
+
+<outline text= "طرفداری" category="ورزشی" description= "طرفداری"  htmlUrl="tarafdari.com" type="rss" xmlUrl="https://www.tarafdari.com/static/page/taxonomy/all/feed.xml"/>
+
+
+</body>
+</opml> 

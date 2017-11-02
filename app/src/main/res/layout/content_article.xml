@@ -74,7 +74,8 @@
                 android:drawablePadding="10dip"
                 android:layout_height="match_parent"
                 android:text="@string/no_content_available"
-                
+                android:lineSpacingMultiplier="1.2"
+
                 android:textSize="@dimen/text_size_avg" />
 
         </LinearLayout>

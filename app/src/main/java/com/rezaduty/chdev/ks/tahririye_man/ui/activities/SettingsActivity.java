@@ -47,6 +47,7 @@ import org.json.JSONObject;
 import java.io.File;
 import java.io.FileWriter;
 import java.io.IOException;
+import java.net.URI;
 import java.util.ArrayList;
 import java.util.Iterator;
 import java.util.List;
@@ -55,6 +56,8 @@ import java.util.Set;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import me.zhanghai.android.materialprogressbar.MaterialProgressBar;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 /**
  * A {@link PreferenceActivity} that presents a set of application settings. On
@@ -74,10 +77,16 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
     @Bind(R.id.toolbar)
     Toolbar toolbar;
     private static int flag;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/vazir.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        );
+        //....
         setActivityTheme();
         setContentView(R.layout.activity_settings);
         ButterKnife.bind(this);
@@ -276,15 +285,14 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
             all="<?xml version=\"1.0\" encoding=\"utf-8\"?>\n" +
                     "<opml version=\"1.0\">\n" +
                     "<head>\n" +
-                    "<title>Vienna Subscriptions</title>\n" +
-                    "<dateCreated>2007-11-13 22:14:09 -0600</dateCreated>\n" +
+                    "<title>Tahririye_man Opml</title>\n" +
                     "</head>\n" +
                     "<body>";
             for (SourceItem sourceItem : customCuratedSourceItems) {
                 JSONObject jsonObjectSource = new JSONObject();
                 try {
 
-                    al = al + "<outline text= \""+ sourceItem.getSourceName()+"\" description= \""+ sourceItem.getSourceName()+"\"  htmlUrl=\""+ sourceItem.getSourceUrl() +"\" type=rss xmlUrl=\""+ sourceItem.getSourceUrl() +"\"/>\n\n";
+                    al = al + "<outline text= \""+ sourceItem.getSourceName()+"\" category= \""+ sourceItem.getSourceCategoryName()+"\"  description= \""+ sourceItem.getSourceName()+"\"  htmlUrl=\""+ getHostName(sourceItem.getSourceUrl()) +"\" type=\""+"rss"+"\" xmlUrl=\""+ sourceItem.getSourceUrl() +"\"/>\n\n";
                     jsonObjectSource.put(SOURCE_NAME, sourceItem.getSourceName());
                     jsonObjectSource.put(SOURCE_URL, sourceItem.getSourceUrl());
                     jsonObjectSource.put(SOURCE_CATEGORY, sourceItem.getSourceCategoryName());
@@ -368,7 +376,21 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
             }
 
         }
+        public String getHostName(String url) {
+            try{
+                URI uri = new URI(url);
+                String hostname = uri.getHost();
+                // to provide faultproof result, check if not null then return only hostname, without www.
+                if (hostname != null) {
+                    return hostname.startsWith("www.") ? hostname.substring(4) : hostname;
+                }
+                return hostname;
+            }catch (Exception e){
+                Log.d("Error","extract host");
+            }
+            return "";
 
+        }
         @Override
         public void onFeedsLoaded(List<SourceItem> sourceItems) {
             new FadeAnimationUtil(getActivity()).fadeOutAlpha(mMaterialProgressBar, 500);

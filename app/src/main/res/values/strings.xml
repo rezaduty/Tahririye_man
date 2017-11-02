@@ -30,15 +30,15 @@
 
     <string-array name="category_names">
         <item>خبری</item>
-        <item>شخصیت ها</item>
-        <!--<item>تکنولوژی </item>
-        <item>برنامه نویسی</item>-->
-        <item>آموزشی</item>
+        <item>ورزشی</item>
         <item>بازی</item>
-
         <item>تکنولوژی</item>
-        <item>یونیکس</item>
+        <item>آموزشی</item>
+        <item>نرم افزار</item>
         <item>سخت افزار</item>
+        <item>هک و امنیت</item>
+        <item>رویداد ها</item>
+        <item>شخصیت ها</item>
         <item>متفرقه</item>
         <!-- <item>Finance</item>
          <item>Fitness</item>
@@ -79,18 +79,20 @@
 
     <array name="button_icons">
         <item>@drawable/ic_action_fav</item>
-        <item>@drawable/line</item>
         <item>@drawable/ic_action_fav</item>
         <item>@drawable/ic_action_share</item>
     </array>
     <string-array name="category_drawables">
-        <item>@drawable/icons8_news_24 </item>
-        <item>@drawable/icons8_person24</item>
-        <item>@drawable/icons8_elearning_24 </item>
-        <item>@drawable/icons8_gamecontroller_24 </item>
+        <item>@drawable/icons8_news </item>
+        <item>@drawable/icons8_gymnastics</item>
+        <item>@drawable/icons8_steam</item>
         <item>@drawable/fiber_new_black_24x24 </item>
-        <item>@drawable/icons8_unix_24 </item>
-        <item>@drawable/icons8_processor_24 </item>
+        <item>@drawable/icons8_e_learning </item>
+        <item>@drawable/code_black_24x24 </item>
+        <item>@drawable/icons8_processor </item>
+        <item>@drawable/icons8_forgot_password</item>
+        <item>@drawable/icons8_event</item>
+        <item>@drawable/icons8_person</item>
         <item>@drawable/icons8_questionmark_24 </item>
 
 
@@ -356,7 +358,7 @@
     <string name="github_source_code">https://github.com/rezaduty/tahririye_man</string>
     <string name="licence">مجوز</string>
     <string name="licence_desc"><b>The MIT License (MIT)</b>\n\n<b>Copyright (c) 2017 rezaduty</b>\n\nPermission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:\n\nThe above copyright notice and this permission notice shall be included in all copies or substantial portions of the Software.\n\nTHE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM, OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE SOFTWARE.</string>
-    <string name="enter_url">Enter Url</string>
+    <string name="enter_url">لطفا آدرس را وارد کنید</string>
     <string name="url">آدرس</string>
     <string name="enter_url_here">آدرس خود را وارد نمایید</string>
     <string name="get_feeds">منابع را بخوان</string>

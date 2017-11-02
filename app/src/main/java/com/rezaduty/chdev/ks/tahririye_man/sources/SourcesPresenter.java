@@ -1,6 +1,8 @@
 package com.rezaduty.chdev.ks.tahririye_man.sources;
 
 import android.content.Context;
+import android.graphics.Color;
+import android.os.Handler;
 import android.support.v4.content.ContextCompat;
 import android.view.View;
 import android.widget.EditText;
@@ -32,16 +34,19 @@ public class SourcesPresenter implements ISourcePresenter, OnSourceSavedListener
     private ImageView mImgCategory;
     private FrameLayout mFrameCategory;
 
+
     public SourcesPresenter(ISourceView mISourceView, Context mContext) {
         this.mISourceView = mISourceView;
         this.mSourceInteractor = new SourceInteractor(mContext);
     }
 
     public void addSource(SourceItem sourceItem) {
+        // save source to db
         mSourceInteractor.addSourceToDb(this, sourceItem);
     }
 
     public void getSources() {
+        // retrive source from db
         mSourceInteractor.getSourcesFromDb(this);
     }
 
@@ -96,7 +101,7 @@ public class SourcesPresenter implements ISourcePresenter, OnSourceSavedListener
 
         //add a white color filter to the images if dark theme is selected
         if (!SettingsPreferences.THEME) {
-            mImgCategory.setColorFilter(ContextCompat.getColor(context, R.color.md_grey_100));
+            mImgCategory.setColorFilter(ContextCompat.getColor(context, R.color.md_blue_700));
         }
 
         mFrameCategory.setOnClickListener(new View.OnClickListener() {
@@ -131,8 +136,16 @@ public class SourcesPresenter implements ISourcePresenter, OnSourceSavedListener
     }
 
     @Override
-    public void onSuccess(String message) {
-        mISourceView.dataSourceSaved(message);
+    public void onSuccess(final String message) {
+        // message for save source to db
+        Handler handler = new Handler();
+        handler.postDelayed(new Runnable() {
+            @Override
+            public void run() {
+                mISourceView.dataSourceSaved(message);
+            }
+        }, 2000);
+
 
     }
 
@@ -143,6 +156,7 @@ public class SourcesPresenter implements ISourcePresenter, OnSourceSavedListener
 
     @Override
     public void onSourceLoaded(List<String> sourceNames) {
+        //save source to db
         mISourceView.dataSourceLoaded(sourceNames);
     }
 

@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+<head>
+<title>Tahririye_man Opml</title>
+</head>
+<body><outline text= "شاتل لند" category="بازی" description= "شاتل لند"  htmlUrl="shatelland.com" type="rss" xmlUrl="http://shatelland.com/feed"/>
+
+<outline text= "گیم یار" category="بازی" description= "گیم یار"  htmlUrl="gameyaar.ir" type="rss" xmlUrl="http://gameyaar.ir/feed"/>
+
+<outline text= "پردیس گیم" category="بازی" description= "پردیس گیم"  htmlUrl="pardisgame.net" type="rss" xmlUrl="http://pardisgame.net/rss/"/>
+
+<outline text= "گیمفا" category="بازی" description= "گیمفا"  htmlUrl="gamefa.com" type="rss" xmlUrl="http://gamefa.com/feed/"/>
+
+<outline text= "بازی سنتر" category="بازی" description= "بازی سنتر"  htmlUrl="bazicenter.com" type="rss" xmlUrl="http://bazicenter.com/feed"/>
+
+<outline text= "polygon" category="بازی" description= "polygon"  htmlUrl="polygon.com" type="rss" xmlUrl="https://polygon.com/rss/index.xml"/>
+
+<outline text= "gamespot" category="بازی" description= "gamespot"  htmlUrl="gamespot.com" type="rss" xmlUrl="https://www.gamespot.com/feeds/news"/>
+
+</body>
+</opml> 

@@ -2,6 +2,8 @@ package com.rezaduty.chdev.ks.rssmanager;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
+import android.support.v4.content.ContextCompat;
 import android.util.Log;
 
 import com.afollestad.materialdialogs.DialogAction;
@@ -31,7 +33,7 @@ public class RssReader implements OnFeedLoadListener {
     private int mPosition = 0;
     private MaterialDialog mMaterialDialog;
     private OnRssLoadListener mOnRssLoadListener;
-
+    private int material = Color.parseColor("#616161");
     public RssReader(Context context, String[] urlList, String[] sourceList, String[] categories, int[] categoryImgIds, OnRssLoadListener onRssLoadListener) {
         this.mContext = context;
         this.mUrlList = urlList;
@@ -42,8 +44,10 @@ public class RssReader implements OnFeedLoadListener {
     }
 
     public void readRssFeeds() {
+
         mMaterialDialog = new MaterialDialog.Builder(mContext)
-                .titleGravity(GravityEnum.END)
+                .backgroundColor(material)
+                    .titleGravity(GravityEnum.END)
                 .contentGravity(GravityEnum.END)
                 .title(R.string.loading_feeds)
                 .progress(true, 0)
@@ -135,8 +139,10 @@ public class RssReader implements OnFeedLoadListener {
 
             if(!element.select("description").first().text().isEmpty() || element.select("description").first().text().length() <=6){
                 description = element.select("description").first().text();
+                Log.d("axc",description);
 
             }else{
+                Log.d("axxc",description);
                 description = "برای اطلاعات بیشتر روی علامت کرده ضربه بزنید";
             }
 

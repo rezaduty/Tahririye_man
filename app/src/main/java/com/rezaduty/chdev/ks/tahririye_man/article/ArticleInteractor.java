@@ -8,6 +8,7 @@ import android.util.Log;
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.GravityEnum;
 import com.afollestad.materialdialogs.MaterialDialog;
+import com.rezaduty.chdev.ks.rssmanager.RssReader;
 import com.rezaduty.chdev.ks.tahririye_man.R;
 import com.rezaduty.chdev.ks.tahririye_man.models.FeedItem;
 import com.rezaduty.chdev.ks.tahririye_man.utils.DatabaseUtil;
@@ -112,15 +113,17 @@ public class ArticleInteractor implements IArticleInteractor {
         public ArticleAsyncLoader(String mUrl) {
             try{
                 mUrl.replace(" ", "%20");
+                mUrl.replace("%3F", "/");
                 int pos = mUrl.lastIndexOf('/') + 1;
 
                 Matcher matcher = RTL_CHARACTERS.matcher(mUrl);
                 if(matcher.find()){
-                    this.mUrl = mUrl.substring(0, pos) + URLEncoder.encode(mUrl.substring(pos), "UTF-8");
+                    this.mUrl = mUrl.substring(0, pos) + URLEncoder.encode(mUrl.substring(pos), "UTF-8").replaceAll("%3F", "/");
+
                     Log.d("URL",this.mUrl.toString());
                 }else{
                     this.mUrl = mUrl;
-                    Log.d("URL",this.mUrl.toString());
+                    Log.d("URL error",this.mUrl.toString());
                 }
 
 
@@ -192,56 +195,56 @@ public class ArticleInteractor implements IArticleInteractor {
 
                     // check img tag in string for margin of text
                     // replace for bayanbox format
-                    if(!para.contains("<img src=\"//analytics") || !para.contains("<p><img src=\"//analytics")){
-                        if(para.contains("<img")) {
 
+                        if(para.contains("<img")) {
+                            Log.d("aaaaa",para.toString());
+                            if(!para.contains("//analytics.irib.ir/piwik.php?idsite=19")) {
 
                                 img_status = true;
-                                Log.d("IMG",para);
+                                Log.d("IMG", para);
 
-                                if(para.contains("//b")){
-                                    para = para.replaceAll("//","http://");
+                                if (para.startsWith("//bayan")) {
+                                    para = para.replaceAll("//bayan", "http://bayan");
+                                    Log.d("IMG_AFTER_REPLACE", para);
+                                }else if(para.contains("/images/items")){
+                                    //sakhtafzarmag
+                                    para = para.replaceAll("/images/items", "https://www.sakhtafzarmag.com/images/items");
+                                } else if (para.startsWith("//")) {
+                                    para = para.replaceFirst("//", "http://");
 
-                                    Log.d("IMG_AFTER_REPLACE",para);
-                                }
+                                    Log.d("IMG_AFTER_REPLACE", para);
+                                }else if (para.contains("ndata/news")) {
+                                    para = para.replaceAll("ndata/news", "http://farsi.khamenei.ir/ndata/news");
 
-                                if(para.startsWith("//")){
-                                    para = para.replaceAll("//","http://");
+                                    Log.d("IMG_AFTER_REPLACE", para);
+                                } /*else if (para.contains("/files/fa")) {
+                                    Log.d("okok", "ok");
+                                    para = para.replaceAll("/files/fa", "http://www.mizanonline.ir/files/fa");
+                                }*/
 
-                                    Log.d("IMG_AFTER_REPLACE",para);
-                                }else if(para.contains("ndata/news")){
-                                    para = para.replaceAll("ndata/news","http://farsi.khamenei.ir/ndata/news");
-
-                                    Log.d("IMG_AFTER_REPLACE",para);
-                                }else if(para.contains("/files/fa")){
-                                    Log.d("okok","ok");
-                                    para = para.replaceAll("/files/fa","http://www.mizanonline.ir/files/fa");
-                                }
-                                body += "<br>" + para + "<br><br><br><br><br><br><br><br>";
+                                body += para + "<br><br><br><br><br><br>";
                             }
+                        }
 
-                        else if (img_status) {
-
-                            body += "<br><br><br><br><br><br><br><br><br><br><br><br><br><br><br>" + para + "\n\n";
-                            img_status = false;
-                        }else {
+                        else {
                             body += para + "\n\n";
                         }
-                    }else{
-                        body += "<br>" + para + "\n\n";
+
                     }
 
 
                 }
 
-            }
+
 
             if (body.length() != 0) {
                 //
                 Log.d("aaaa", String.valueOf(body.length()));
-                if(body.length()<=93){
-                    body = " لطفا برای اطلاعات بیشتر کره را لمس کنید";
+                if(body.length()<=106){
+                    //body = " لطفا برای اطلاعات بیشتر کره را لمس کنید";
+                    body = desc;
                 }
+
                 return body.substring(0, body.length() - 1);
             } else {
                 //body = desc;

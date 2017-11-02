@@ -2,6 +2,7 @@ package com.rezaduty.chdev.ks.tahririye_man.ui.activities;
 
 import android.Manifest;
 import android.app.ProgressDialog;
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
 import android.os.AsyncTask;
@@ -72,6 +73,8 @@ import java.util.regex.Pattern;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class HomeActivity extends AppCompatActivity implements ISourceView, FloatingActionMenu.OnMenuToggleListener, AdapterView.OnItemSelectedListener, NavigationView.OnNavigationItemSelectedListener {
 
@@ -123,6 +126,12 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/vazir.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        );
+        //....
         View view = (View) LayoutInflater.from(this).inflate(R.layout.content_home, null);
 
         isStoragePermissionGranted();
@@ -144,7 +153,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
 
         if (mSourcesPresenter == null) {
             mSourcesPresenter = new SourcesPresenter(HomeActivity.this, HomeActivity.this);
-        }
+       }
 
         fab.setOnMenuToggleListener(this);
 
@@ -354,6 +363,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
         mSourceItem.setSourceDateAdded(date);
 
         mSourcesPresenter.addSource(mSourceItem);
+
     }
 
     @OnClick(R.id.button_category)
@@ -413,6 +423,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
         //add newly added items to spinner. Not working currently
         mSourcesPresenter.getSources();
 
+
         Toast.makeText(HomeActivity.this, message, Toast.LENGTH_SHORT).show();
         fab.close(true);
         enableSecondaryLayout(false);
@@ -464,7 +475,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
                 StringBuilder html = new StringBuilder();
                 for (String line; (line = reader.readLine()) != null; ) {
                     html.append(line);
-                    if (html.toString().contains(param)) {
+                    if (html.toString().startsWith(param)) {
                         status = true;
                         break;
 
@@ -557,7 +568,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
 
 
 
-            
+
 
 
 
@@ -569,15 +580,46 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
             }
 
 
+            // gamespot feed url
+            else if(getHtml(urlsettextbox+"/feeds/news/","<rss")){
+                urlsettextbox=urlsettextbox + "/feeds/news/";
+            }
+            // polygon.com
+            else if(getHtml(urlsettextbox+"/rss/index.xml","<rss")){
+                urlsettextbox=urlsettextbox + "/rss/index.xml";
+                Log.d("ok","polygon.com");
+            }
+            // irna feed url
+            else if(getHtml(urlsettextbox+"/fa/rss.aspx?kind=-1","<rss")){
+                urlsettextbox=urlsettextbox + "/fa/rss.aspx?kind=-1";
+            }
 
             // iransamaneh feed url
-            else if(getHtml(urlsettextbox+"/fa/rss/allnews","<rss") || getHtml(urlsettextbox+"/fa/rss/allnews","<?xml")){
+            else if(getHtml(urlsettextbox+"/fa/rss/allnews","<rss")){
                 urlsettextbox=urlsettextbox + "/fa/rss/allnews";
             }
             //varzesh3
-            else if(getHtml(urlsettextbox+"/rss/all","<rss") || getHtml(urlsettextbox+"/rss/all","<?xml")){
+            else if(getHtml(urlsettextbox+"/rss/all","<rss")){
                 urlsettextbox=urlsettextbox + "/rss/all";
             }
+            //tarafdari
+            else if(getHtml(urlsettextbox+"/static/page/taxonomy/all/feed.xml","<rss")){
+                urlsettextbox=urlsettextbox + "/static/page/taxonomy/all/feed.xml";
+            }
+            //90tv
+            else if(getHtml(urlsettextbox+"/frontcms/rss/view","<rss")){
+                urlsettextbox=urlsettextbox + "/frontcms/rss/view";
+            }
+            //shahrsakhtafzar.com
+            else if(getHtml(urlsettextbox+"/fa/?format=feed&type=rss","<rss")){
+                urlsettextbox=urlsettextbox + "/fa/?format=feed&type=rss";
+            }
+            //sakhtafzarmag.com
+            else if(getHtml(urlsettextbox+"/?format=feed","<rss")){
+                urlsettextbox=urlsettextbox + "/?format=feed";
+            }
+
+
             // varzesh11 feed url
             else if(getHtml(urlsettextbox+"/fa/rss/","<?xml") || getHtml(urlsettextbox+"/fa/rss/","<rss")){
                 urlsettextbox=urlsettextbox + "/fa/rss/";
@@ -585,8 +627,33 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
             else if(getHtml(urlsettextbox+"/rss","<rss") || getHtml(urlsettextbox+"/rss","<?xml")){
                 urlsettextbox=urlsettextbox + "/rss";
             }
+            // alef.ir feed url
+            else if(getHtml(urlsettextbox+"/rss/latest/all.xml","<?xml") || getHtml(urlsettextbox+"/rss/latest/all.xml","<rss")){
+                urlsettextbox=urlsettextbox + "/rss/latest/all.xml";
+            }
 
 
+
+
+            // ashiyane.org
+            else if(getHtml(urlsettextbox+"/forums/external.php?type=RSS2","<rss")){
+                urlsettextbox=urlsettextbox + "/forums/external.php?type=RSS2";
+                Log.d("ok","ashiyane.org");
+            }
+            // vbultin forums
+            else if(getHtml(urlsettextbox+"/external.php?type=RSS2","<rss")){
+                urlsettextbox=urlsettextbox + "/external.php?type=RSS2";
+                Log.d("ok","forums");
+            }
+
+            //sanjesh
+            else if(getHtml(urlsettextbox+"/rss/rss.aspx","<rss") || getHtml(urlsettextbox+"/rss/rss.aspx","<?xml")){
+                urlsettextbox=urlsettextbox + "/rss/rss.aspx";
+            }
+            // tehlug feed url
+            else if(getHtml(urlsettextbox+"/rss.php","<rss")){
+                urlsettextbox=urlsettextbox + "/rss.php";
+            }
 
             // presstv
             else if(getHtml(urlsettextbox+"/RSS/MRSS/1","<rss")){
@@ -640,6 +707,8 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
                 Log.d("ok","alef");
             }
 
+
+
             // tasnimnews
             else if(getHtml(urlsettextbox+"/fa/rss/feed/0/7/0/پربازدیدترین?hit=1","<?xml")){
                 urlsettextbox=urlsettextbox + "/fa/rss/feed/0/7/0/پربازدیدترین?hit=1";
@@ -655,9 +724,19 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
                 urlsettextbox=urlsettextbox + "/rss.xml";
             }
 
+            // netbarg
+
+            else if(getHtml(urlsettextbox+"/tehran.rss","<rss") || getHtml(urlsettextbox+"/tehran.rss","<?xml")){
+                urlsettextbox=urlsettextbox + "/tehran.rss";
+            }
+
             // gohugo feed url
             else if(getHtml(urlsettextbox+"/index.xml","<rss") || getHtml(urlsettextbox+"/index.xml","<?xml")){
                 urlsettextbox=urlsettextbox + "/rss-homepage";
+            }
+            // vulnerability-lab.com feed url
+            else if(getHtml(urlsettextbox+"/rss/rss.php","<rss") || getHtml(urlsettextbox+"/rss/rss.php","<?xml")){
+                urlsettextbox=urlsettextbox + "/rss/rss.php";
             }
             else{
                 MoreFindRss();
@@ -673,7 +752,9 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
         StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
         StrictMode.setThreadPolicy(policy);
-
+        regexp = "^(?:https?:\\/\\/)?(?:[^@\\/\\n]+@)?(?:www\\.)?([^:\\/\\n]+)"; //cut baseurle
+        Pattern pattern = Pattern.compile(regexp);
+        Matcher matcher = pattern.matcher(eTxtSourceUrl.getText().toString());
 
         // for generate correct url
         urlsettextbox=eTxtSourceUrl.getText().toString();
@@ -683,7 +764,13 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
             eTxtSourceUrl.setError("لطفا آدرس منبع را با دقت وارد کنید");
         } else if (message.equals("name_empty")) {
             message = "نام منبع به صورت خودکار پر شد";
-            eTxtSourceName.setText(eTxtSourceUrl.getText());
+            if(matcher.find()){
+                eTxtSourceName.setText(matcher.group(1));
+            }else{
+                String[] separated = eTxtSourceUrl.getText().toString().split("/");
+                eTxtSourceName.setText(separated[0]);
+            }
+
             eTxtSourceName.setError("لطفا نام منبع را وارد کنید");
         } else if (message.equals("url_empty")) {
             message = "آدرس مبنع نمیتواند خالی باشد";
@@ -691,63 +778,44 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
         } else if (message.equals("category_empty")) {
             message = "لطفا دسته بندی را انتخاب کنید";
         } else if (message.equals("در حال بررسی")) {
+
             // for incorrect_url
             // message = " متاسفانه آدرس منبع معتبر نیست";
             if(eTxtSourceName.getText().toString()==""){
-                eTxtSourceName.setText(eTxtSourceUrl.getText());
+                eTxtSourceName.setText(matcher.group(1));
             }
-            regexp = "^(?:https?:\\/\\/)?(?:[^@\\/\\n]+@)?(?:www\\.)?([^:\\/\\n]+)"; //cut baseurle
-            if(eTxtSourceUrl.getText().toString()!="") {
-                originalText=eTxtSourceUrl.getText().toString();
-                Pattern pattern = Pattern.compile(regexp);
-                Matcher matcher = pattern.matcher(eTxtSourceUrl.getText().toString());
-                if (matcher.find()) {// cutting
-                   uuu =matcher.group(1);
-                   eTxtSourceUrl.setText(uuu);
-                    if(uuu.contains("cnn.com")){
-                        uuu = "rss."+uuu;
-                    }else if(uuu.contains("google.com")){
-                        uuu = "news."+uuu;
-                    }else if(uuu.contains("presstv.ir")){
+            if(!eTxtSourceUrl.getText().toString().contains("http") || !eTxtSourceUrl.getText().toString().contains("https") ) {
+                eTxtSourceUrl.setText("http://" + eTxtSourceUrl.getText().toString());
+            }
+            if(!getHtml(eTxtSourceUrl.getText().toString(),"<rss") || !getHtml(eTxtSourceUrl.getText().toString(),"<?xml")){
+                if(eTxtSourceUrl.getText().toString()!="") {
+                    originalText = eTxtSourceUrl.getText().toString();
+                    if (matcher.find()) {// cutting
+                        uuu = matcher.group(1);
+                        eTxtSourceUrl.setText(uuu);
+                        if (uuu.contains("cnn.com")) {
+                            uuu = "rss." + uuu;
+                        } else if (uuu.contains("google.com")) {
+                            uuu = "news." + uuu;
+                        } else if (uuu.contains("presstv.ir")) {
+
+                        }
+                    }
+                    if (!uuu.contains("http") || !uuu.contains("https")) {
+                        eTxtSourceUrl.setText("http://" + uuu);
+                    }
+                    // if domain is not complete
+                    if (!android.util.Patterns.WEB_URL.matcher(eTxtSourceUrl.getText().toString()).matches()) {
+
 
                     }
+
+
+                    urlsettextbox = eTxtSourceUrl.getText().toString();
+                    // check feed url
+                    // Async for load progress dialog with check feed url
+                    new CustomTask().execute((Void[]) null);
                 }
-                if(!uuu.contains("http")) {
-                    eTxtSourceUrl.setText("http://" + uuu);
-                }
-                // if domain is not complete
-                if(!android.util.Patterns.WEB_URL.matcher(eTxtSourceUrl.getText().toString()).matches()){
-                    Log.d("URL","ok");
-                    if(getHtml(eTxtSourceUrl.getText()+".ir","<html")){
-                        eTxtSourceUrl.setText(eTxtSourceUrl.getText()+".ir");
-                    }else if(getHtml(eTxtSourceUrl.getText()+".com","<html")){
-                        eTxtSourceUrl.setText(eTxtSourceUrl.getText()+".com");
-                    }/*else if(getHtml(eTxtSourceUrl.getText()+".co.ir","<html")){
-                        eTxtSourceUrl.setText(eTxtSourceUrl.getText()+".co.ir");
-                    }else if(getHtml(eTxtSourceUrl.getText()+".io","<html")){
-                        eTxtSourceUrl.setText(eTxtSourceUrl.getText()+".io");
-                    }else if(getHtml(eTxtSourceUrl.getText()+".us","<html")){
-                        eTxtSourceUrl.setText(eTxtSourceUrl.getText()+".us");
-                    }else if(getHtml(eTxtSourceUrl.getText()+".tv","<html")){
-                        eTxtSourceUrl.setText(eTxtSourceUrl.getText()+".tv");
-                    }*/else{
-                        eTxtSourceUrl.setText(eTxtSourceUrl.getText()+".خطا");
-                    }
-
-                }
-
-
-
-
-
-
-
-
-
-                urlsettextbox=eTxtSourceUrl.getText().toString();
-                // check feed url
-                // Async for load progress dialog with check feed url
-                new CustomTask().execute((Void[])null);
             }
 
         }
@@ -844,7 +912,8 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
         }
     }
 
-    /*@Override
+    /*
+    @Override
     public boolean onCreateOptionsMenu(Menu menu) {
         // Inflate the menu; this adds items to the action bar if it is present.
         getMenuInflater().inflate(R.menu.menu_feeds, menu);

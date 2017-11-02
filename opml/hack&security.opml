@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+<head>
+<title>Tahririye_man Opml</title>
+</head>
+<body><outline text="vulnerability-lab.com" category="هک و امنیت" description= "vulnerability-lab.com"  htmlUrl="vulnerability-lab.com" type="rss" xmlUrl="https://www.vulnerability-lab.com/rss/rss.php
+"/>
+
+<outline text="packetstormsecurity.com" category="هک و امنیت" description= "packetstormsecurity.com"  htmlUrl="packetstormsecurity.com" type="rss" xmlUrl="https://rss.packetstormsecurity.com/
+"/>
+
+
+</body>
+</opml> 

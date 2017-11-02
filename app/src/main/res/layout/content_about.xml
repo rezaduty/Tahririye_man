@@ -23,7 +23,7 @@
         <FrameLayout
             android:id="@+id/frame_layout_contact"
             android:layout_width="wrap_content"
-            android:layout_height="200dp"
+            android:layout_height="259dp"
             android:clickable="true"
             android:foreground="?android:attr/selectableItemBackground">
 
@@ -44,37 +44,41 @@
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/text_size_min"
                     android:id="@+id/textView"
-                    android:layout_alignParentBottom="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
+                    android:gravity="right"
+                    android:background="#e6e5e7"
                     android:layout_alignParentLeft="true"
                     android:layout_alignParentStart="true"
-                    android:gravity="right"
-                    android:background="#e6e5e7" />
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentBottom="true" />
 
                 <TextView
                     android:id="@+id/text_view_app_version"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:ellipsize="end"
+
                     android:padding="@dimen/padding_min"
-                    android:layout_alignParentRight="true"
-                    android:textDirection="rtl"
+                    android:textDirection="ltr"
                     android:textColor="@color/colorPrimary"
                     android:textSize="@dimen/text_size_min"
+                    android:background="#e9e9ea"
                     android:layout_above="@+id/textView"
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_marginBottom="19dp"
-                    android:background="#e9e9ea" />
+                    android:layout_alignParentStart="true" />
+
+                <ImageView
+                    android:id="@+id/image_button_nTA_about"
+                    android:scaleType="fitStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="146dp"
+
+                    android:src="@drawable/about"
+                    android:layout_alignParentTop="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
-            <ImageView
-                android:id="@+id/image_button_nTA_about"
-                android:scaleType="fitStart"
-                android:layout_width="match_parent"
-                android:layout_height="match_parent"
-
-                android:src="@drawable/about" />
         </FrameLayout>
 
         <Space

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+<head>
+<title>Tahririye_man Opml</title>
+</head>
+<body><outline text= "developer.com" category="نرم افزار" description= "developer.com"  htmlUrl="developer.com" type="rss" xmlUrl="https://www.developer.com/developer/dev-25.xml"/>
+
+<outline text= "slashdot.org" category="نرم افزار" description= "slashdot.org"  htmlUrl="slashdot.org" type="rss" xmlUrl="http://rss.slashdot.org/Slashdot/slashdotMain"/>
+
+<outline text= "eweek.com" category="نرم افزار" description= "eweek.com"  htmlUrl="eweek.com" type="rss" xmlUrl="http://www.eweek.com/rss.xml"/>
+
+<outline text= "github.com Blog" category="نرم افزار" description= "github.com Blog"  htmlUrl="github.com" type="rss" xmlUrl="https://github.com/blog.atom"/>
+
+
+</body>
+</opml> 

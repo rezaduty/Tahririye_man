@@ -1,5 +1,6 @@
 package com.rezaduty.chdev.ks.tahririye_man.ui.activities;
 
+import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
@@ -27,10 +28,12 @@ import com.rezaduty.chdev.ks.tahririye_man.utils.WebsiteIntentUtil;
 import butterknife.Bind;
 import butterknife.ButterKnife;
 import butterknife.OnClick;
+import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
+import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class AboutActivity extends AppCompatActivity {
 
-    private static String EMAIL_SUBJECT = "nTA Feedback";
+    private static String EMAIL_SUBJECT = "Tahririye_man Feedback";
     private static String MESSAGE_TYPE = "message/rfc822";
     @Bind(R.id.toolbar)
     Toolbar toolbar;
@@ -43,6 +46,12 @@ public class AboutActivity extends AppCompatActivity {
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+        CalligraphyConfig.initDefault(new CalligraphyConfig.Builder()
+                .setDefaultFontPath("fonts/vazir.ttf")
+                .setFontAttrId(R.attr.fontPath)
+                .build()
+        );
+        //....
 
         setActivityTheme();
 
@@ -83,7 +92,11 @@ public class AboutActivity extends AppCompatActivity {
         }
         String versionName = packageInfo.versionName;
         String versionCode = String.valueOf(packageInfo.versionCode);
-        txtAppVersion.setText("App Version: " + versionName + "\nApp Version Code: " + versionCode);
+        txtAppVersion.setText("App Version Code: " + versionCode);
+        txtAppVersion.append("App Version Name: " + versionName+"\n");
+
+
+
     }
 
     @OnClick(R.id.frame_layout_contact)

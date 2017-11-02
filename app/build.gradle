@@ -55,4 +55,8 @@ dependencies {
 
     compile 'com.github.delight-im:Android-AdvancedWebView:v3.0.0'
     compile 'com.bcgdv.asia.lib:fanmenu:1.2'
+    compile 'uk.co.chrisjenx:calligraphy:2.1.0'
+
+
+
 }

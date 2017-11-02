@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<opml version="1.0">
+<head>
+<title>Tahririye_man Opml</title>
+</head>
+<body><outline text= "nodejs.org" category="نرم افزار" description= "nodejs.org"  htmlUrl="nodejs.org" type="rss" xmlUrl="https://nodejs.org/en/feed/blog.xml"/>
+
+<outline text= "blog.jquery.com" category="نرم افزار" description= "blog.jquery.com"  htmlUrl="blog.jquery.com" type="rss" xmlUrl="http://blog.jquery.com/feed/"/>
+
+<outline text= "blog.angularjs.org" category="نرم افزار" description= "blog.angularjs.org"  htmlUrl="blog.angularjs.org" type="rss" xmlUrl="http://blog.angularjs.org/feeds/posts/default"/>
+
+
+</body>
+</opml> 

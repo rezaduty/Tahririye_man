@@ -1,9 +1,11 @@
 package com.rezaduty.chdev.ks.tahririye_man.sources;
 
 import android.content.Context;
+import android.os.StrictMode;
 import android.util.Log;
 
 import com.rezaduty.chdev.ks.tahririye_man.models.SourceItem;
+import com.rezaduty.chdev.ks.tahririye_man.ui.activities.HomeActivity;
 import com.rezaduty.chdev.ks.tahririye_man.utils.DatabaseUtil;
 import com.rezaduty.chdev.ks.tahririye_man.utils.UrlUtil;
 
@@ -95,85 +97,28 @@ public class SourceInteractor implements ISourceInteractor {
             //Log.e("categoryImgId", String.valueOf(sourceItem.getSourceCategoryImgId()));
             //Log.e("date", sourceItem.getSourceDateAdded());
 
+            StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
+            StrictMode.setThreadPolicy(policy);
             Log.e("RSS",sourceItem.getSourceUrl());
-            if(true==true){
-                Log.e("RSS",sourceItem.getSourceUrl().toString());
-                if(sourceItem.getSourceUrl().toString().contains("http://rezaduty.blog.")){
-                    Log.e("RSS",sourceItem.getSourceUrl());
-                    DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
-                    databaseUtil.saveSourceInDB(sourceItem);
+            if (getHtml(sourceItem.getSourceUrl(),"<rss")) {
+                DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
+                databaseUtil.saveSourceInDB(sourceItem);
 
-                    onSourceSavedListener.onSuccess("ذخیره شد");
-                }else if(sourceItem.getSourceUrl().toString().contains("http://farsi.khamenei.ir/rss")){
-                    DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
-                    databaseUtil.saveSourceInDB(sourceItem);
-
-                    onSourceSavedListener.onSuccess("ذخیره شد");
-                }else if(sourceItem.getSourceUrl().toString().contains("http://www.isna.ir/rss-homepage/")){
-                    DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
-                    databaseUtil.saveSourceInDB(sourceItem);
-
-                    onSourceSavedListener.onSuccess("ذخیره شد");
-                }else if(sourceItem.getSourceUrl().toString().contains("http://www.yjc.ir/fa/rss/allnews/")){
-                    DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
-                    databaseUtil.saveSourceInDB(sourceItem);
-
-                    onSourceSavedListener.onSuccess("ذخیره شد");
-                }else if(sourceItem.getSourceUrl().toString().contains("http://pardisgame.net/rss/")){
-                    DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
-                    databaseUtil.saveSourceInDB(sourceItem);
-
-                    onSourceSavedListener.onSuccess("ذخیره شد");
-                }else if(sourceItem.getSourceUrl().toString().contains("http://gamefa.com/feed/")){
-                    DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
-                    databaseUtil.saveSourceInDB(sourceItem);
-
-                    onSourceSavedListener.onSuccess("ذخیره شد");
-                }else if(sourceItem.getSourceUrl().toString().contains("planet.sito.ir/feed/")){
-                    DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
-                    databaseUtil.saveSourceInDB(sourceItem);
-
-                    onSourceSavedListener.onSuccess("ذخیره شد");
-                }else if(sourceItem.getSourceUrl().toString().contains("https://www.tarfandestan.com/rss/")){
-                    DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
-                    databaseUtil.saveSourceInDB(sourceItem);
-
-                    onSourceSavedListener.onSuccess("ذخیره شد");
-                }else if(sourceItem.getSourceUrl().toString().contains("https://www.sakhtafzarmag.com/?format=feed/")){
-                    DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
-                    databaseUtil.saveSourceInDB(sourceItem);
-
-                    onSourceSavedListener.onSuccess("ذخیره شد");
-                }else if(sourceItem.getSourceUrl().toString().contains("http://digiato.com/feed/")){
-                    DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
-                    databaseUtil.saveSourceInDB(sourceItem);
-
-                    onSourceSavedListener.onSuccess("ذخیره شد");
-                }else{
-                    if (getHtml(sourceItem.getSourceUrl(),"<rss")) {
-                        DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
-                        databaseUtil.saveSourceInDB(sourceItem);
-
-                        onSourceSavedListener.onSuccess("ذخیره شد");
+                onSourceSavedListener.onSuccess("ذخیره شد");
 
 
-                    }else if (getHtml(sourceItem.getSourceUrl(),"<?xml")){
-                        DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
-                        databaseUtil.saveSourceInDB(sourceItem);
 
-                        onSourceSavedListener.onSuccess("ذخیره شد");
-                        getSourcesFromDb((OnSourcesLoadedListener) this);
+            }else if (getHtml(sourceItem.getSourceUrl(),"<?xml")){
+                DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
+                databaseUtil.saveSourceInDB(sourceItem);
 
-                    }else{
-                        // incorrect_url
-                        onSourceSavedListener.onFailure("در حال بررسی");
-                    }
-                }
+                onSourceSavedListener.onSuccess("ذخیره شد");
+
+
             }else{
-
+                onSourceSavedListener.onFailure("در حال بررسی");
             }
-
 
 
         }
@@ -183,12 +128,14 @@ public class SourceInteractor implements ISourceInteractor {
         List<String> sourceNames = new ArrayList<>();
         try {
             //default value
-            sourceNames.add("تمامی منابع");
+            sourceNames.add("تمام منابع");
+
 
             List<SourceItem> sourceItems = new DatabaseUtil(mContext).getAllSources();
 
             for (SourceItem sourceItem : sourceItems) {
                 sourceNames.add(sourceItem.getSourceName());
+
             }
 
             onSourcesLoadedListener.onSourceLoaded(sourceNames);
