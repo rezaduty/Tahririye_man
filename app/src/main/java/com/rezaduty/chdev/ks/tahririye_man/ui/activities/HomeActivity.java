@@ -475,7 +475,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
                 StringBuilder html = new StringBuilder();
                 for (String line; (line = reader.readLine()) != null; ) {
                     html.append(line);
-                    if (html.toString().startsWith(param)) {
+                    if (html.toString().contains(param)) {
                         status = true;
                         break;
 
