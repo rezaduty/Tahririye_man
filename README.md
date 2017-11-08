@@ -5,13 +5,13 @@
 </h1>
 
 <p align="center">
-	<a href="https://apkscan.nviso.be/report/show/6286286ec0cbe8c5d6e7c5743858b7a1">
+	<a href="https://apkscan.nviso.be/report/show/338372b751652daade53d5d8692f1764">
         	<img src="https://img.shields.io/badge/malware%20scan%20result-clean-brightgreen.svg" alt="malware scan">
 	</a>
 	<a href="https://github.com/ellerbrock/open-source-badge/">
 		<img src="https://badges.frapsoft.com/os/v3/open-source.svg?v=102" alt="open source">
 	</a>
-	<a href="https://www.dropbox.com/s/tvcobmapiucb7qm/t-v1-0.apk?dl=0">
+	<a href="https://github.com/rezaduty/Tahririye_man/raw/master/app/t-v1.0.apk">
 		<img src="https://img.shields.io/travis/rust-lang/rust/master.svg" alt="open source">
 	</a>
 	<a href="#">
@@ -32,11 +32,11 @@ A minimalistic, easy to use Rss reader application.
 # Download
 
 ***
-For download apk without android store please goto ``app/`` folder and Download ``t-v*-*.apk``
+For download apk without android store please goto ``app/`` folder and Download ``t-v*.*.apk``
 
 OR 
 
-[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://www.dropbox.com/s/tvcobmapiucb7qm/t-v1-0.apk?dl=0)
+[![Travis branch](https://img.shields.io/travis/rust-lang/rust/master.svg)](https://github.com/rezaduty/Tahririye_man/raw/master/app/t-v1.0.apk)
 
 
 # What is Tahririrye_man ?
@@ -67,15 +67,13 @@ Tahririye_man uses jsoup xml parser to parse rss feeds and also load the web art
 
 [![Requirement](https://img.shields.io/badge/android-%3E%3D4.1-orange.svg)]()
 
-# Blog Review
+# LICENSE
+
+[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 
 <h1 align="center">
   <br>
   <a href="http://rezaduty.blog.ir/"><img src="https://raw.githubusercontent.com/rezaduty/Tahririye_man/master/rezaduty.png" alt="Markdownify" width="200"></a>
 
 </h1>
-
-# LICENSE
-
-[![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
 

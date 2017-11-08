@@ -28,7 +28,7 @@ import java.util.List;
  * Created by Kartik_ch on 1/8/2016.
  */
 public class ImportOpmlInteractor implements IImportOpmlInteractor {
-    private static String UNKNOWN = "Unknown";
+    private static String UNKNOWN = "نامشخص";
     private OnOpmlImportListener mOnOpmlImportListener;
     private MaterialDialog mLoadingDialog;
     private OpmlAsyncParser mOpmlAsyncParser;
