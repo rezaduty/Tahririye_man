@@ -92,9 +92,8 @@ public class AboutActivity extends AppCompatActivity {
         }
         String versionName = packageInfo.versionName;
         String versionCode = String.valueOf(packageInfo.versionCode);
-        txtAppVersion.setText("App Version Code: " + versionCode+"\n");
+        txtAppVersion.setText("App Version Code: " + versionCode + "\n");
         txtAppVersion.append("App Version Name: " + versionName);
-
 
 
     }

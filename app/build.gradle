@@ -35,7 +35,7 @@ dependencies {
         transitive = true
     }
     compile('com.github.ozodrukh:CircularReveal:1.1.1@aar') {
-        transitive = true;
+        transitive = true
     }
     compile project(':mindb')
     compile project(':rssmanager')

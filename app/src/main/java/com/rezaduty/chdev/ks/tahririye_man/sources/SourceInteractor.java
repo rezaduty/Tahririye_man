@@ -30,15 +30,16 @@ public class SourceInteractor implements ISourceInteractor {
     public SourceInteractor(Context mContext) {
         this.mContext = mContext;
     }
+
     // check url is feed
-    public boolean getHtml(String urll,String param) {
+    public boolean getHtml(String urll, String param) {
         Boolean status;
-        status=false;
+        status = false;
         try {
             // Build and set timeout values for the request.
 
             URL url = new URL(urll.toString());
-            HttpURLConnection connection = (HttpURLConnection)url.openConnection();
+            HttpURLConnection connection = (HttpURLConnection) url.openConnection();
             connection.setRequestMethod("GET");
             connection.setConnectTimeout(5000);
             connection.setReadTimeout(5000);
@@ -46,7 +47,7 @@ public class SourceInteractor implements ISourceInteractor {
 
             int code = connection.getResponseCode();
 
-            if(code == 200) {
+            if (code == 200) {
                 // Read and store the result line by line then return the entire string.
                 InputStream in = connection.getInputStream();
                 BufferedReader reader = new BufferedReader(new InputStreamReader(in));
@@ -64,8 +65,8 @@ public class SourceInteractor implements ISourceInteractor {
                     }
                 }
                 in.close();
-            }else{
-                status=false;
+            } else {
+                status = false;
             }
 
         } catch (Exception e) {
@@ -80,12 +81,7 @@ public class SourceInteractor implements ISourceInteractor {
     public void addSourceToDb(OnSourceSavedListener onSourceSavedListener, SourceItem sourceItem) {
         // main shit happens here
         this.onSourceSavedListener = onSourceSavedListener;
-        MaterialDialog dialog = new MaterialDialog.Builder(mContext)
-                .title("dasasdasd")
-                .content("asssssssssssssssssssssssssssssssss")
-                .positiveText("tes")
-                .show();
-        dialog.show();
+
         String regexUrl = UrlUtil.REGEX_URL;
 
         if (sourceItem.getSourceName().isEmpty() && sourceItem.getSourceUrl().isEmpty() && sourceItem.getSourceCategoryName().isEmpty()) {
@@ -98,7 +94,7 @@ public class SourceInteractor implements ISourceInteractor {
             onSourceSavedListener.onFailure("category_empty");
         } else if (!sourceItem.getSourceUrl().matches(regexUrl)) {
             onSourceSavedListener.onFailure("در حال بررسی");
-        }else {
+        } else {
 
             //Log.e("name", sourceItem.getSourceName());
             //Log.e("url", sourceItem.getSourceUrl());
@@ -109,31 +105,28 @@ public class SourceInteractor implements ISourceInteractor {
             StrictMode.ThreadPolicy policy = new StrictMode.ThreadPolicy.Builder().permitAll().build();
 
             StrictMode.setThreadPolicy(policy);
-            Log.e("RSS",sourceItem.getSourceUrl());
+            Log.e("RSS", sourceItem.getSourceUrl());
 
-            if (getHtml(sourceItem.getSourceUrl(),"<rss")) {
+            if (getHtml(sourceItem.getSourceUrl(), "<rss")) {
                 DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
                 databaseUtil.saveSourceInDB(sourceItem);
-                dialog.dismiss();
-                Toast.makeText(mContext, "با موفقیت ثبت شد"+"\n"+sourceItem.getSourceUrl(),
+
+                Toast.makeText(mContext, "با موفقیت ثبت شد" + "\n" + sourceItem.getSourceUrl(),
                         Toast.LENGTH_LONG).show();
                 onSourceSavedListener.onSuccess("ذخیره شد");
 
 
-
-
-            }else if (getHtml(sourceItem.getSourceUrl(),"<?xml")){
+            } else if (getHtml(sourceItem.getSourceUrl(), "<?xml")) {
                 DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
                 databaseUtil.saveSourceInDB(sourceItem);
-                dialog.dismiss();
-                Toast.makeText(mContext, "با موفقیت ثبت شد"+"\n"+sourceItem.getSourceUrl(),
+
+                Toast.makeText(mContext, "با موفقیت ثبت شد" + "\n" + sourceItem.getSourceUrl(),
                         Toast.LENGTH_LONG).show();
                 onSourceSavedListener.onSuccess("ذخیره شد");
 
 
-            }else{
-                dialog.dismiss();
-                Toast.makeText(mContext,  "خطایی رخ داده است"+"\n"+sourceItem.getSourceUrl(),
+            } else {
+                Toast.makeText(mContext, "خطایی رخ داده است" + "\n" + sourceItem.getSourceUrl(),
                         Toast.LENGTH_LONG).show();
                 onSourceSavedListener.onFailure("در حال بررسی");
             }

@@ -132,7 +132,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
                 .build()
         );
         //....
-        View view = (View) LayoutInflater.from(this).inflate(R.layout.content_home, null);
+        View view = LayoutInflater.from(this).inflate(R.layout.content_home, null);
 
         isStoragePermissionGranted();
 
@@ -511,10 +511,7 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
             for (Element head : doc.select("link")) {
                 if(head.toString().contains("rss")){
                     sourcefeedurl = head.attr("href").toString();
-                    if(!android.util.Patterns.WEB_URL.matcher(sourcefeedurl).matches())
-                        status=true;
-                    else
-                        status=false;
+                    status = !android.util.Patterns.WEB_URL.matcher(sourcefeedurl).matches();
                     break;
                 }
                 Log.d("OK",head.toString());

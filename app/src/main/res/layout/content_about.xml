@@ -28,7 +28,6 @@
             android:foreground="?android:attr/selectableItemBackground">
 
 
-
             <RelativeLayout
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
@@ -37,46 +36,46 @@
                 android:background="#e9e8e9">
 
                 <TextView
+                    android:id="@+id/textView"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
+                    android:layout_alignParentBottom="true"
+                    android:layout_alignParentEnd="true"
+                    android:layout_alignParentLeft="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_alignParentStart="true"
+                    android:background="#e6e5e7"
+                    android:gravity="right"
                     android:padding="@dimen/padding_min"
                     android:text="@string/created_by"
                     android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/text_size_min"
-                    android:id="@+id/textView"
-                    android:gravity="right"
-                    android:background="#e6e5e7"
-                    android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true"
-                    android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true"
-                    android:layout_alignParentBottom="true" />
+                    android:textSize="@dimen/text_size_min" />
 
                 <TextView
                     android:id="@+id/text_view_app_version"
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:ellipsize="end"
-
-                    android:padding="@dimen/padding_min"
-                    android:textDirection="ltr"
-                    android:textColor="@color/colorPrimary"
-                    android:textSize="@dimen/text_size_min"
-                    android:background="#e9e9ea"
                     android:layout_above="@+id/textView"
+
                     android:layout_alignParentLeft="true"
-                    android:layout_alignParentStart="true" />
+                    android:layout_alignParentStart="true"
+                    android:background="#e9e9ea"
+                    android:ellipsize="end"
+                    android:padding="@dimen/padding_min"
+                    android:textColor="@color/colorPrimary"
+                    android:textDirection="ltr"
+                    android:textSize="@dimen/text_size_min" />
 
                 <ImageView
                     android:id="@+id/image_button_nTA_about"
-                    android:scaleType="fitStart"
                     android:layout_width="wrap_content"
                     android:layout_height="146dp"
+                    android:layout_alignParentEnd="true"
 
-                    android:src="@drawable/about"
-                    android:layout_alignParentTop="true"
                     android:layout_alignParentRight="true"
-                    android:layout_alignParentEnd="true" />
+                    android:layout_alignParentTop="true"
+                    android:scaleType="fitStart"
+                    android:src="@drawable/about" />
 
             </RelativeLayout>
         </FrameLayout>
