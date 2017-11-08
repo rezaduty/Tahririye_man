@@ -3,7 +3,10 @@ package com.rezaduty.chdev.ks.tahririye_man.sources;
 import android.content.Context;
 import android.os.StrictMode;
 import android.util.Log;
+import android.widget.Toast;
 
+import com.afollestad.materialdialogs.MaterialDialog;
+import com.rezaduty.chdev.ks.tahririye_man.R;
 import com.rezaduty.chdev.ks.tahririye_man.models.SourceItem;
 import com.rezaduty.chdev.ks.tahririye_man.ui.activities.HomeActivity;
 import com.rezaduty.chdev.ks.tahririye_man.utils.DatabaseUtil;
@@ -77,7 +80,12 @@ public class SourceInteractor implements ISourceInteractor {
     public void addSourceToDb(OnSourceSavedListener onSourceSavedListener, SourceItem sourceItem) {
         // main shit happens here
         this.onSourceSavedListener = onSourceSavedListener;
-
+        MaterialDialog dialog = new MaterialDialog.Builder(mContext)
+                .title("dasasdasd")
+                .content("asssssssssssssssssssssssssssssssss")
+                .positiveText("tes")
+                .show();
+        dialog.show();
         String regexUrl = UrlUtil.REGEX_URL;
 
         if (sourceItem.getSourceName().isEmpty() && sourceItem.getSourceUrl().isEmpty() && sourceItem.getSourceCategoryName().isEmpty()) {
@@ -91,6 +99,7 @@ public class SourceInteractor implements ISourceInteractor {
         } else if (!sourceItem.getSourceUrl().matches(regexUrl)) {
             onSourceSavedListener.onFailure("در حال بررسی");
         }else {
+
             //Log.e("name", sourceItem.getSourceName());
             //Log.e("url", sourceItem.getSourceUrl());
             //Log.e("category", sourceItem.getSourceCategoryName());
@@ -101,22 +110,31 @@ public class SourceInteractor implements ISourceInteractor {
 
             StrictMode.setThreadPolicy(policy);
             Log.e("RSS",sourceItem.getSourceUrl());
+
             if (getHtml(sourceItem.getSourceUrl(),"<rss")) {
                 DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
                 databaseUtil.saveSourceInDB(sourceItem);
-
+                dialog.dismiss();
+                Toast.makeText(mContext, "با موفقیت ثبت شد"+"\n"+sourceItem.getSourceUrl(),
+                        Toast.LENGTH_LONG).show();
                 onSourceSavedListener.onSuccess("ذخیره شد");
+
 
 
 
             }else if (getHtml(sourceItem.getSourceUrl(),"<?xml")){
                 DatabaseUtil databaseUtil = new DatabaseUtil(mContext);
                 databaseUtil.saveSourceInDB(sourceItem);
-
+                dialog.dismiss();
+                Toast.makeText(mContext, "با موفقیت ثبت شد"+"\n"+sourceItem.getSourceUrl(),
+                        Toast.LENGTH_LONG).show();
                 onSourceSavedListener.onSuccess("ذخیره شد");
 
 
             }else{
+                dialog.dismiss();
+                Toast.makeText(mContext,  "خطایی رخ داده است"+"\n"+sourceItem.getSourceUrl(),
+                        Toast.LENGTH_LONG).show();
                 onSourceSavedListener.onFailure("در حال بررسی");
             }
 

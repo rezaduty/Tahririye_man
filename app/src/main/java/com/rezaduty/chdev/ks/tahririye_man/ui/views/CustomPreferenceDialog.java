@@ -27,7 +27,7 @@ public class CustomPreferenceDialog extends DialogPreference {
             // User selected OK
             try {
                 new DatabaseUtil(getContext()).deleteAll();
-                Toast.makeText(getContext(), "Database reset", Toast.LENGTH_SHORT).show();
+                Toast.makeText(getContext(), "با موفقیت انجام شد", Toast.LENGTH_SHORT).show();
             } catch (Exception e) {
                 e.printStackTrace();
                 Toast.makeText(getContext(), "Error: " + e.getMessage(), Toast.LENGTH_SHORT).show();
