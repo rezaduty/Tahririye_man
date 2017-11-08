@@ -4,11 +4,6 @@
 
 </h1>
 
-# Tahririye_man
-A minimalistic, easy to use Rss reader application.
-
-## Program Scan Result
-
 <p align="center">
 	<a href="https://apkscan.nviso.be/report/show/6286286ec0cbe8c5d6e7c5743858b7a1">
         	<img src="https://img.shields.io/badge/malware%20scan%20result-clean-brightgreen.svg" alt="malware scan">
@@ -16,26 +11,23 @@ A minimalistic, easy to use Rss reader application.
 	<a href="https://github.com/ellerbrock/open-source-badge/">
 		<img src="https://badges.frapsoft.com/os/v3/open-source.svg?v=102" alt="open source">
 	</a>
-
 	<a href="https://www.dropbox.com/s/tvcobmapiucb7qm/t-v1-0.apk?dl=0">
 		<img src="https://img.shields.io/travis/rust-lang/rust/master.svg" alt="open source">
 	</a>
-
 	<a href="#">
 		<img src="https://img.shields.io/chrome-web-store/price/nimelepbpejjlbmoobocpfnjhihnpked.svg?style=plastic" alt="open source">
 	</a>
-
 	<a href="#">
 		<img src="https://img.shields.io/badge/size-3.4%20MB-brightgreen.svg" alt="open source">
 	</a>
 	<a href="https://saythanks.io/to/rezaduty">
 		<img src="https://img.shields.io/badge/Say%20Thanks-!-1EAEDB.svg" alt="open source">
 	</a>
-
-
 </p>
 
 
+# Tahririye_man
+A minimalistic, easy to use Rss reader application.
 
 # Download
 
@@ -86,3 +78,4 @@ Tahririye_man uses jsoup xml parser to parse rss feeds and also load the web art
 # LICENSE
 
 [![license](https://img.shields.io/github/license/mashape/apistatus.svg)]()
+
