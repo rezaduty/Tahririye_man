@@ -2,6 +2,7 @@ package com.rezaduty.chdev.ks.tahririye_man.ui.activities;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Build;
 import android.os.Bundle;
 import android.support.design.widget.FloatingActionButton;
@@ -335,6 +336,8 @@ public class ArticleActivity extends AppCompatActivity implements IArticleView, 
 
         if (id == R.id.action_delete) {
             MaterialDialog confirmDeleteDialog = new MaterialDialog.Builder(this)
+                    .contentColor(Color.parseColor("#424242"))
+                    .titleColor(Color.parseColor("#424242"))
                     .titleGravity(GravityEnum.END)
                     .contentGravity(GravityEnum.END)
                     .title(R.string.delete_this_feed)

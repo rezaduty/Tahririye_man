@@ -5,6 +5,7 @@ import android.app.ProgressDialog;
 import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.os.Build;
 import android.os.Bundle;
@@ -373,6 +374,8 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
         final MaterialDialog categoryDialog = new MaterialDialog.Builder(HomeActivity.this)
                 .titleGravity(GravityEnum.END)
                 .contentGravity(GravityEnum.END)
+                .contentColor(Color.parseColor("#424242"))
+                .titleColor(Color.parseColor("#424242"))
                 .title(R.string.add_category)
                 .adapter(new CategoryListAdapter(HomeActivity.this, categoryItems),
                         new MaterialDialog.ListCallback() {
@@ -690,6 +693,11 @@ public class HomeActivity extends AppCompatActivity implements ISourceView, Floa
             else if(getHtml(urlsettextbox+"/rss/top","<rss")){
                 urlsettextbox=urlsettextbox + "/rss/top";
                 Log.d("ok","khabarfarsi");
+            }
+            // armandaily
+            else if(getHtml(urlsettextbox+"/Feed/Service/0","<rss")){
+                urlsettextbox=urlsettextbox + "/Feed/Service/0";
+                Log.d("ok","armandaily");
             }
 
             // jamejamonline

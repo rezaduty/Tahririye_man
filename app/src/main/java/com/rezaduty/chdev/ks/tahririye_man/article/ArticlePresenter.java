@@ -1,6 +1,7 @@
 package com.rezaduty.chdev.ks.tahririye_man.article;
 
 import android.content.Context;
+import android.graphics.Color;
 
 import com.afollestad.materialdialogs.DialogAction;
 import com.afollestad.materialdialogs.GravityEnum;
@@ -45,6 +46,8 @@ public class ArticlePresenter implements IArticlePresenter, OnArticleLoadedListe
         MaterialDialog removeArticleDialog = new MaterialDialog.Builder(mContext)
                 .titleGravity(GravityEnum.END)
                 .contentGravity(GravityEnum.END)
+                .contentColor(Color.parseColor("#424242"))
+                .titleColor(Color.parseColor("#424242"))
                 .title(R.string.remove_archive)
                 .content(R.string.remove_archive_content)
                 .positiveText(R.string.remove)

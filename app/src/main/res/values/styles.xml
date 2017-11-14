@@ -68,7 +68,7 @@
     </style>
 
     <style name="AppThemeCustom.NoActionBar.Grey">
-        <item name="colorPrimary">@color/md_grey_500</item>
+        <item name="colorPrimary">@color/md_black_1000</item>
     </style>
 
     <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />

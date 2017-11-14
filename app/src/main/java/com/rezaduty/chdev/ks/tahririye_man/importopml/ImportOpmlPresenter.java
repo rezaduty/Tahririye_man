@@ -1,6 +1,7 @@
 package com.rezaduty.chdev.ks.tahririye_man.importopml;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.widget.EditText;
@@ -44,6 +45,8 @@ public class ImportOpmlPresenter implements IImportOpmlPresenter, OnOpmlImportLi
             MaterialDialog urlDialog = new MaterialDialog.Builder(sContext)
                     .titleGravity(GravityEnum.END)
                     .contentGravity(GravityEnum.END)
+                    .contentColor(Color.parseColor("#424242"))
+                    .titleColor(Color.parseColor("#424242"))
                     .title(R.string.enter_url)
                     .customView(R.layout.dialog_ompl_url, true)
                     .positiveText(R.string.get_feeds)

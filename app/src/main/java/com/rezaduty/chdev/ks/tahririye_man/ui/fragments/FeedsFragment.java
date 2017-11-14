@@ -1,6 +1,7 @@
 package com.rezaduty.chdev.ks.tahririye_man.ui.fragments;
 
 import android.content.Intent;
+import android.graphics.Color;
 import android.os.Bundle;
 import android.os.Handler;
 import android.support.annotation.Nullable;
@@ -183,6 +184,8 @@ public class FeedsFragment extends Fragment implements IFeedsView, SwipeRefreshL
             MaterialDialog sortDialog = new MaterialDialog.Builder(getActivity())
                     .titleGravity(GravityEnum.END)
                     .contentGravity(GravityEnum.END)
+                    .contentColor(Color.parseColor("#424242"))
+                    .titleColor(Color.parseColor("#424242"))
                     .title(R.string.sort_feeds)
                     .positiveText(R.string.sort)
                     .negativeText(R.string.cancel)
@@ -211,6 +214,8 @@ public class FeedsFragment extends Fragment implements IFeedsView, SwipeRefreshL
 
         if (id == R.id.action_clear_feeds) {
             MaterialDialog confirmDeleteDialog = new MaterialDialog.Builder(getActivity())
+                    .contentColor(Color.parseColor("#424242"))
+                    .titleColor(Color.parseColor("#424242"))
                     .title(R.string.clear_feeds)
                     .content(R.string.clear_feeds_desc)
                     .titleGravity(GravityEnum.CENTER)

@@ -2,6 +2,7 @@ package com.rezaduty.chdev.ks.tahririye_man.article;
 
 import android.content.Context;
 import android.content.DialogInterface;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.util.Log;
 
@@ -44,6 +45,8 @@ public class ArticleInteractor implements IArticleInteractor {
         mMaterialDialog = new MaterialDialog.Builder(context)
                 .titleGravity(GravityEnum.END)
                 .contentGravity(GravityEnum.END)
+                .contentColor(Color.parseColor("#424242"))
+                .titleColor(Color.parseColor("#424242"))
                 .title(R.string.loading)
                 .content(R.string.please_wait)
                 .progress(true, 0)
@@ -222,12 +225,12 @@ public class ArticleInteractor implements IArticleInteractor {
                                     para = para.replaceAll("/files/fa", "http://www.mizanonline.ir/files/fa");
                                 }*/
 
-                                body += para + "<br><br><br><br><br><br>";
+                                body += para + "<br><br><br><br><br><br><br><br><br>";
                             }
                         }
 
                         else {
-                            body += para + "\n\n";
+                            body += para + "\n";
                         }
 
                     }

@@ -2,6 +2,7 @@ package com.rezaduty.chdev.ks.tahririye_man.utils;
 
 import android.content.Context;
 import android.content.Intent;
+import android.graphics.Color;
 import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.provider.Settings;
@@ -30,6 +31,8 @@ public class NetworkConnectionUtil {
         MaterialDialog noNetworkAvailDialog = new MaterialDialog.Builder(context)
                 .titleGravity(GravityEnum.END)
                 .contentGravity(GravityEnum.END)
+                .contentColor(Color.parseColor("#424242"))
+                .titleColor(Color.parseColor("#424242"))
                 .title(R.string.no_internet_available)
                 .content(R.string.no_internet_available_extnd)
                 .positiveText(R.string.settings)

@@ -58,6 +58,8 @@ public class SourcesPresenter implements ISourcePresenter, OnSourceSavedListener
         final MaterialDialog modifyDialog = new MaterialDialog.Builder(context)
                 .titleGravity(GravityEnum.END)
                 .contentGravity(GravityEnum.END)
+                .contentColor(Color.parseColor("#424242"))
+                .titleColor(Color.parseColor("#424242"))
                 .title(R.string.modify_source)
                 .customView(R.layout.dialog_modify_source, true)
                 .positiveText(R.string.modify)
@@ -112,6 +114,8 @@ public class SourcesPresenter implements ISourcePresenter, OnSourceSavedListener
                 final MaterialDialog categoryDialog = new MaterialDialog.Builder(context)
                         .titleGravity(GravityEnum.END)
                         .contentGravity(GravityEnum.END)
+                        .contentColor(Color.parseColor("#424242"))
+                        .titleColor(Color.parseColor("#424242"))
                         .title(R.string.add_category)
                         .adapter(new CategoryListAdapter(context, categoryItems),
                                 new MaterialDialog.ListCallback() {

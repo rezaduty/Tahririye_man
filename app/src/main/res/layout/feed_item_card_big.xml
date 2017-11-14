@@ -26,7 +26,9 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:layout_marginLeft="@dimen/margin_min"
-                android:layout_marginRight="@dimen/margin_min">
+                android:layout_marginRight="@dimen/margin_min"
+                android:layout_marginStart="@dimen/margin_min"
+                android:layout_marginEnd="@dimen/margin_min">
 
                 <TextView
                     android:id="@+id/text_view_category"
@@ -34,7 +36,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:text="#test"
-                    android:textSize="@dimen/text_size_small" />
+                    android:textSize="@dimen/text_size_small"
+                    android:layout_alignParentStart="true" />
 
                 <TextView
                     android:id="@+id/text_view_source"
@@ -42,7 +45,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:text="#test"
-                    android:textSize="@dimen/text_size_small" />
+                    android:textSize="@dimen/text_size_small"
+                    android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
 
@@ -81,7 +85,9 @@
                 android:layout_marginLeft="@dimen/margin_min"
                 android:layout_marginRight="@dimen/margin_min"
                 android:text="News Title"
-                android:textSize="@dimen/text_size_avg" />
+                android:textSize="@dimen/text_size_avg"
+                android:layout_marginEnd="@dimen/margin_min"
+                android:layout_marginStart="@dimen/margin_min" />
 
             <Space
                 android:layout_width="match_parent"

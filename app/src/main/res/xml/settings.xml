@@ -6,7 +6,8 @@
             android:defaultValue="@string/perf_small"
             android:entries="@array/perf_feeds_font_size_entries"
             android:entryValues="@array/perf_feeds_font_size_entry_values"
-            android:layoutDirection="rtl"
+            android:textDirection="anyRtl"
+            android:gravity="right"
             android:key="@string/perf_feeds_font_size_key"
 
             android:summary="@string/perf_feeds_font_size_desc"
@@ -17,7 +18,8 @@
             android:entries="@array/perf_article_font_size_entries"
             android:entryValues="@array/perf_article_font_size_entry_values"
             android:key="@string/perf_article_font_size_key"
-            android:layoutDirection="rtl"
+            android:textDirection="anyRtl"
+            android:gravity="right"
 
             android:summary="@string/perf_article_font_size_desc"
             android:title="@string/perf_article_font_size" />
@@ -25,7 +27,8 @@
         <SwitchPreference
             android:defaultValue="true"
             android:key="@string/perf_feeds_anim_key"
-            android:layoutDirection="rtl"
+            android:textDirection="anyRtl"
+            android:gravity="right"
 
             android:summaryOff="@string/perf_feeds_anim_desc_disabled"
             android:summaryOn="@string/perf_feeds_anim_desc_enabled"
@@ -34,7 +37,8 @@
         <SwitchPreference
             android:defaultValue="true"
             android:key="@string/perf_sources_anim_key"
-            android:layoutDirection="rtl"
+            android:textDirection="anyRtl"
+            android:gravity="right"
 
             android:summaryOff="@string/perf_sources_anim_desc_disabled"
             android:summaryOn="@string/perf_sources_anim_desc_enabled"
@@ -43,7 +47,8 @@
         <SwitchPreference
             android:defaultValue="true"
             android:key="@string/perf_circular_reveal_key"
-            android:layoutDirection="rtl"
+            android:textDirection="anyRtl"
+            android:gravity="right"
 
             android:summaryOff="@string/perf_circular_reveal_desc_disabled"
             android:summaryOn="@string/perf_circular_reveal_desc_enabled"
@@ -56,6 +61,8 @@
         <MultiSelectListPreference
             android:defaultValue="@array/perf_curated_feeds_import_empty"
             android:dialogTitle="@string/perf_curated_feeds_import"
+            android:textDirection="anyRtl"
+            android:gravity="right"
             android:entries="@array/perf_curated_feeds_import_empty"
             android:entryValues="@array/perf_curated_feeds_import_empty"
             android:key="@string/perf_curated_feeds_import_key"
@@ -65,6 +72,8 @@
         <MultiSelectListPreference
             android:defaultValue="@array/perf_curated_feeds_submit_empty"
             android:dialogTitle="@string/perf_curated_feeds_submit"
+            android:textDirection="anyRtl"
+            android:gravity="right"
             android:entries="@array/perf_curated_feeds_submit_empty"
             android:entryValues="@array/perf_curated_feeds_submit_empty"
             android:key="@string/perf_curated_feeds_submit_key"
@@ -78,6 +87,8 @@
         <com.rezaduty.chdev.ks.tahririye_man.ui.views.CustomListPreferenceDialog
             android:defaultValue="@string/perf_theme_default_value"
             android:entries="@array/perf_theme_entries"
+            android:textDirection="anyRtl"
+            android:gravity="right"
             android:entryValues="@array/perf_theme_values"
             android:key="@string/perf_theme_key"
             android:summary="@string/perf_theme_desc"
@@ -85,12 +96,16 @@
 
         <SwitchPreference
             android:defaultValue="true"
+            android:textDirection="anyRtl"
+            android:gravity="right"
             android:key="@string/perf_cache_key"
             android:summaryOff="@string/perf_cache_desc_disabled"
             android:summaryOn="@string/perf_cache_desc_enabled"
             android:title="@string/perf_cache" />
 
         <SwitchPreference
+            android:textDirection="anyRtl"
+            android:gravity="right"
             android:defaultValue="true"
             android:key="@string/perf_in_app_browser_key"
             android:summaryOff="@string/perf_in_app_browser_desc_disabled"
@@ -99,6 +114,9 @@
 
 
         <ListPreference
+            android:textDirection="anyRtl"
+            android:gravity="right"
+
             android:defaultValue="@string/perf_import_opml_default_value"
             android:entries="@array/perf_import_opml_entries"
             android:entryValues="@array/perf_import_opml_values"
@@ -107,6 +125,8 @@
             android:title="@string/perf_import_opml" />
 
         <com.rezaduty.chdev.ks.tahririye_man.ui.views.CustomPreferenceDialog
+            android:textDirection="anyRtl"
+            android:gravity="right"
             android:dialogMessage="@string/perf_reset_db_message"
             android:dialogTitle="@string/perf_reset_db"
             android:summary="@string/perf_reset_db_desc"
@@ -118,6 +138,8 @@
 
         <Preference
             android:key="@string/perf_feeds_not_working_key"
+            android:textDirection="anyRtl"
+            android:gravity="right"
             android:summary="@string/perf_feeds_not_working_desc"
             android:title="@string/perf_feeds_not_working" />
 

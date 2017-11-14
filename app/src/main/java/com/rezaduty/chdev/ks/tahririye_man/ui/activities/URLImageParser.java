@@ -12,6 +12,7 @@ import android.graphics.PorterDuffColorFilter;
 import android.graphics.drawable.BitmapDrawable;
 import android.graphics.drawable.Drawable;
 import android.os.AsyncTask;
+import android.support.v4.view.ViewCompat;
 import android.text.Html.ImageGetter;
 import android.util.Base64;
 import android.util.Log;
@@ -77,11 +78,9 @@ public class URLImageParser implements ImageGetter {
             try {
                 InputStream is = (InputStream) new URL(urlString).getContent();
                 Drawable drawable = Drawable.createFromStream(is, "src");
-
                 int dWidth = drawable.getIntrinsicWidth();
                 int dHeight = drawable.getIntrinsicHeight();
-                drawable.setBounds(0, 0, getScreenWidth(), getScreenHeight()/3);
-
+                drawable.setBounds(0, getScreenHeight()/2, getScreenWidth(), getScreenHeight()/2);
                 return drawable;
             } catch (Exception e) {
                 Log.d("Error",e.toString());

@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -32,6 +33,7 @@ import uk.co.chrisjenx.calligraphy.CalligraphyConfig;
 import uk.co.chrisjenx.calligraphy.CalligraphyContextWrapper;
 
 public class AboutActivity extends AppCompatActivity {
+    int greenColorValue = Color.parseColor("#424242");
 
     private static String EMAIL_SUBJECT = "Tahririye_man Feedback";
     private static String MESSAGE_TYPE = "message/rfc822";
@@ -103,8 +105,11 @@ public class AboutActivity extends AppCompatActivity {
         CharSequence[] contacts = getResources().getStringArray(R.array.contacts);
 
         MaterialDialog contactDialog = new MaterialDialog.Builder(AboutActivity.this)
+                .contentColor(Color.parseColor("#424242"))
+                .titleColor(Color.parseColor("#424242"))
                 .titleGravity(GravityEnum.END)
                 .contentGravity(GravityEnum.END)
+                .contentColor(greenColorValue)
                 .title(R.string.contact_dev)
                 .items(contacts)
                 .itemsCallback(new MaterialDialog.ListCallback() {
@@ -210,8 +215,11 @@ public class AboutActivity extends AppCompatActivity {
 
         if (id == R.id.action_contributions) {
             MaterialDialog contributionsDialog = new MaterialDialog.Builder(AboutActivity.this)
+                    .contentColor(Color.parseColor("#424242"))
+                    .titleColor(Color.parseColor("#424242"))
                     .titleGravity(GravityEnum.END)
                     .contentGravity(GravityEnum.END)
+                    .contentColor(greenColorValue)
                     .title(R.string.contributions)
                     .items(R.array.contributions_arr)
                     .content(R.string.contributions_desc)
@@ -232,7 +240,10 @@ public class AboutActivity extends AppCompatActivity {
 
         if (id == R.id.action_licence) {
             MaterialDialog licenceDialog = new MaterialDialog.Builder(AboutActivity.this)
+                    .contentColor(Color.parseColor("#424242"))
+                    .titleColor(Color.parseColor("#424242"))
                     .title(R.string.licence)
+                    .contentColor(greenColorValue)
                     .content(R.string.licence_desc)
                     .negativeText(R.string.dismiss)
                     .build();

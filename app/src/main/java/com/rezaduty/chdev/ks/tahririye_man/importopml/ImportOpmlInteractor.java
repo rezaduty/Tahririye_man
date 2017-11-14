@@ -1,6 +1,7 @@
 package com.rezaduty.chdev.ks.tahririye_man.importopml;
 
 import android.content.Context;
+import android.graphics.Color;
 import android.os.AsyncTask;
 import android.util.Log;
 import android.webkit.MimeTypeMap;
@@ -37,6 +38,8 @@ public class ImportOpmlInteractor implements IImportOpmlInteractor {
         mLoadingDialog = new MaterialDialog.Builder(context)
                 .titleGravity(GravityEnum.END)
                 .contentGravity(GravityEnum.END)
+                .contentColor(Color.parseColor("#424242"))
+                .titleColor(Color.parseColor("#424242"))
                 .title(R.string.loading)
                 .content(R.string.please_wait)
                 .progressIndeterminateStyle(true)

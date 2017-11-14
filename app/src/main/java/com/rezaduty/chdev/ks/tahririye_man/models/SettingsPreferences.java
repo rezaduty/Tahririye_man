@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.SharedPreferences;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.preference.PreferenceManager;
 
 import com.afollestad.materialdialogs.GravityEnum;
@@ -205,6 +206,8 @@ public class SettingsPreferences {
         MaterialDialog changeLogDialog = new MaterialDialog.Builder(context)
                 .titleGravity(GravityEnum.END)
                 .contentGravity(GravityEnum.END)
+                .contentColor(Color.parseColor("#424242"))
+                .titleColor(Color.parseColor("#424242"))
                 .title(R.string.change_log)
                 .content(R.string.change_log_desc)
                 .negativeText(R.string.dismiss)

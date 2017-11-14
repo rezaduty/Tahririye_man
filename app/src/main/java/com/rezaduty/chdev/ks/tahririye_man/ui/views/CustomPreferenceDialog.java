@@ -14,8 +14,8 @@ public class CustomPreferenceDialog extends DialogPreference {
     public CustomPreferenceDialog(Context context, AttributeSet attrs) {
         super(context, attrs);
 
-        setPositiveButtonText(android.R.string.ok);
-        setNegativeButtonText(android.R.string.cancel);
+        setPositiveButtonText("تایید");
+        setNegativeButtonText("لغو");
 
         setDialogIcon(null);
     }

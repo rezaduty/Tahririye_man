@@ -6,6 +6,7 @@ import android.content.Context;
 import android.content.DialogInterface;
 import android.content.Intent;
 import android.content.pm.PackageManager;
+import android.graphics.Color;
 import android.net.Uri;
 import android.os.Build;
 import android.os.Bundle;
@@ -102,20 +103,23 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
         getFragmentManager().beginTransaction().replace(R.id.frame_layout_settings, new SettingsFragment()).commit();
 
         sFileChooserDialog = new FileChooserDialog.Builder(SettingsActivity.this)
+                .chooseButton(R.string.ok)
                 .cancelButton(R.string.cancel)
                 .build();
+
     }
+
 
     private void setActivityTheme() {
         if (!SettingsPreferences.THEME) {
-            setTheme(R.style.DarkAppTheme_NoActionBar);
+            setTheme(R.style.DarkAppThemeCustom_NoActionBar_Grey);
             if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.LOLLIPOP) {
                 getWindow().setStatusBarColor(ContextCompat.getColor(SettingsActivity.this, R.color.darkColorPrimaryDark));
             }
             getWindow().setBackgroundDrawableResource(R.color.darkColorBackground);
+
         }
     }
-
     private void setToolBar() {
         setSupportActionBar(toolbar);
         getSupportActionBar().setDisplayHomeAsUpEnabled(true);
@@ -128,12 +132,12 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
 
     public static class SettingsFragment extends PreferenceFragment implements Preference.OnPreferenceClickListener, Preference.OnPreferenceChangeListener, ICuratedFeedsView, ISourceView, IImportOpmlView {
         private final static int STORAGE_PERMISSION_RC = 1;
-        private static String EMAIL_SUBJECT = "Custom curated list - Munch";
+        private static String EMAIL_SUBJECT = "Custom curated list - Tahririye_man";
         private static String MESSAGE_TYPE = "message/rfc822";
         private static String SOURCE_NAME = "source_name";
         private static String SOURCE_URL = "source_url";
         private static String SOURCE_CATEGORY = "source_category";
-        private static String FEEDS_NOT_WORKING_TUTORIAL_URL = "http://rezaduty.com/blog/2016/january/make-your-feeds-work-with-munch.html";
+        private static String FEEDS_NOT_WORKING_TUTORIAL_URL = "http://rezaduty.blog.ir/";
         private CuratedFeedsPresenter mCuratedFeedsPresenter;
         private SourcesPresenter mSourcesPresenter;
         private Preference mFeedsNotWorkingPreference;
@@ -477,6 +481,8 @@ public class SettingsActivity extends AppCompatActivity implements FileChooserDi
             MaterialDialog opmlFeedsDialog = new MaterialDialog.Builder(getActivity())
                     .titleGravity(GravityEnum.END)
                     .contentGravity(GravityEnum.END)
+                    .contentColor(Color.parseColor("#424242"))
+                    .titleColor(Color.parseColor("#424242"))
                     .title(R.string.select_feeds)
                     .items(titles)
                     .itemsCallbackMultiChoice(null, new MaterialDialog.ListCallbackMultiChoice() {

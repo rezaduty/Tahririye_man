@@ -27,7 +27,8 @@
                 android:layout_marginRight="@dimen/margin_huge"
                 android:orientation="vertical"
                 android:paddingBottom="@dimen/padding_small"
-                android:paddingTop="@dimen/padding_small">
+                android:paddingTop="@dimen/padding_small"
+                android:layout_marginEnd="@dimen/margin_huge">
 
                 <TextView
                     android:id="@+id/text_view_feed_title"
@@ -36,7 +37,9 @@
                     android:layout_marginLeft="@dimen/margin_min"
                     android:layout_marginRight="@dimen/margin_min"
                     android:text="@string/feed_title"
-                    android:textSize="@dimen/text_size_avg" />
+                    android:textSize="@dimen/text_size_avg"
+                    android:layout_marginEnd="@dimen/margin_min"
+                    android:layout_marginStart="@dimen/margin_min" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -49,7 +52,9 @@
                     android:layout_marginLeft="@dimen/margin_min"
                     android:layout_marginRight="@dimen/margin_min"
                     android:text="@string/source"
-                    android:textSize="@dimen/text_size_small" />
+                    android:textSize="@dimen/text_size_small"
+                    android:layout_marginEnd="@dimen/margin_min"
+                    android:layout_marginStart="@dimen/margin_min" />
 
             </LinearLayout>
 

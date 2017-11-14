@@ -13,7 +13,7 @@ public class URLDrawable extends BitmapDrawable {
 
 
     public static int getScreenWidth() {
-        Log.d("adas",String.valueOf(Resources.getSystem().getDisplayMetrics().widthPixels));
+        //Log.d("width",String.valueOf(Resources.getSystem().getDisplayMetrics().widthPixels));
         return Resources.getSystem().getDisplayMetrics().widthPixels;
 
     }
@@ -25,7 +25,6 @@ public class URLDrawable extends BitmapDrawable {
         // override the draw to facilitate refresh function later
         if(drawable != null) {
             //Log.d("image found",String.valueOf(canvas.getWidth()));
-
             drawable.setBounds(0,0,getScreenWidth(),getScreenHeight()/3);
             drawable.draw(canvas);
         }

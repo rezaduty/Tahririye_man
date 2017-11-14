@@ -74,11 +74,11 @@
                     android:layout_height="wrap_content"
                     android:hint="@string/source_name"
                     android:theme="@style/AppTheme.WhiteAccent"
-                    app:met_baseColor="@color/white"
+                    app:met_baseColor="@color/cardview_shadow_start_color"
                     app:met_errorColor="@color/white"
                     app:met_floatingLabel="highlight"
 
-                    app:met_primaryColor="@color/white" />
+                    app:met_primaryColor="@color/cardview_shadow_start_color" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -91,11 +91,11 @@
                     android:hint="@string/feed_url"
                     android:inputType="textWebEmailAddress"
                     android:theme="@style/AppTheme.WhiteAccent"
-                    app:met_baseColor="@color/white"
+                    app:met_baseColor="@color/cardview_shadow_start_color"
                     app:met_errorColor="@color/white"
 
                     app:met_floatingLabel="highlight"
-                    app:met_primaryColor="@color/white" />
+                    app:met_primaryColor="@color/cardview_shadow_end_color" />
 
                 <Space
                     android:layout_width="match_parent"
@@ -113,7 +113,8 @@
                         android:layout_alignParentLeft="true"
                         android:enabled="false"
                         android:text="@string/category"
-                        android:textColor="@color/md_white_1000" />
+                        android:textColor="@color/md_white_1000"
+                        android:layout_alignParentStart="true" />
 
                     <LinearLayout
                         android:id="@+id/category_layout"
@@ -149,7 +150,8 @@
                         android:layout_alignParentRight="true"
                         android:enabled="false"
                         android:text="@string/save"
-                        android:textColor="@color/md_white_1000" />
+                        android:textColor="@color/md_white_1000"
+                        android:layout_alignParentEnd="true" />
 
                 </RelativeLayout>
 

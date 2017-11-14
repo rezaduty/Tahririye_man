@@ -49,6 +49,8 @@ public class RssReader implements OnFeedLoadListener {
                 .backgroundColor(material)
                     .titleGravity(GravityEnum.END)
                 .contentGravity(GravityEnum.END)
+                .contentColor(Color.parseColor("#424242"))
+                .titleColor(Color.parseColor("#424242"))
                 .title(R.string.loading_feeds)
                 .progress(true, 0)
                 .progressIndeterminateStyle(true)

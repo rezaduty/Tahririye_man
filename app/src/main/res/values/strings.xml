@@ -178,12 +178,12 @@
     <string name="remove">حذف</string>
     <string name="nav_manage_sources">مدیریت منابع</string>
     <string name="modify_source">تغیر منابع</string>
-    <string name="modify">تغیر</string>
+    <string name="modify">تغییر</string>
     <string name="delete">حذف</string>
     <string name="title_activity_settings">تنظیمات</string>
     <string name="sort">مرتب سازی</string>
     <string name="sort_feeds">مرتب سازی موضوعات</string>
-
+    <string name="ok">انتخاب</string>
     <string-array name="sort_feeds_types">
         <item>تصادفی</item>
         <item>عنوان ها</item>
@@ -250,7 +250,7 @@
 
     <string name="perf_curated_feeds">موضوعات جاری</string>
 
-    <string name="perf_curated_feeds_import">فراخوان منابع</string>
+    <string name="perf_curated_feeds_import">فراخوانی منابع</string>
     <string name="perf_curated_feeds_import_desc">فراخوانی منابع متداول</string>
     <string name="perf_curated_feeds_import_key">perf_curated_feeds_import_key</string>
 
@@ -304,7 +304,7 @@
     <string name="perf_cache_key">perf_feeds_cache</string>
 
     <string name="perf_system">سیستمی</string>
-    <string name="perf_reset_db">راه اندازی مججد دیتابیس</string>
+    <string name="perf_reset_db">راه اندازی مجدد پایگاه داده</string>
     <string name="perf_reset_db_desc">بازگشت به حالت اولیه</string>
     <string name="perf_reset_db_message">باعث از دست رفتن موضوعات و منابع خواهد شد</string>
 

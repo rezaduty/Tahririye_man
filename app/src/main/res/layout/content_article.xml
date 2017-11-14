@@ -18,7 +18,9 @@
             android:layout_height="match_parent"
             android:orientation="vertical"
             android:paddingLeft="@dimen/padding_avg"
-            android:paddingRight="@dimen/padding_avg">
+            android:paddingRight="@dimen/padding_avg"
+            android:paddingStart="@dimen/padding_avg"
+            android:paddingEnd="@dimen/padding_avg">
 
             <Space
                 android:layout_width="match_parent"
@@ -52,7 +54,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentLeft="true"
                     android:text="@string/category"
-                    android:textSize="@dimen/text_size_small" />
+                    android:textSize="@dimen/text_size_small"
+                    android:layout_alignParentStart="true" />
 
                 <TextView
                     android:id="@+id/text_view_feed_pub_date"
@@ -60,7 +63,8 @@
                     android:layout_height="wrap_content"
                     android:layout_alignParentRight="true"
                     android:text="@string/pub_date"
-                    android:textSize="@dimen/text_size_small" />
+                    android:textSize="@dimen/text_size_small"
+                    android:layout_alignParentEnd="true" />
 
             </RelativeLayout>
 

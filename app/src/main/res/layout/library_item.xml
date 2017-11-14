@@ -24,7 +24,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentLeft="true"
                 android:text="@string/library"
-                android:textSize="@dimen/text_size_avg" />
+                android:textSize="@dimen/text_size_avg"
+                android:layout_alignParentStart="true" />
 
             <TextView
                 android:id="@+id/text_view_library_creator"
@@ -32,7 +33,8 @@
                 android:layout_height="wrap_content"
                 android:layout_alignParentRight="true"
                 android:text="@string/library_creator"
-                android:textSize="@dimen/text_size_avg" />
+                android:textSize="@dimen/text_size_avg"
+                android:layout_alignParentEnd="true" />
 
         </RelativeLayout>
 

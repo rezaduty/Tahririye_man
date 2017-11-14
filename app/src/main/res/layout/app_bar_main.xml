@@ -30,7 +30,7 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_centerVertical="true"
-                    android:gravity="right"
+                    android:gravity="end"
                     android:layoutDirection="rtl"
                     android:textDirection="rtl"
                     android:layout_marginLeft="@dimen/margin_min"
@@ -38,13 +38,15 @@
                     android:text="@string/add_feed_title"
                     android:textColor="@color/md_white_1000"
                     android:textSize="@dimen/text_size_toolbar_title"
-                    android:visibility="invisible" />
+                    android:visibility="invisible"
+                    android:layout_marginStart="@dimen/margin_min" />
 
                 <Spinner
                     android:id="@+id/spinner_sources"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
-                    android:layout_marginRight="@dimen/margin_avg"></Spinner>
+                    android:layout_marginRight="@dimen/margin_avg"
+                    android:layout_marginEnd="@dimen/margin_avg"></Spinner>
 
             </RelativeLayout>
 
@@ -59,7 +61,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_margin="@dimen/fab_margin"
-        android:layout_gravity="bottom|right"
+        android:layout_gravity="bottom|end"
         fab:menu_colorNormal="@color/colorAccent"
         fab:menu_colorPressed="@color/colorAccentDark"
         fab:menu_colorRipple="@color/colorAccentLight" />
