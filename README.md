@@ -81,7 +81,7 @@ THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR IMPLI
 
 <h1 align="center">
   <br>
-  <a href="http://rezaduty.blog.ir/"><img src="https://raw.githubusercontent.com/rezaduty/Tahririye_man/master/rezaduty.png" alt="Markdownify" width="200"></a>
+  <a href="http://your-application.ir/"><img src="https://raw.githubusercontent.com/rezaduty/Tahririye_man/master/rezaduty.png" alt="Markdownify" width="200"></a>
 
 </h1>
 
